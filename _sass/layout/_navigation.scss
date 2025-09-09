@@ -2,6 +2,11 @@
    NAVIGATION
    ========================================================================== */
 
+/* --- 新增：启用单页锚点平滑滚动 --- */
+html {
+  scroll-behavior: smooth;
+}
+
 /*
    Breadcrumb navigation links
    ========================================================================== */
@@ -184,6 +189,11 @@
     color: var(--global-masthead-link-color);
     text-decoration: none;
 
+    /* --- 新增：以 # 开头的链接显示为可点（光标） --- */
+    &[href^="#"] {
+      cursor: pointer;
+    }
+
     &:hover {
       color: var(--global-masthead-link-color-hover);
     }
@@ -335,6 +345,11 @@
     display: block;
     padding: 0.125em 0;
     color: inherit;
+
+    /* --- 新增：以 # 开头的侧边导航链接也显示为可点 --- */
+    &[href^="#"] {
+      cursor: pointer;
+    }
 
     &:hover {
       text-decoration: underline;

@@ -25,56 +25,34 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(3 of 12); // 原来是 2 of 12，这里改成 3 of 12
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
-            transition: opacity 0.2s ease-in-out;
-
+    transition: opacity 0.2s ease-in-out;
     &:hover {
       opacity: 1;
     }
   }
-
   @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
+    max-width: none; // 如果不想限制最大宽度，可以去掉限制
     padding-right: 0;
-  }
-
-  h2, h3, h4, h5, h6 {
-    margin-bottom: 0;
-    font-family: $sans-serif-narrow;
-  }
-
-  h3, h4 {
-    font-size: $type-size-5;
-  }
-
-  p, li {
-    font-family: $sans-serif;
-    font-size: $type-size-6;
-    line-height: 1.5;
-  }
-
-  img {
-    width: 100%;
   }
 }
 
+/* 右侧栏 */
 .sidebar__right {
-  margin-bottom: 1em;
-
   @include breakpoint($large) {
     position: relative;
     float: right;
-    width: $right-sidebar-width-narrow;
+    @include span(3 of 12); // 改成和左栏一样的宽度
     margin-left: span(0.5 of 12);
     z-index: 10;
   }
-
   @include breakpoint($x-large) {
-    width: $right-sidebar-width;
+    width: auto; // 或者保持相同的 span 宽度
   }
 }
+
 
 /*
    Author profile and links

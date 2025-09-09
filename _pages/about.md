@@ -9,12 +9,12 @@ redirect_from:
 
 I am currently a bachelor’s student in Physics (with Electronics and Information Science minor) at Sun Yat-sen University (SYSU). My research intterests lie in the “intersection” area of physics and information science, especially in healthcare applications (e.g. biomedical signal processing, sensor technologies in healthcare). 
 
-A data-driven personal website
-======
+**research interests**
 
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+- Radar Technologies in Healthcare 
+- Biomedical Signal Processing
+- Optoelectronic Devices (e.g. SiPMs)
+- Silicon Photonics
 
 **Markdown generator**
 

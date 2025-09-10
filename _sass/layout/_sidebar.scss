@@ -31,7 +31,7 @@
 
   @include breakpoint($large) {
     /* 使用 px 固定宽度，避免被 Susy 的栅格和 max-width 意外限制 */
-    width: 300px;       // 你可以按需把 300px 改成想要的值（例如 320px）
+    width: 600px;       // 你可以按需把 300px 改成想要的值（例如 320px）
     float: none;        // fixed 元素不需要 float
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;

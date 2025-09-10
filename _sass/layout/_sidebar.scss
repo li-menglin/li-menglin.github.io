@@ -44,7 +44,7 @@
   @include breakpoint($large) {
     position: relative;
     float: right;
-    @include span(2 of 12); // 改成和左栏一样的宽度
+    @include span(3 of 12); // 改成和左栏一样的宽度
     margin-left: span(0.5 of 12);
     z-index: 10;
   }

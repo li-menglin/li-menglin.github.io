@@ -17,16 +17,22 @@
     margin-top: 1em;
   }
 
+  /* 保留 fixed 行为（大屏时），并确保从页面左上角开始 */
   @media screen and (min-width: $sidebar-screen-min-width) {
     height: 100vh;
     overflow-y: auto;               // Add scrollbar if the sidebar is too long
     position: fixed;
     padding-top: $masthead-height;
+
+    left: 0;   /* ← 新增：明确左侧位置 */
+    top: 0;    /* ← 新增：从页面顶部开始 */
+    z-index: 50;
   }
 
   @include breakpoint($large) {
-    width: 50%;       // 原来是 span(2 of 12)，这里直接设定 25%
-    float: left;      // 保证在左边
+    /* 使用 px 固定宽度，避免被 Susy 的栅格和 max-width 意外限制 */
+    width: 300px;       // 你可以按需把 300px 改成想要的值（例如 320px）
+    float: none;        // fixed 元素不需要 float
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
@@ -37,27 +43,27 @@
   }
 
   @include breakpoint($x-large) {
-    width: 50%;       // 保持一致
-    max-width: none;  // 去掉最大宽度限制
+    /* 更大屏可以给稍大一点的宽度 */
+    width: 320px;       // 超大屏下使用 320px（可调整）
+    max-width: none;    // 确保没有被其他 max-width 限制
     padding-right: 0;
   }
 }
 
-/* 右侧栏 */
+/* 右侧栏（如果你使用到）——保持相对定位，不影响左侧 fixed */
 .sidebar__right {
   @include breakpoint($large) {
     position: relative;
     float: right;
-    width: 25%;      // 如果要启用右侧栏，保持和左栏一致
-    margin-left: 2%; // 给正文留点间距，可调整
+    width: auto;      // 不强制宽度，避免冲突
+    margin-left: span(0.5 of 12);
     z-index: 10;
   }
 
   @include breakpoint($x-large) {
-    width: 25%;
+    width: auto;
   }
 }
-
 
 /*
    Author profile and links

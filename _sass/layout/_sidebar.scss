@@ -25,7 +25,7 @@
   }
 
   @include breakpoint($large) {
-    width: 25%;       // 原来是 span(2 of 12)，这里直接设定 25%
+    width: 50%;       // 原来是 span(2 of 12)，这里直接设定 25%
     float: left;      // 保证在左边
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
@@ -37,7 +37,7 @@
   }
 
   @include breakpoint($x-large) {
-    width: 25%;       // 保持一致
+    width: 50%;       // 保持一致
     max-width: none;  // 去掉最大宽度限制
     padding-right: 0;
   }

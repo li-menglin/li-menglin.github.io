@@ -40,4 +40,31 @@
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
+
+/* === Custom sidebar styles === */
+
+/* 放大头像 */
+.author__avatar {
+  width: 180px !important;   /* 默认大概 120px，这里调大 */
+  height: auto !important;
+  border-radius: 50% !important;  /* 保持圆形 */
+  margin-bottom: 15px;
+}
+
+/* 姓名字体放大 */
+.author__name {
+  font-size: 28px !important;  /* 默认 ~24px */
+  font-weight: bold;
+}
+
+/* 简短描述 */
+.author__bio {
+  font-size: 16px !important;
+}
+
+/* 其他侧边栏文字（地点、学校等） */
+.author__content {
+  font-size: 15px !important;
+}
+
 ;

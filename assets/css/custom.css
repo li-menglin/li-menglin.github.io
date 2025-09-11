@@ -3,19 +3,23 @@
 /* 引入原始样式 */
 @import "main";
 
-/* 自定义覆盖 */
+/* 通用字体大小（Email + Location + University 都包括） */
+.author__urls li {
+  font-size: 1.2rem !important;
+  margin-bottom: 8px;
+}
+
+/* 针对 li 里的 <a> 链接（Email） */
 .author__urls li a {
   font-size: 1.2rem !important;
 }
 
-.author__urls li a i {
+/* 针对所有 li 里的图标 */
+.author__urls li i {
   font-size: 1.2rem !important;
   margin-right: 6px;
 }
 
-.author__urls li {
-  margin-bottom: 8px;
-}
 
 /* === 头像 === */
 .author__avatar img,

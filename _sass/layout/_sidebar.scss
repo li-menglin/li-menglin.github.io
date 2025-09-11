@@ -17,25 +17,18 @@
     margin-top: 1em;
   }
 
-  /* 保留 fixed 行为（大屏时），并确保从页面左上角开始 */
   @media screen and (min-width: $sidebar-screen-min-width) {
     height: 100vh;
     overflow-y: auto;               // Add scrollbar if the sidebar is too long
     position: fixed;
     padding-top: $masthead-height;
-
-    //left: 0;   /* ← 新增：明确左侧位置 */
-    //top: 0;    /* ← 新增：从页面顶部开始 */
-    z-index: 50;
   }
 
-    @include breakpoint($large) {
-    width: 300px;        // ← 放大尺寸（比如从 200px 改成 300px 或更大）
-    left: 20px;          // ← 新增，往右保留 20px 空隙；想紧贴左边就写 0
-    float: none;
+  @include breakpoint($large) {
+    @include span(2 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
 
     &:hover {
       opacity: 1;
@@ -43,24 +36,43 @@
   }
 
   @include breakpoint($x-large) {
-    width: 320px;        // 超大屏再大一点
-    left: 200px;          // 保持和上面一致
-    max-width: none;
+    max-width: $sidebar-link-max-width;
     padding-right: 0;
   }
 
-/* 右侧栏（如果你使用到）——保持相对定位，不影响左侧 fixed */
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    font-family: $sans-serif-narrow;
+  }
+
+  h3, h4 {
+    font-size: $type-size-5;
+  }
+
+  p, li {
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 .sidebar__right {
+  margin-bottom: 1em;
+
   @include breakpoint($large) {
     position: relative;
     float: right;
-    width: auto;      // 不强制宽度，避免冲突
+    width: $right-sidebar-width-narrow;
     margin-left: span(0.5 of 12);
     z-index: 10;
   }
 
   @include breakpoint($x-large) {
-    width: auto;
+    width: $right-sidebar-width;
   }
 }
 
@@ -72,6 +84,8 @@
   display: table-cell;
   vertical-align: top;
   width: 36px;
+  // set width only, for non-square avatars
+  // height: 36px;
 
   @include breakpoint($large) {
     display: block;
@@ -149,6 +163,7 @@
   vertical-align: middle;
   font-family: $sans-serif;
   z-index: 10;
+  position: relative;
   cursor: pointer;
 
   li:last-child {

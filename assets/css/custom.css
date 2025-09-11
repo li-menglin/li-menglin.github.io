@@ -1,6 +1,6 @@
 /* 放大头像 */
 .author__avatar {
-  width: 180px !important;
+  width: 300px !important;
   height: auto !important;
   border-radius: 50% !important;
 }

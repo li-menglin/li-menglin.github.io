@@ -1,20 +1,30 @@
-/* 放大头像 */
+/* === 头像 === */
+.author__avatar img,
 img.author__avatar {
-  width: 200px !important;
+  width: 200px !important;    /* 放大头像 */
   height: auto !important;
   border-radius: 50% !important;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px auto !important; /* 居中并加间距 */
 }
 
-/* 姓名字体 */
+/* === 姓名 === */
 .author__name {
-  font-size: 32px !important;
-  font-weight: bold !important;
+  font-size: 32px !important;  /* 加大字号 */
+  font-weight: 700 !important;
+  text-align: center;          /* 居中 */
 }
 
-/* 侧边栏其他文字（学校、位置等） */
-.author__content {
+/* === 简短描述 === */
+.author__bio {
   font-size: 18px !important;
-  line-height: 1.5 !important;
+  line-height: 1.6 !important;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* === 位置 / 学校等信息 === */
+.author__urls {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
 }

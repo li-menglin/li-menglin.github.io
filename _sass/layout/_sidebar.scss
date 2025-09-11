@@ -44,7 +44,7 @@
 
   @include breakpoint($x-large) {
     width: 320px;        // 超大屏再大一点
-    left: 20px;          // 保持和上面一致
+    left: 200px;          // 保持和上面一致
     max-width: none;
     padding-right: 0;
   }

@@ -22,8 +22,8 @@ author_profile: true
   </ul>
 </section>
 
-<section id="Education Background">
-  <h1 class="page__title">Education Background</h1>
+<section id="Education">
+  <h1 class="page__title">Education</h1>
   <p>
     (Bachelor’s degree in Physics, Sun Yat-sen University, etc.)
   </p>

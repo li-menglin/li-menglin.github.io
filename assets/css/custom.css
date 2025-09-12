@@ -22,14 +22,14 @@
 
 
 /* === 头像 === */
-.author__avatar img,
-img.author__avatar {
-  width: 200px !important;    /* 放大头像 */
-  height: auto !important;
-  border-radius: 50% !important;
-  display: block;
-  margin: 0 auto 15px auto !important; /* 居中并加间距 */
+/* 调整头像大小 */
+.author__avatar img {
+  width: 260px !important;   /* 原来一般是 100px 左右，可以改大 */
+  height: auto !important;   /* 保持宽高比 */
+  border-radius: 50%;        /* 圆形头像（可选） */
+  margin-bottom: 15px;       /* 和下面的文字留点间距 */
 }
+
 
 /* === 姓名 === */
 .author__name {

@@ -89,26 +89,30 @@ header: false
   </ul>
 </section>
 
-
-<section id="Publications">
-  <h2 class="page__title">Publications</h2>
-  <p>
-    (List your publications here)
-  </p>
-</section>
-
 <section id="Skills">
-  <h2 class="page__title">Skills</h2>
+  <h1 class="page__title">Skills</h1>
   <ul>
-    <li>C++, Python, MATLAB, Mathematica</li>
-    <li>Pythia8, Proteus, mmWave Studio</li>
+    <li><strong>Programming:</strong> C++, Python, MATLAB, Mathematica</li>
+    <li><strong>Simulation Tools:</strong> Pythia8, Proteus, mmWave Studio</li>
+    <li><strong>Data Analysis:</strong> Origin, SciDAVis</li>
+    <li><strong>Standardized Tests:</strong> TOEFL 102 (R30, L26, S19, W25), GRE 322 (V155, Q167, W)</li>
+    <li><strong>Problem-Solving:</strong> Excellent analytical and problem-solving abilities</li>
+    <li><strong>Communication:</strong> Good at presentations</li>
+    <li><strong>Learning & Thinking:</strong> Fast learner with system-level thinking</li>
   </ul>
 </section>
 
 <section id="Hobbies and Personalities">
   <h2 class="page__title">Hobbies and Personalities</h2>
   <ul>
-    <li>C++, Python, MATLAB, Mathematica</li>
-    <li>Pythia8, Proteus, mmWave Studio</li>
+    <li><strong>Hobbies: </strong>Hiking, Reading, Spending time with family</li>
+    <li><strong>Personality: </strong>Easy-going, Honest, Reliable, Embracing Challenge, Cooperative</li>
   </ul>
+</section>
+
+<section id="Publications">
+  <h2 class="page__title">Publications</h2>
+  <p>
+    (List your publications here)
+  </p>
 </section>

@@ -12,13 +12,6 @@ img.author__avatar {
 }
 
 /* 手机屏幕自适应 */
-@media (max-width: 600px) {
-    img.author__avatar {
-        width: 40%;        /* 相对屏幕宽度 */
-        max-width: 150px;  /* 限制最大尺寸 */
-        margin-bottom: 10px;
-    }
-}
 
 
 /* === 姓名 === */

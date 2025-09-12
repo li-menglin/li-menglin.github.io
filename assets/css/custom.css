@@ -114,5 +114,7 @@ html {
 .masthead__menu .visible-links {
     min-width: 0;        /* 保持灵活，或设置更大宽度 */
     display: flex;
+    flex-shrink: 0;
     flex-wrap: nowrap;    /* 不换行，尽量显示在一行 */
 }
+

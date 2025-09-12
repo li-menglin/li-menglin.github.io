@@ -1,65 +1,52 @@
-<section id="Biography">
 ---
 permalink: /
-title: "Biography"
+title: "About"
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
 ---
 
-I am currently a bachelor’s student in Physics (with Electronics and Information Science minor) at Sun Yat-sen University (SYSU). My research intterests lie in the “intersection” area of physics and information science, especially in healthcare applications (e.g. biomedical signal processing, sensor technologies in healthcare). 
+<section id="Biography">
+  <h1 class="page__title">Biography</h1>
+  <p>
+    I am currently a bachelor’s student in Physics (with Electronics and Information Science minor) 
+    at Sun Yat-sen University (SYSU). My research interests lie in the intersection of physics and 
+    information science, especially in healthcare applications (e.g. biomedical signal processing, 
+    sensor technologies in healthcare).
+  </p>
 
-
-**research interests**
-
-- Radar Technologies in Healthcare 
-- Biomedical Signal Processing
-- Optoelectronic Devices (e.g. SiPMs)
-- Silicon Photonics
-
+  <strong>Research Interests</strong>
+  <ul>
+    <li>Radar Technologies in Healthcare</li>
+    <li>Biomedical Signal Processing</li>
+    <li>Optoelectronic Devices (e.g. SiPMs)</li>
+    <li>Silicon Photonics</li>
+  </ul>
 </section>
 
-<section id="Education">
----
-permalink: /
-title: "Education Background"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
+<section id="Education Background">
+  <h1 class="page__title">Education Background</h1>
+  <p>
+    (Bachelor’s degree in Physics, Sun Yat-sen University, etc.)
+  </p>
 </section>
 
 <section id="Research Experience">
----
-permalink: /
-title: "Research Experience"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
+  <h1 class="page__title">Research Experience</h1>
+  <p>
+    (Details of your projects here)
+  </p>
 </section>
 
 <section id="Publications">
----
-permalink: /
-title: "Publications"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
+  <h1 class="page__title">Publications</h1>
+  <p>
+    (List your publications here)
+  </p>
 </section>
 
 <section id="Skills">
----
-permalink: /
-title: Skills"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
+  <h1 class="page__title">Skills</h1>
+  <ul>
+    <li>C++, Python, MATLAB, Mathematica</li>
+    <li>Pythia8, Proteus, mmWave Studio</li>
+  </ul>
 </section>

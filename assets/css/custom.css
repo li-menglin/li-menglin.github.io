@@ -104,3 +104,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 增加顶部导航栏整体宽度 */
+.masthead__menu {
+    max-width: 1200px;  /* 根据需要调整，可改成更大值 */
+    width: 100%;
+}
+
+/* 增加可见菜单项容器宽度，防止被 greedy-nav 自动隐藏 */
+.masthead__menu .visible-links {
+    min-width: 0;        /* 保持灵活，或设置更大宽度 */
+    display: flex;
+    flex-wrap: nowrap;    /* 不换行，尽量显示在一行 */
+}

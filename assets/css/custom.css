@@ -96,3 +96,6 @@ img.author__avatar {
   line-height: 1.65;
 }
 
+:root {
+  scroll-padding-top: 80px; /* 根据导航栏高度调整，比如 70~100px */
+}

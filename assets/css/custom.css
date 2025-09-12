@@ -11,6 +11,16 @@ img.author__avatar {
   margin: 0 auto 15px auto;
 }
 
+/* 手机屏幕自适应 */
+@media (max-width: 600px) {
+    img.author__avatar {
+        width: 40%;        /* 相对屏幕宽度 */
+        max-width: 150px;  /* 限制最大尺寸 */
+        margin-bottom: 10px;
+    }
+}
+
+
 /* === 姓名 === */
 .author__name {
   font-size: 30px !important;   /* 略微缩小，和正文比例更协调 */

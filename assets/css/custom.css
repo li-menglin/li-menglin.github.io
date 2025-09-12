@@ -30,7 +30,7 @@ img.author__avatar {
 
 /* === 位置 / 学校 / Email 等 === */
 .author__urls li {
-  font-size: 0.7rem !important;   /* 比正文略小 */
+  font-size: 0.85rem !important;   /* 比正文略小 */
   line-height: 1.25;
   margin-bottom: 5px;
 }
@@ -40,7 +40,7 @@ img.author__avatar {
 }
 
 .author__urls li i {
-  font-size: 0.75rem !important; /* 图标稍微缩小 */
+  font-size: 0.9rem !important; /* 图标稍微缩小 */
   margin-right: 5px;
   color: #444;
 }

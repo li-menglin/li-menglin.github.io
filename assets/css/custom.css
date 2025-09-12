@@ -26,6 +26,7 @@
 img.author__avatar {
   width: 240px !important;   /* 想要的尺寸 */
   height: auto !important;   /* 保持比例 */
+  max-width: none !important;
   border-radius: 50%;        /* 圆形头像（可选） */
   display: block;            /* 让 margin 居中生效 */
   margin: 0 auto 15px auto;  /* 居中 + 底部间距 */

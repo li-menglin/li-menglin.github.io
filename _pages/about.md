@@ -89,6 +89,13 @@ header: false
   </ul>
 </section>
 
+<section id="Publications">
+  <h2 class="page__title">Publications</h2>
+  <p>
+    (List your publications here)
+  </p>
+</section>
+
 <section id="Skills">
   <h1 class="page__title">Skills</h1>
   <ul>
@@ -110,9 +117,4 @@ header: false
   </ul>
 </section>
 
-<section id="Publications">
-  <h2 class="page__title">Publications</h2>
-  <p>
-    (List your publications here)
-  </p>
-</section>
+

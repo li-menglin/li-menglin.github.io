@@ -24,7 +24,7 @@
 /* === 头像 === */
 /* 强制放大头像 */
 img.author__avatar {
-  width: 180px !important;   /* 想要的尺寸 */
+  width: 240px !important;   /* 想要的尺寸 */
   height: auto !important;   /* 保持比例 */
   border-radius: 50%;        /* 圆形头像（可选） */
   display: block;            /* 让 margin 居中生效 */

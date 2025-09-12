@@ -3,92 +3,95 @@
 
 /* === 头像 === */
 img.author__avatar {
-  width: 240px !important;     /* 想要的尺寸 */
-  height: auto !important;     /* 保持比例 */
+  width: 220px !important;     /* 稍微小一点，避免压缩右侧正文 */
+  height: auto !important;
   max-width: none !important;
-  border-radius: 50%;          /* 圆形头像 */
-  display: block;              /* 让 margin 居中生效 */
-  margin: 0 auto 15px auto;    /* 居中 + 底部间距 */
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
 /* === 姓名 === */
 .author__name {
-  font-size: 32px !important;
+  font-size: 30px !important;   /* 略微缩小，和正文比例更协调 */
   font-weight: 700 !important;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 /* === 简短描述 === */
 .author__bio {
-  font-size: 18px !important;
-  line-height: 1.6 !important;
+  font-size: 16.5px !important; /* 稍小一点，作为副标题 */
+  line-height: 1.5 !important;
   text-align: center;
   margin-bottom: 15px;
+  color: #555;                  /* 灰色，弱化 */
 }
 
 /* === 位置 / 学校 / Email 等 === */
 .author__urls li {
-  font-size: 1.15rem !important;
-  line-height: 1.6;
-  margin-bottom: 8px;          /* 让行距更自然 */
+  font-size: 1rem !important;   /* 比正文略小 */
+  line-height: 1.5;
+  margin-bottom: 6px;
 }
 
 .author__urls li a {
-  font-size: inherit !important;  /* 跟随 li 的字体 */
+  font-size: inherit !important;
 }
 
 .author__urls li i {
-  font-size: 1.2rem !important;
+  font-size: 1.05rem !important; /* 图标稍微缩小 */
   margin-right: 6px;
+  color: #444;
 }
 
 /* === 正文容器整体 === */
 .page__inner-wrap {
-  max-width: 800px;      /* 控制正文宽度，避免太宽影响阅读 */
-  margin: 0 auto;        /* 居中 */
-  padding: 20px 30px;    /* 内边距，增加留白 */
-  background: #fff;      /* 白底（可选，看你主题） */
-  border-radius: 8px;    /* 圆角（可选） */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* 轻微阴影，突出内容 */
+  max-width: 850px;      /* 宽度稍大，正文更舒展 */
+  margin: 0 auto;
+  padding: 25px 35px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* === 标题 === */
 .page__title {
-  font-size: 30px !important;
+  font-size: 32px !important;   /* 突出，保持层级 */
   font-weight: 700;
   margin-bottom: 20px;
-  text-align: left;         /* 可改成 center 居中 */
-  border-bottom: 2px solid #eee; /* 底部横线，增加层次 */
+  text-align: left;
+  border-bottom: 2px solid #eee;
   padding-bottom: 8px;
 }
 
 /* === 正文段落 === */
 .page__content p {
-  font-size: 18px;
-  line-height: 1.75;
-  margin-bottom: 15px;
-  color: #333;             /* 字体颜色稍微深一点，便于阅读 */
+  font-size: 18.5px;            /* 略微增大，主体感更强 */
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #222;
 }
 
 /* === 强调文字（比如 research interests） === */
 .page__content strong {
-  display: block;          /* 单独占一行 */
-  font-size: 22px;
+  display: block;
+  font-size: 20px;
   font-weight: 600;
-  margin: 20px 0 10px;
-  color: #444;
-  text-transform: capitalize; /* 首字母大写 */
+  margin: 22px 0 12px;
+  color: #333;
+  text-transform: capitalize;
 }
 
 /* === 列表 === */
 .page__content ul {
-  margin: 0 0 20px 20px;   /* 左边缩进 */
+  margin: 0 0 22px 22px;
   padding: 0;
-  list-style-type: disc;   /* 保持原点 */
+  list-style-type: disc;
 }
 
 .page__content li {
   font-size: 18px;
-  margin-bottom: 8px;
-  line-height: 1.6;
+  margin-bottom: 10px;
+  line-height: 1.65;
 }

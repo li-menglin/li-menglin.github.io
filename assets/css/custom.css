@@ -118,3 +118,7 @@ html {
     flex-wrap: nowrap;    /* 不换行，尽量显示在一行 */
 }
 
+#site-nav.no-greedy .hidden-links {
+    display: flex !important;
+    position: static !important;
+}

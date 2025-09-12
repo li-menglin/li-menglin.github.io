@@ -1,43 +1,21 @@
----
----
 /* 引入原始样式 */
 @import "main";
 
-/* 通用字体大小（Email + Location + University 都包括） */
-.author__urls li {
-  font-size: 1.2rem !important;
-  margin-bottom: 8px;
-}
-
-/* 针对 li 里的 <a> 链接（Email） */
-.author__urls li a {
-  font-size: 1.2rem !important;
-}
-
-/* 针对所有 li 里的图标 */
-.author__urls li i {
-  font-size: 1.2rem !important;
-  margin-right: 6px;
-}
-
-
 /* === 头像 === */
-/* 强制放大头像 */
 img.author__avatar {
-  width: 240px !important;   /* 想要的尺寸 */
-  height: auto !important;   /* 保持比例 */
+  width: 240px !important;     /* 想要的尺寸 */
+  height: auto !important;     /* 保持比例 */
   max-width: none !important;
-  border-radius: 50%;        /* 圆形头像（可选） */
-  display: block;            /* 让 margin 居中生效 */
-  margin: 0 auto 15px auto;  /* 居中 + 底部间距 */
+  border-radius: 50%;          /* 圆形头像 */
+  display: block;              /* 让 margin 居中生效 */
+  margin: 0 auto 15px auto;    /* 居中 + 底部间距 */
 }
-
 
 /* === 姓名 === */
 .author__name {
-  font-size: 32px !important;  /* 加大字号 */
+  font-size: 32px !important;
   font-weight: 700 !important;
-  text-align: center;          /* 居中 */
+  text-align: center;
 }
 
 /* === 简短描述 === */
@@ -48,19 +26,17 @@ img.author__avatar {
   margin-bottom: 15px;
 }
 
-/* === 位置 / 学校等信息 === */
-/* 调整学校名称、地址的字体大小 */
+/* === 位置 / 学校 / Email 等 === */
 .author__urls li {
-  font-size: 1.15rem !important;   /* 默认可能是 0.9–1rem，可以调大 */
-  line-height: 1.6;                /* 增加行高，避免太挤 */
-}
-
-/* 调整 Email 链接的字体大小 */
-.author__urls li a {
   font-size: 1.15rem !important;
+  line-height: 1.6;
+  margin-bottom: 8px;          /* 让行距更自然 */
 }
 
-/* 调整图标大小，保持和文字协调 */
+.author__urls li a {
+  font-size: inherit !important;  /* 跟随 li 的字体 */
+}
+
 .author__urls li i {
   font-size: 1.2rem !important;
   margin-right: 6px;

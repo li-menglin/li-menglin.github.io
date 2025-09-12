@@ -95,3 +95,50 @@ img.author__avatar {
   margin-bottom: 10px;
   line-height: 1.65;
 }
+
+/* === 桌面端（默认样式） === */
+#main {
+  display: flex;             /* 左右两栏 */
+  justify-content: center;   /* 水平居中 */
+  max-width: 1200px;         /* 限制总宽度 */
+  margin: 0 auto;            /* 居中 */
+  gap: 40px;                 /* 左右栏间距 */
+}
+
+.sidebar {
+  flex: 0 0 280px;           /* 左栏固定宽度 */
+}
+
+.page {
+  flex: 1;                   /* 正文占据剩余空间 */
+  min-width: 0;              /* 防止溢出 */
+}
+
+
+/* === 移动端（小于 768px） === */
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;   /* 改为上下布局 */
+    align-items: center;      /* 居中对齐 */
+    gap: 20px;                /* 栏目间距缩小 */
+    padding: 0 15px;          /* 给屏幕边缘留点空间 */
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;              /* 占满宽度 */
+    max-width: 400px;         /* 头像和信息区域不会太宽 */
+    text-align: center;       /* 居中显示头像和文字 */
+  }
+
+  .page {
+    flex: none;
+    width: 100%;              /* 正文占满屏幕 */
+    max-width: 600px;         /* 限制最大宽度，避免太宽 */
+  }
+
+  /* 手机端头像缩小一点，更协调 */
+  img.author__avatar {
+    width: 180px !important;
+  }
+}

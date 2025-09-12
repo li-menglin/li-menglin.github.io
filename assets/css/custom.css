@@ -100,7 +100,7 @@ img.author__avatar {
 }
 
 :root {
-  scroll-padding-top: 80px; /* 根据导航栏高度调整，比如 70~100px */
+  scroll-padding-top: 70px; /* 根据导航栏高度调整，比如 70~100px 80px*/
 }
 
 html {

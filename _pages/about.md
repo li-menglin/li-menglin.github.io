@@ -6,7 +6,7 @@ header: false
 ---
 
 <section id="Biography">
-  <h1 class="page__title">Biography</h1>
+  <h2 class="page__title">Biography</h2>
   <p>
     I am currently a bachelor’s student in Physics (with Electronics and Information Science minor) 
     at Sun Yat-sen University (SYSU). My research interests lie in the intersection of physics and 
@@ -24,7 +24,7 @@ header: false
 </section>
 
 <section id="Education">
-  <h1 class="page__title">Education</h1>
+  <h2 class="page__title">Education</h2>
 
   <p><strong>Sun Yat-sen University (SYSU), Guangzhou, China</strong><br>
   <em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em><br>
@@ -45,7 +45,7 @@ header: false
 
 
 <section id="Research Experience">
-  <h1 class="page__title">Research Experience</h1>
+  <h2 class="page__title">Research Experience</h2>
 
   <p><strong>FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring</strong><br>
   <em>Research Assistant, advised by Prof. XXX, SYSU</em><br>
@@ -91,14 +91,14 @@ header: false
 
 
 <section id="Publications">
-  <h1 class="page__title">Publications</h1>
+  <h2 class="page__title">Publications</h2>
   <p>
     (List your publications here)
   </p>
 </section>
 
 <section id="Skills">
-  <h1 class="page__title">Skills</h1>
+  <h2 class="page__title">Skills</h2>
   <ul>
     <li>C++, Python, MATLAB, Mathematica</li>
     <li>Pythia8, Proteus, mmWave Studio</li>
@@ -106,7 +106,7 @@ header: false
 </section>
 
 <section id="Hobbies and Personalities">
-  <h1 class="page__title">Hobbies and Personalities</h1>
+  <h2 class="page__title">Hobbies and Personalities</h2>
   <ul>
     <li>C++, Python, MATLAB, Mathematica</li>
     <li>Pythia8, Proteus, mmWave Studio</li>

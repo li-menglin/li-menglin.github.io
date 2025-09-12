@@ -41,3 +41,54 @@ img.author__avatar {
   font-size: 1.2rem !important;
   margin-right: 6px;
 }
+
+/* === 正文容器整体 === */
+.page__inner-wrap {
+  max-width: 800px;      /* 控制正文宽度，避免太宽影响阅读 */
+  margin: 0 auto;        /* 居中 */
+  padding: 20px 30px;    /* 内边距，增加留白 */
+  background: #fff;      /* 白底（可选，看你主题） */
+  border-radius: 8px;    /* 圆角（可选） */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* 轻微阴影，突出内容 */
+}
+
+/* === 标题 === */
+.page__title {
+  font-size: 28px !important;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left;         /* 可改成 center 居中 */
+  border-bottom: 2px solid #eee; /* 底部横线，增加层次 */
+  padding-bottom: 8px;
+}
+
+/* === 正文段落 === */
+.page__content p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  margin-bottom: 15px;
+  color: #333;             /* 字体颜色稍微深一点，便于阅读 */
+}
+
+/* === 强调文字（比如 research interests） === */
+.page__content strong {
+  display: block;          /* 单独占一行 */
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  color: #444;
+  text-transform: capitalize; /* 首字母大写 */
+}
+
+/* === 列表 === */
+.page__content ul {
+  margin: 0 0 20px 20px;   /* 左边缩进 */
+  padding: 0;
+  list-style-type: disc;   /* 保持原点 */
+}
+
+.page__content li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}

@@ -54,7 +54,7 @@ img.author__avatar {
 
 /* === 标题 === */
 .page__title {
-  font-size: 28px !important;
+  font-size: 30px !important;
   font-weight: 700;
   margin-bottom: 20px;
   text-align: left;         /* 可改成 center 居中 */
@@ -64,7 +64,7 @@ img.author__avatar {
 
 /* === 正文段落 === */
 .page__content p {
-  font-size: 16.5px;
+  font-size: 18px;
   line-height: 1.75;
   margin-bottom: 15px;
   color: #333;             /* 字体颜色稍微深一点，便于阅读 */
@@ -73,7 +73,7 @@ img.author__avatar {
 /* === 强调文字（比如 research interests） === */
 .page__content strong {
   display: block;          /* 单独占一行 */
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   margin: 20px 0 10px;
   color: #444;
@@ -88,7 +88,7 @@ img.author__avatar {
 }
 
 .page__content li {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 8px;
   line-height: 1.6;
 }

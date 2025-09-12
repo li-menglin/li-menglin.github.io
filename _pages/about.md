@@ -46,29 +46,49 @@ header: false
 
 <section id="Research Experience">
   <h1 class="page__title">Research Experience</h1>
-  <p>
-    FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring 
-Advised by Prof. XXX, SYSU                            Research Assistant                                          11/2024 to now
-•	Configured Texas Instruments IWR1443BOOST Frequency-Modulated Continuous Wave (FMCW) radar with mmWave Studio to acquire raw radar echoes for non-contact cardiopulmonary monitoring experiments.
-•	Implemented approximated Fast Fourier Transform (apFFT) to resolve range profiles of radar chirps.
-•	Designed advanced preprocessing modules including smoothing-spline fitting and matched filtering, and applied Variational Mode Extraction (VME) to decompose respiration and heartbeat components under noisy conditions.
-•	Applied double Chirp-Z Transform (double-CZT) for high-resolution spectral estimation of both respiratory and cardiac signals.
-•	Reproduced and validated published benchmark results within MATLAB, demonstrating the accuracy and robustness of the proposed FMCW radar framework for non-contact vital signs detection.
-Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems 
-Advised by Prof. XXX, SYSU                            Research Assistant                                          10/2024 to now
-•	Designed and developed a detection platform using plastic scintillators coupled with Silicon Photomultipliers (SiPMs) 
-•	Optimized SiPM operation parameters, including bias voltage and threshold settings, to enhance detector resolution, reduce background noise, and achieve reliable muon flux measurements across multiple structural levels.
-•	Applied the Bethe–Bloch equation and Landau MPV, and implemented a Monte Carlo simulation in Python to model muon energy-loss spectra and predict counting rates
-•	Conducted neutron detection experiments using Am-241 α particles on aluminum foils as a neutron source, identifying the p–t coincidence peak with a He-3 detector and quantifying its energy through calibrated multi-channel spectral analysis.
-Machine Learning for Beam-Space Traffic Pattern Analysis
-Advised by Prof. XXX, The Chinese University of Hong Kong     Research Assistant    10/2024 to 06/2025
-•	Developed end-to-end ML pipelines for large-scale cellular network datasets, implementing feature engineering, normalization, and PyTorch-based data loaders to enable reproducible model training and evaluation.
-•	Trained and optimized a Vector-Quantized Variational Autoencoder (VQ-VAE) by refining network architecture, tuning hyperparameters, and improving training stability to enhance representation quality.
-•	Extracted and analyzed discrete latent embeddings from the VQ-VAE, applying clustering metrics and quantization analysis to identify prototypical traffic patterns and improve interpretability of learned representations.
-•	Surveyed spatio-temporal ML models (Transformers, Graph Neural Networks) and evaluated their applicability to traffic prediction and adaptive scheduling tasks in multi-beam wireless systems.
 
-  </p>
+  <p><strong>FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring</strong><br>
+  <em>Research Assistant, advised by Prof. XXX, SYSU</em><br>
+  Nov. 2024 – Present</p>
+  <ul>
+    <li>Configured Texas Instruments IWR1443BOOST FMCW radar with mmWave Studio to acquire raw echoes for non-contact vital signs monitoring.</li>
+    <li>Implemented approximated Fast Fourier Transform (apFFT) for resolving radar chirp range profiles.</li>
+    <li>Designed preprocessing modules including smoothing-spline fitting, matched filtering, and applied Variational Mode Extraction (VME) to isolate respiration and heartbeat signals under noise.</li>
+    <li>Applied double Chirp-Z Transform (double-CZT) for high-resolution spectral estimation of cardiopulmonary signals.</li>
+    <li>Reproduced and validated benchmark results in MATLAB, demonstrating robustness of the proposed FMCW radar framework.</li>
+  </ul>
+
+  <p><strong>Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems</strong><br>
+  <em>Research Assistant, advised by Prof. XXX, SYSU</em><br>
+  Oct. 2024 – Present</p>
+  <ul>
+    <li>Designed and developed a detection platform using plastic scintillators coupled with Silicon Photomultipliers (SiPMs).</li>
+    <li>Optimized SiPM bias voltage and threshold settings to improve resolution, reduce noise, and measure muon flux across multiple structural levels.</li>
+    <li>Applied Bethe–Bloch equation and Landau MPV; implemented a Monte Carlo simulation in Python to model muon energy-loss spectra and predict counting rates.</li>
+    <li>Conducted neutron detection experiments using Am-241 α particles on aluminum foils as a neutron source, identifying the p–t coincidence peak with a He-3 detector via calibrated spectral analysis.</li>
+  </ul>
+
+  <p><strong>Machine Learning for Beam-Space Traffic Pattern Analysis</strong><br>
+  <em>Research Assistant, advised by Prof. XXX, The Chinese University of Hong Kong</em><br>
+  Oct. 2024 – Jun. 2025</p>
+  <ul>
+    <li>Developed end-to-end ML pipelines for large-scale cellular datasets, including feature engineering, normalization, and PyTorch-based data loaders.</li>
+    <li>Trained and optimized a Vector-Quantized Variational Autoencoder (VQ-VAE), refining architecture and hyperparameters to improve training stability and representation quality.</li>
+    <li>Extracted discrete latent embeddings from the VQ-VAE, applying clustering and quantization metrics to identify prototypical traffic patterns.</li>
+    <li>Reviewed spatio-temporal ML models (Transformers, Graph Neural Networks) for traffic prediction and adaptive scheduling in multi-beam wireless systems.</li>
+  </ul>
+
+  <p><strong>Analysis of Long-Lived Particle Properties with Multiple Detectors</strong><br>
+  <em>Research Assistant, advised by Prof. XXX, SYSU</em><br>
+  Sept. 2023 – Sept. 2024</p>
+  <ul>
+    <li>Reviewed the CHARM fixed-target experiment (400 GeV p–Cu collisions), analyzing methodology and exclusion bounds on long-lived particles (LLPs).</li>
+    <li>Used Pythia8 to simulate proton–proton collisions at LHC energies, producing LLP spectra and decay-length distributions under BSM scenarios.</li>
+    <li>Studied geometry and shielding of the proposed CODEX-b detector at LHCb, evaluating fiducial acceptance for LLP decays.</li>
+    <li>Applied Monte Carlo methods with Geant4 detector simulations to derive sensitivity curves for dark photons and axion-like particles (ALPs), showing CODEX-b’s complementary reach.</li>
+  </ul>
 </section>
+
 
 <section id="Publications">
   <h1 class="page__title">Publications</h1>

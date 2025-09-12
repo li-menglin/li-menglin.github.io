@@ -5,7 +5,6 @@ author_profile: true
 header: false
 ---
 
-
 <section id="Biography">
   <h1 class="page__title">Biography</h1>
   <p>
@@ -26,17 +25,24 @@ header: false
 
 <section id="Education">
   <h1 class="page__title">Education</h1>
-  <p>
-    Sun Yat-sen University (SYSU)	Guangzhou, CN 
-B.Sc. in Physics (Major),  Electronics and Information Science (Minor)                                  Sept. 2022 - Jun. 2026	 
-Overall GPA: 3.6/4.0, ranking 10/75
-•	Core Courses: Radar Principles and Systems, Computer Programming, Optics, Statistical Methods in Physics, Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators, Principles of Lasers, Astronomy Principles, etc.
-•	First-Class Scholarship                                                                                                                        2023 & 2024
-•	Second Prize, The Chinese Mathematics Competitions for College Students, CMC                                      2023
-•	Outstanding Undergraduate Innovation and Entrepreneurship Training Program SYSU                                2024
 
-  </p>
+  <p><strong>Sun Yat-sen University (SYSU), Guangzhou, China</strong><br>
+  <em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em><br>
+  Sept. 2022 – Jun. 2026</p>
+
+  <ul>
+    <li><strong>Overall GPA:</strong> 3.6/4.0 (Top 10/75)</li>
+    <li><strong>Selected Coursework:</strong> Radar Principles and Systems, Computer Programming, Optics, Statistical Methods in Physics, Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators, Principles of Lasers, Astronomy Principles</li>
+    <li><strong>Honors & Awards:</strong>
+      <ul>
+        <li>First-Class Scholarship, 2023 & 2024</li>
+        <li>Second Prize, Chinese Mathematics Competitions for College Students (CMC), 2023</li>
+        <li>Outstanding Undergraduate Innovation and Entrepreneurship Training Program, SYSU, 2024</li>
+      </ul>
+    </li>
+  </ul>
 </section>
+
 
 <section id="Research Experience">
   <h1 class="page__title">Research Experience</h1>
@@ -73,6 +79,14 @@ Advised by Prof. XXX, The Chinese University of Hong Kong     Research Assistant
 
 <section id="Skills">
   <h1 class="page__title">Skills</h1>
+  <ul>
+    <li>C++, Python, MATLAB, Mathematica</li>
+    <li>Pythia8, Proteus, mmWave Studio</li>
+  </ul>
+</section>
+
+<section id="Hobbies and Personalities">
+  <h1 class="page__title">Hobbies and Personalities</h1>
   <ul>
     <li>C++, Python, MATLAB, Mathematica</li>
     <li>Pythia8, Proteus, mmWave Studio</li>

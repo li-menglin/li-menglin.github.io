@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "Biography"
 author_profile: true
 header: false
 ---
@@ -8,10 +8,11 @@ header: false
 <section id="Biography">
   <h2 class="page__title">Biography</h2>
   <p>
-    I am currently a bachelor’s student in Physics (with Electronics and Information Science minor) 
-    at Sun Yat-sen University (SYSU). My research interests lie in the intersection of physics and 
-    information science, especially in healthcare applications (e.g. biomedical signal processing, 
-    sensor technologies in healthcare).
+    I am currently a bachelor’s student in Physics, with a minor in Electronics and Information Science, at Sun Yat-sen University (SYSU). My research interests 
+    lie in the intersection area of physics and information science, especially in healthcare applications such as biomedical signal processing and sensor
+    technologies in healthcare. I have a solid theoretical background with a GPA over 3.6/4.0, and I am a winner of various major scholarships and competitions. 
+    To summarize, I consider myself as a voracious learner and passionate researcher with abundant research experiences. Now I am looking for a Ph.D. opening in 
+    Fall 2026.
   </p>
 
   <strong>Research Interests</strong>

@@ -9,16 +9,16 @@
 
 main:
 - title: "Biography"
-  url: "#biography"
+  url: "#Biography"
 
 - title: "Education"
-  url: "#education"
+  url: "#Education"
 
-- title: "CV"
-  url: "#cv"
+- title: "Research Experience"
+  url: "#Research Experience"
 
 - title: "Publications"
-  url: "#publications"
+  url: "#Publications"
 
-- title: "Talks"
-  url: "#talks"
+- title: "Skills"
+  url: "#Skills"

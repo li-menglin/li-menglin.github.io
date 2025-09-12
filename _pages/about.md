@@ -6,7 +6,6 @@ header: false
 ---
 
 <section id="Biography">
-  <h2 class="page__title">Biography</h2>
   <p>
     I am currently a bachelor’s student in Physics, with a minor in Electronics and Information Science, at Sun Yat-sen University (SYSU). My research interests 
     lie in the intersection area of physics and information science, especially in healthcare applications such as biomedical signal processing and sensor

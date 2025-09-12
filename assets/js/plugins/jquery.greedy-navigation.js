@@ -16,17 +16,19 @@ var breaks = [];
 
 
 function updateNav() {
+  
   // 在 updateNav() 开头加
+  if ($(window).width() > 768) {
+  $hlinks.children().appendTo($vlinks);
+  $btn.addClass('hidden');
+  $hlinks.addClass('hidden');
+  breaks = [];  // 清空折叠记录
+  return;
+  }
   
   if ($(window).width() > 768) return; // 仅在小屏触发折叠
 
-  if ($(window).width() > 768) {
-    $hlinks.children().appendTo($vlinks);
-    $btn.addClass('hidden');
-    $hlinks.addClass('hidden');
-    breaks = [];  // 清空折叠记录
-    return;
-  }
+
   
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() + 10;
 

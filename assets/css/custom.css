@@ -49,7 +49,19 @@ img.author__avatar {
 }
 
 /* === 位置 / 学校等信息 === */
-.author__urls {
-  font-size: 16px !important;
-  line-height: 1.6 !important;
+/* 调整学校名称、地址的字体大小 */
+.author__urls li {
+  font-size: 1.15rem !important;   /* 默认可能是 0.9–1rem，可以调大 */
+  line-height: 1.6;                /* 增加行高，避免太挤 */
+}
+
+/* 调整 Email 链接的字体大小 */
+.author__urls li a {
+  font-size: 1.15rem !important;
+}
+
+/* 调整图标大小，保持和文字协调 */
+.author__urls li i {
+  font-size: 1.2rem !important;
+  margin-right: 6px;
 }

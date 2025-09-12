@@ -13,9 +13,12 @@ var $hlinks = $('#site-nav .hidden-links');
 
 var breaks = [];
 
+// 在 updateNav() 开头加
+if ($(window).width() > 768) return; // 仅在小屏触发折叠
+
 function updateNav() {
 
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() + 1000;
+  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() + 10;
 
   // The visible list is overflowing the nav
   if ($vlinks.width() > availableSpace) {

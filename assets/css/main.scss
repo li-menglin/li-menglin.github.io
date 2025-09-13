@@ -54,3 +54,24 @@ html[data-theme="light"] body {
   background: #fff;
 }
 
+/* 桌面端字体调整 */
+.masthead__menu-item--lg a {
+  font-size: 1.4rem;   /* 桌面主标题更大 */
+  font-weight: 600;
+}
+
+.masthead__menu-item a {
+  font-size: 1.1rem;   /* 桌面菜单略大 */
+  font-weight: 500;
+}
+
+/* 移动端恢复默认大小 */
+@media (max-width: 768px) {
+  .masthead__menu-item--lg a {
+    font-size: 1.2rem;  /* 比默认稍大即可 */
+  }
+
+  .masthead__menu-item a {
+    font-size: 1rem;    /* 恢复正常大小 */
+  }
+}

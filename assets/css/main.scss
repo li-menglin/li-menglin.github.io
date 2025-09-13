@@ -113,3 +113,6 @@ nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
   margin-left: auto; /* 永远顶到最右 */
 }
 
+.page {
+  margin-top: 0 !important;    /* 确保正文没有多余的上边距 */
+}

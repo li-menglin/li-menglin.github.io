@@ -54,29 +54,29 @@ html[data-theme="light"] body {
   background: #fff;
 }
 
+/* 左侧站点标题（略微增大 + 深色突出） */
 .masthead__menu-item--lg.persist a {
-  color: #111 !important;   /* 常态深色 */
-  font-weight: 700;
-  text-decoration: none;     /* 默认无下划线 */
+  font-size: 1.25rem;       /* 比普通导航项大 */
+  color: #111 !important;   /* 深色，突出效果 */
+  font-weight: 700;         /* 加粗醒目 */
 }
 
-.masthead__menu-item--lg.persist a:hover {
-  color: #0056b3;            /* hover 时偏蓝 */
-  text-decoration: underline; /* hover 下划线 */
-}
-
-
-/* 右侧导航字体再小一点，减少折叠 */
+/* 右侧其他导航项字体（略小，避免折叠） */
 .masthead__menu-item:not(.masthead__menu-item--lg) a {
-  font-size: 0.9rem;   /* 比之前再小一些 */
+  font-size: 0.95rem;       /* 稍小，避免挤占空间 */
   font-weight: 500;
-  padding: 0 0.6rem;   /* 默认可能 1rem，这里缩小间距 */
+  padding: 0 0.5rem;        /* 缩小左右间距，减少折叠可能 */
 }
 
-/* 移动端保持正常大小 */
+/* 移动端保持正常大小和舒适间距 */
 @media (max-width: 768px) {
+  .masthead__menu-item--lg.persist a {
+    font-size: 1rem;        /* 小屏幕标题不必太大 */
+  }
   .masthead__menu-item:not(.masthead__menu-item--lg) a {
     font-size: 1rem;
-    padding: 0 1rem;   /* 恢复默认舒适间距 */
+    padding: 0 0.8rem;      /* 恢复舒适间距 */
   }
 }
+
+

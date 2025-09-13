@@ -54,21 +54,29 @@ html[data-theme="light"] body {
   background: #fff;
 }
 
-/* 左侧站点标题（保持大小，但加深颜色突出） */
 .masthead__menu-item--lg.persist a {
-  color: #111 !important;   /* 深色，突出效果 */
-  font-weight: 700;         /* 加粗，让它更醒目 */
+  color: #111 !important;   /* 常态深色 */
+  font-weight: 700;
+  text-decoration: none;     /* 默认无下划线 */
 }
 
-/* 右侧其他导航项字体稍小，避免折叠 */
+.masthead__menu-item--lg.persist a:hover {
+  color: #0056b3;            /* hover 时偏蓝 */
+  text-decoration: underline; /* hover 下划线 */
+}
+
+
+/* 右侧导航字体再小一点，减少折叠 */
 .masthead__menu-item:not(.masthead__menu-item--lg) a {
-  font-size: 0.95rem;  /* 比原来小一点 */
+  font-size: 0.9rem;   /* 比之前再小一些 */
   font-weight: 500;
+  padding: 0 0.6rem;   /* 默认可能 1rem，这里缩小间距 */
 }
 
 /* 移动端保持正常大小 */
 @media (max-width: 768px) {
   .masthead__menu-item:not(.masthead__menu-item--lg) a {
     font-size: 1rem;
+    padding: 0 1rem;   /* 恢复默认舒适间距 */
   }
 }

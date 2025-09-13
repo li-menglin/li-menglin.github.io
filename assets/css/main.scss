@@ -48,6 +48,7 @@
   box-sizing: border-box;
 }
 
+
 /* 2) 保持左侧站点标题放大并加深（确保不被主题覆盖） */
 .masthead__menu-item--lg.persist > a,
 .site-title a,
@@ -59,6 +60,7 @@ nav#site-nav .masthead__menu-item--lg.persist a {
   padding-right: 1rem !important;
 }
 
+
 /* 3) 右侧菜单：字体略微增大但不加粗，缩减左右内边距以避免折叠 */
 .masthead__menu-item:not(.masthead__menu-item--lg) > a {
   font-size: 0.95rem !important;   /* 右侧菜单大小（比模板略大） */
@@ -66,6 +68,7 @@ nav#site-nav .masthead__menu-item--lg.persist a {
   padding: 0 0.1rem !important;    /* 缩小间距，减少占用宽度 */
   white-space: nowrap !important;  /* 每个项内部不换行 */
 }
+
 
 /* 4) 尽量减少 greedy-nav 折叠触发概率（扩展可用空间，强制不换行） */
 /* 禁用 greedy-nav 的隐藏菜单逻辑，强制所有菜单项保持可见 */

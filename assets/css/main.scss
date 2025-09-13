@@ -44,41 +44,35 @@
   margin: 0 auto;
 }
 
-/* 2) 保持右侧菜单与主题一致的字号（恢复模板大小），并紧缩左右内边距 */
-.masthead__menu-item a {
-  font-size: 1rem !important;    /* 与模板一致 */
-  font-weight: 500 !important;
-  padding: 0 0.6rem !important;  /* 缩小左右间距以节省宽度 */
-  white-space: nowrap;           /* 单个菜单项内部不要换行 */
-}
-
-/* 3) 左侧标题略大并加深颜色（按你要求保持更突出） */
+/* 左侧站点标题（略微增大 + 深色突出） */
 .masthead__menu-item--lg.persist a {
-  font-size: 1.15rem !important;
-  font-weight: 700 !important;
-  color: #111 !important;
-  padding-right: 1rem !important;
-  white-space: nowrap;
+  font-size: 1.25rem;       /* 比普通导航项大 */
+  color: #111 !important;   /* 深色，突出效果 */
+  font-weight: 700;         /* 加粗醒目 */
 }
 
-/* 4) 兜底：让 visible-links 尽量不换行（供 greedy 测量时参考） */
-nav#site-nav.greedy-nav .visible-links {
-  flex-wrap: nowrap !important;
-  min-width: 0;
+/* 右侧其他导航项字体（略小，避免折叠） */
+.masthead__menu-item:not(.masthead__menu-item--lg) a {
+  font-size: 0.95rem;       /* 稍小，避免挤占空间 */
+  font-weight: 500;
+  padding: 0 0.5rem;        /* 缩小左右间距，减少折叠可能 */
 }
+
+/* 移动端保持正常大小和舒适间距 */
+@media (max-width: 768px) {
+  .masthead__menu-item--lg.persist a {
+    font-size: 1rem;        /* 小屏幕标题不必太大 */
+  }
+  .masthead__menu-item:not(.masthead__menu-item--lg) a {
+    font-size: 1rem;
+    padding: 0 0.8rem;      /* 恢复舒适间距 */
+  }
+}
+
 
 /* 5) 如果仍然被 greedy-js 移走，作为备选：让溢出项换行而不是显示下拉（避免“更多”下拉） */
 /* 取消注释下面两行会使项目在多时换到下一行显示，而不是进入隐藏菜单 */
 // nav#site-nav.greedy-nav .hidden-links { display: none !important; }
 // nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
-
-/* 6) 移动端恢复舒适间距/字号 */
-@media (max-width: 768px) {
-  .masthead__menu-item a { font-size: 1rem !important; padding: 0 0.9rem !important; }
-  .masthead__menu-item--lg.persist a { font-size: 1rem !important; padding-right: 0.8rem !important; }
-  /* 小屏幕下允许换行（垂直堆叠） */
-  nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
-}
-
 
 

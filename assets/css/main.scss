@@ -104,3 +104,8 @@ nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
   nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
 }
 
+/* 推到最右 + 排序最后 */
+#theme-toggle {
+  margin-left: auto !important;
+  order: 999 !important;
+}

@@ -68,19 +68,17 @@ nav#site-nav .masthead__menu-item--lg.persist a {
 }
 
 /* 4) 尽量减少 greedy-nav 折叠触发概率（扩展可用空间，强制不换行） */
-nav#site-nav.greedy-nav,
-.greedy-nav {
-  max-width: none !important;
+/* 禁用 greedy-nav 的隐藏菜单逻辑，强制所有菜单项保持可见 */
+nav#site-nav.greedy-nav .hidden-links {
+  display: none !important;
 }
 
-nav#site-nav.greedy-nav .visible-links {
-  flex-wrap: nowrap !important;
-  min-width: 0 !important;
+nav#site-nav.greedy-nav .visible-links li {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-.masthead__menu {
-  flex: 1 1 auto !important;
-}
 
 /* 5) 若仍有溢出：作为兜底，允许 visible-links 换行（而不是进入隐藏“更多”菜单）
    注：下面为可选方案，默认注释。若你宁愿换行而不是折叠，请取消注释。 */

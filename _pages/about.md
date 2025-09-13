@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: ""
-author_profile: true
+title: null
+author_profile: false
 header: false
 ---
 

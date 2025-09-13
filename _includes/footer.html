@@ -24,4 +24,30 @@
   Site last updated {{ "now" | date: '%Y-%m-%d' }}
 </div>
 
-<script src="{{ '/assets/js/custom-nav.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var nav = document.getElementById("site-nav");
+  if (!nav) return;
+  var visible = nav.querySelector(".visible-links");
+  var hidden = nav.querySelector(".hidden-links");
+  var btn = nav.querySelector("button");
+
+  // 桌面端强制搬回
+  function restore() {
+    if (window.innerWidth > 768 && hidden) {
+      while (hidden.firstElementChild) {
+        visible.appendChild(hidden.firstElementChild);
+      }
+      hidden.style.display = "none";
+      if (btn) btn.style.display = "none";
+    }
+  }
+
+  // 初始执行 + load 后执行
+  restore();
+  window.addEventListener("load", restore);
+  window.addEventListener("resize", restore);
+});
+</script>

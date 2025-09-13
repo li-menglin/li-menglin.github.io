@@ -44,7 +44,7 @@
 /* 1) 顶栏整体右移，使站点标题与侧栏（头像列）左缘对齐
    （假设侧栏宽度为 280px；若不是，请修改 280px 为你的侧栏宽度） */
 .masthead__inner-wrap {
-  padding-left: 280px !important;
+  padding-left: 0px !important;
   box-sizing: border-box;
 }
 

@@ -40,3 +40,16 @@
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
+   
+.greedy-nav .visible-links {
+      flex-wrap: nowrap;   /* 不要换行 */
+}   
+   
+.greedy-nav {
+   max-width: 100% !important;   /* 撑满可用宽度 */
+}  
+   
+
+.masthead__menu {
+  flex: 1 1 auto;   /* 允许导航栏扩展 */
+}

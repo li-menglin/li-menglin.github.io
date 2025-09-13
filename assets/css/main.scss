@@ -36,47 +36,70 @@
   放在 assets/css/main.scss 的末尾（@import 之后）
    ====================== */
 
-/* 1) 整体右移：让导航栏和左侧栏对齐 */
+/* ---------------------------
+   顶栏与侧栏对齐 + 菜单样式覆盖
+   放到 assets/css/main.scss 的最底部（@import 之后）
+   --------------------------- */
+
+/* 1) 顶栏整体右移，使站点标题与侧栏（头像列）左缘对齐
+   （假设侧栏宽度为 280px；若不是，请修改 280px 为你的侧栏宽度） */
 .masthead__inner-wrap {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 2rem !important;   /* 强制右移 */
+  padding-left: 280px !important;
+  box-sizing: border-box;
 }
 
-/* 左侧站点标题（比右侧大一些 + 深色突出） */
-.site-title a {
-  font-size: 1.4rem !important;    /* 调大标题 */
-  color: #111 !important;          /* 深色突出 */
-  font-weight: 700 !important;     /* 加粗 */
+/* 2) 保持左侧站点标题放大并加深（确保不被主题覆盖） */
+.masthead__menu-item--lg.persist > a,
+.site-title a,
+nav#site-nav .masthead__menu-item--lg.persist a {
+  font-size: 1.30rem !important;   /* 左侧标题大小（可微调） */
+  color: #111111 !important;       /* 深色突出 */
+  font-weight: 700 !important;     /* 加粗突出 */
+  white-space: nowrap !important;  /* 标题不换行 */
+  padding-right: 1rem !important;
 }
 
-/* 右侧菜单项（稍大，避免折叠） */
-.masthead__menu-item a {
-  font-size: 1.05rem !important;   /* 稍微加大 */
+/* 3) 右侧菜单：字体略微增大但不加粗，缩减左右内边距以避免折叠 */
+.masthead__menu-item:not(.masthead__menu-item--lg) > a {
+  font-size: 1.05rem !important;   /* 右侧菜单大小（比模板略大） */
   font-weight: 500 !important;     /* 不加粗 */
-  padding: 0 0.6rem !important;    /* 缩小间距 */
+  padding: 0 0.5rem !important;    /* 缩小间距，减少占用宽度 */
+  white-space: nowrap !important;  /* 每个项内部不换行 */
 }
 
-/* 避免 greedy-nav 提前折叠 */
+/* 4) 尽量减少 greedy-nav 折叠触发概率（扩展可用空间，强制不换行） */
+nav#site-nav.greedy-nav,
 .greedy-nav {
-  max-width: 100% !important;
-}
-.greedy-nav .visible-links {
-  flex-wrap: nowrap !important;   /* 不换行 */
-}
-.masthead__menu {
-  flex: 1 1 auto !important;      /* 撑开可用空间 */
+  max-width: none !important;
 }
 
-/* 移动端保持正常大小 */
+nav#site-nav.greedy-nav .visible-links {
+  flex-wrap: nowrap !important;
+  min-width: 0 !important;
+}
+
+.masthead__menu {
+  flex: 1 1 auto !important;
+}
+
+/* 5) 若仍有溢出：作为兜底，允许 visible-links 换行（而不是进入隐藏“更多”菜单）
+   注：下面为可选方案，默认注释。若你宁愿换行而不是折叠，请取消注释。 */
+/*
+nav#site-nav.greedy-nav .hidden-links { display: none !important; }
+nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
+*/
+
+/* 6) 移动端适配：去掉左移，保持舒适间距 */
 @media (max-width: 768px) {
-  .site-title a {
-    font-size: 1.1rem !important;
-  }
-  .masthead__menu-item a {
+  .masthead__inner-wrap { padding-left: 1rem !important; } /* 小屏不要大左移 */
+  .masthead__menu-item--lg.persist > a,
+  .site-title a { font-size: 1rem !important; padding-right: 0.6rem !important; }
+  .masthead__menu-item:not(.masthead__menu-item--lg) > a {
     font-size: 1rem !important;
     padding: 0 0.8rem !important;
   }
+
+  /* 小屏允许换行，垂直堆叠 */
+  nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
 }
 

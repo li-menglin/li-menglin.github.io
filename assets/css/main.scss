@@ -1,26 +1,15 @@
 ---
 ---
 
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
-
 @import
     "vendor/breakpoint/breakpoint",
-
     "themes",
     "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
     "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
-
     "include/mixins",
     "vendor/susy/susy",
-
     "layout/reset",
     "layout/base",
-
     "include/utilities",
     "layout/tables",
     "layout/buttons",
@@ -29,16 +18,39 @@
     "layout/navigation",
     "layout/footer",
     "syntax",
-
     "layout/forms",
-
     "layout/page",
     "layout/archive",
     "layout/sidebar",
     "layout/json_cv",
-
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-   
-@import "custom";
+    "vendor/font-awesome/brands";
+
+/* ==================== */
+/* 你自己的覆盖样式写在这里 */
+/* ==================== */
+
+.greedy-nav .visible-links {
+  flex-wrap: nowrap;   /* 不要换行 */
+}
+
+.greedy-nav {
+  max-width: 100% !important;   /* 撑满可用宽度 */
+}
+
+.masthead__menu {
+  flex: 1 1 auto;   /* 允许导航栏扩展 */
+}
+
+/* 示例：修复暗黑模式字体 */
+html[data-theme="dark"] body {
+  color: #eaeaea;
+  background: #121212;
+}
+
+html[data-theme="light"] body {
+  color: #222;
+  background: #fff;
+}
+

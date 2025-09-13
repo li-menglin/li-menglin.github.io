@@ -36,43 +36,48 @@
   放在 assets/css/main.scss 的末尾（@import 之后）
    ====================== */
 
-/* 1) 扩展导航栏可用空间（让 masthead 能撑开，减小被 greedy-js 判定为溢出的概率） */
-.masthead__inner-wrap,
-.masthead__menu {
-  max-width: 1200px;       /* 根据需要调大/调小（例如 1200 或 1400） */
+/* 1) 让导航栏整体右移，对齐左侧栏（头像/姓名） */
+.masthead__inner-wrap {
+  max-width: 1200px;   /* 控制整体宽度 */
   width: 100%;
   margin: 0 auto;
+  padding-left: 2rem;  /* 适当右移，保证和左栏对齐 */
 }
 
-/* 左侧站点标题（略微增大 + 深色突出） */
+/* 左侧站点标题（比右侧大一些 + 深色突出） */
 .masthead__menu-item--lg.persist a {
-  font-size: 1.25rem;       /* 比普通导航项大 */
-  color: #111 !important;   /* 深色，突出效果 */
-  font-weight: 700;         /* 加粗醒目 */
+  font-size: 1.3rem;       /* 比普通菜单大一些 */
+  color: #111 !important;  /* 深色突出 */
+  font-weight: 700;        /* 加粗 */
 }
 
-/* 右侧其他导航项字体（略小，避免折叠） */
+/* 右侧菜单项（稍大，避免折叠） */
 .masthead__menu-item:not(.masthead__menu-item--lg) a {
-  font-size: 0.95rem;       /* 稍小，避免挤占空间 */
-  font-weight: 500;
-  padding: 0 0.5rem;        /* 缩小左右间距，减少折叠可能 */
+  font-size: 1.05rem;   /* 稍微加大，接近模板默认 */
+  font-weight: 500;     /* 保持正常字重 */
+  padding: 0 0.6rem;    /* 调整间距，减少折叠 */
 }
 
-/* 移动端保持正常大小和舒适间距 */
+/* 避免 greedy-nav 提前折叠 */
+.greedy-nav {
+  max-width: 100% !important;
+}
+.greedy-nav .visible-links {
+  flex-wrap: nowrap;   /* 不换行 */
+}
+.masthead__menu {
+  flex: 1 1 auto;      /* 撑开可用空间 */
+}
+
+/* 移动端保持舒适大小 */
 @media (max-width: 768px) {
   .masthead__menu-item--lg.persist a {
-    font-size: 1rem;        /* 小屏幕标题不必太大 */
+    font-size: 1rem;   /* 小屏不必太大 */
   }
   .masthead__menu-item:not(.masthead__menu-item--lg) a {
     font-size: 1rem;
-    padding: 0 0.8rem;      /* 恢复舒适间距 */
+    padding: 0 0.8rem; /* 恢复舒适间距 */
   }
 }
-
-
-/* 5) 如果仍然被 greedy-js 移走，作为备选：让溢出项换行而不是显示下拉（避免“更多”下拉） */
-/* 取消注释下面两行会使项目在多时换到下一行显示，而不是进入隐藏菜单 */
-// nav#site-nav.greedy-nav .hidden-links { display: none !important; }
-// nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
 
 

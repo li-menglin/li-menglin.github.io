@@ -1,68 +1,66 @@
-/* 引入原始样式 */
+/* ===============================
+   基础引入
+   =============================== */
 @import "main";
 
-/* === 头像 === */
+/* ===============================
+   左侧 Sidebar
+   =============================== */
+/* 头像 */
 img.author__avatar {
-  width: 220px !important;     /* 稍微小一点，避免压缩右侧正文 */
+  width: 220px !important;
   height: auto !important;
-  max-width: none !important;
   border-radius: 50%;
   display: block;
   margin: 0 auto 15px auto;
 }
 
-/* 手机屏幕自适应 */
-
-
-/* === 姓名 === */
+/* 姓名 */
 .author__name {
-  font-size: 30px !important;   /* 略微缩小，和正文比例更协调 */
+  font-size: 30px !important;
   font-weight: 700 !important;
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* === 简短描述 === */
+/* 副标题简介 */
 .author__bio {
-  font-size: 16.5px !important; /* 稍小一点，作为副标题 */
+  font-size: 16.5px !important;
   line-height: 1.5 !important;
   text-align: center;
   margin-bottom: 15px;
-  color: #555;                  /* 灰色，弱化 */
+  color: #555;
 }
 
-/* === 位置 / 学校 / Email 等 === */
+/* 位置 / 学校 / Email */
 .author__urls li {
-  font-size: 0.85rem !important;   /* 比正文略小 */
+  font-size: 0.85rem !important;
   line-height: 1.25;
   margin-bottom: 5px;
 }
-
-.author__urls li a {
-  font-size: inherit !important;
-}
-
+.author__urls li a { font-size: inherit !important; }
 .author__urls li i {
-  font-size: 0.9rem !important; /* 图标稍微缩小 */
+  font-size: 0.9rem !important;
   margin-right: 5px;
   color: #444;
 }
 
-/* === 正文容器整体 === */
+/* ===============================
+   正文内容区
+   =============================== */
 .page__inner-wrap {
-  max-width: 900px;      /* 宽度稍大，正文更舒展 */
+  max-width: 950px;  /* 稍微放大正文宽度 */
   margin: 0 auto;
-  padding: 25px 35px;
+  padding: 25px 35px 25px 35px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  padding-right: 1rem;
-  line-height: 1.65; /* 更舒适的行距 */
+  line-height: 1.65;
 }
 
-/* === 标题 === */
+/* 一级标题（如 Biography / Education） */
 .page__title {
-  font-size: 32px !important;   /* 突出，保持层级 */
+  font-size: 32px !important;
   font-weight: 700;
   margin-bottom: 20px;
   text-align: left;
@@ -70,15 +68,15 @@ img.author__avatar {
   padding-bottom: 8px;
 }
 
-/* === 正文段落 === */
+/* 正文段落 */
 .page__content p {
-  font-size: 18.5px;            /* 略微增大，主体感更强 */
+  font-size: 18.5px;
   line-height: 1.8;
   margin-bottom: 18px;
   color: #222;
 }
 
-/* === 强调文字（比如 research interests） === */
+/* 强调文字块（如 Research Interests） */
 .page__content strong {
   display: block;
   font-size: 20px;
@@ -88,124 +86,83 @@ img.author__avatar {
   text-transform: capitalize;
 }
 
-/* === 列表 === */
+/* 列表 */
 .page__content ul {
   margin: 0 0 22px 22px;
   padding: 0;
   list-style-type: disc;
 }
-
 .page__content li {
   font-size: 18px;
   margin-bottom: 10px;
   line-height: 1.65;
 }
 
-:root {
-  scroll-padding-top: 70px; /* 根据导航栏高度调整，比如 70~100px 80px*/
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* 增加顶部导航栏整体宽度 */
-.masthead__menu {
-    max-width: 1200px;  /* 根据需要调整，可改成更大值 */
-    width: 100%;
-}
-
-/* 增加可见菜单项容器宽度，防止被 greedy-nav 自动隐藏 */
-.masthead__menu .visible-links {
-    min-width: 0;        /* 保持灵活，或设置更大宽度 */
-    display: flex;
-    flex-shrink: 0;
-    flex-wrap: nowrap;    /* 不换行，尽量显示在一行 */
-}
-
-#site-nav.no-greedy .hidden-links {
-    display: flex !important;
-    position: static !important;
-}
-
-/* 让左侧头像和右侧Biography标题对齐 */
+/* 左侧头像和正文对齐 */
 .page__content section:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* 1) 顶栏整体右移，使站点标题与侧栏（头像列）左缘对齐
-   （假设侧栏宽度为 280px；若不是，请修改 280px 为你的侧栏宽度） */
+/* ===============================
+   导航栏
+   =============================== */
+:root { scroll-padding-top: 70px; }
+html { scroll-behavior: smooth; }
+
+/* 顶栏容器 */
 .masthead__inner-wrap {
-  padding-left: 0px !important;
+  padding-left: 0 !important;
   box-sizing: border-box;
 }
 
-
-/* 2) 保持左侧站点标题放大并加深（确保不被主题覆盖） */
+/* 网站标题（左上角） */
 .masthead__menu-item--lg.persist > a,
-.site-title a,
-nav#site-nav .masthead__menu-item--lg.persist a {
-  font-size: 1.30rem !important;   /* 左侧标题大小（可微调） */
-  color: #111111 !important;       /* 深色突出 */
-  font-weight: 700 !important;     /* 加粗突出 */
-  white-space: nowrap !important;  /* 标题不换行 */
+.site-title a {
+  font-size: 1.3rem !important;
+  color: #111 !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
   padding-right: 1rem !important;
 }
 
-
-/* 3) 右侧菜单：字体略微增大但不加粗，缩减左右内边距以避免折叠 */
+/* 菜单项 */
 .masthead__menu-item:not(.masthead__menu-item--lg) > a {
-  font-size: 1.05rem !important;   /* 右侧菜单大小（比模板略大） */
-  font-weight: 450 !important;     /* 不加粗 */
-  padding: 0 0.1rem !important;    /* 缩小间距，减少占用宽度 */
-  white-space: nowrap !important;  /* 每个项内部不换行 */
+  font-size: 1.05rem !important;
+  font-weight: 450 !important;
+  padding: 0 0.1rem !important;
+  white-space: nowrap !important;
 }
 
-
-/* 4) 尽量减少 greedy-nav 折叠触发概率（扩展可用空间，强制不换行） */
-/* 禁用 greedy-nav 的隐藏菜单逻辑，强制所有菜单项保持可见 */
-nav#site-nav.greedy-nav .hidden-links {
-  display: none !important;
+/* 保持菜单项可见，避免 greedy-nav 折叠 */
+nav#site-nav.greedy-nav .hidden-links { display: none !important; }
+nav#site-nav.greedy-nav .visible-links {
+  display: flex !important;
+  flex-wrap: nowrap !important;
 }
-
 nav#site-nav.greedy-nav .visible-links li {
   display: inline-flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
 }
 
+/* 顶栏右侧的主题切换按钮 */
+#site-nav { display: flex; align-items: center; }
+#theme-toggle { margin-left: auto; }
 
-/* 5) 若仍有溢出：作为兜底，允许 visible-links 换行（而不是进入隐藏“更多”菜单）
-   注：下面为可选方案，默认注释。若你宁愿换行而不是折叠，请取消注释。 */
-
-nav#site-nav.greedy-nav .hidden-links { display: none !important; }
-nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
-
-
-/* 6) 移动端适配：去掉左移，保持舒适间距 */
+/* ===============================
+   移动端优化
+   =============================== */
 @media (max-width: 768px) {
-  .masthead__inner-wrap { padding-left: 1rem !important; } /* 小屏不要大左移 */
+  .masthead__inner-wrap { padding-left: 1rem !important; }
   .masthead__menu-item--lg.persist > a,
   .site-title a { font-size: 1rem !important; padding-right: 0.6rem !important; }
   .masthead__menu-item:not(.masthead__menu-item--lg) > a {
     font-size: 1rem !important;
     padding: 0 0.8rem !important;
   }
-
-  /* 小屏允许换行，垂直堆叠 */
   nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
 }
 
-#site-nav {
-  display: flex;
-  align-items: center;
-}
-
-#theme-toggle {
-  margin-left: auto; /* 永远顶到最右 */
-}
-
-.page {
-  margin-top: 0 !important;    /* 确保正文没有多余的上边距 */
-}
+/* ===============================
+   其他
+   =============================== */
+.page { margin-top: 0 !important; }

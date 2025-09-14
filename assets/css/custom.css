@@ -1,21 +1,27 @@
 /* ===============================
-   基础引入
+   引入主题入口（保留）
    =============================== */
 @import "main";
 
+
 /* ===============================
-   左侧 Sidebar
+   强制恢复：头像（高优先级，避免被覆盖）
+   说明：侧栏内 div 和 img 同名 class（author__avatar），
+   所以尽量用更具体的选择器定位 img 元素。
    =============================== */
-/* 头像 */
+.sidebar .author__avatar img.author__avatar,
 img.author__avatar {
   width: 220px !important;
   height: auto !important;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 15px auto;
+  max-width: none !important;
+  border-radius: 50% !important;
+  display: block !important;
+  margin: 0 auto 15px auto !important;
 }
 
-/* 姓名 */
+/* ===============================
+   Sidebar：姓名 / 简介 / 联系方式
+   =============================== */
 .author__name {
   font-size: 30px !important;
   font-weight: 700 !important;
@@ -23,7 +29,6 @@ img.author__avatar {
   margin-bottom: 10px;
 }
 
-/* 副标题简介 */
 .author__bio {
   font-size: 16.5px !important;
   line-height: 1.5 !important;
@@ -32,7 +37,6 @@ img.author__avatar {
   color: #555;
 }
 
-/* 位置 / 学校 / Email */
 .author__urls li {
   font-size: 0.85rem !important;
   line-height: 1.25;
@@ -45,20 +49,21 @@ img.author__avatar {
   color: #444;
 }
 
+
 /* ===============================
-   正文内容区
+   正文区（page）
    =============================== */
 .page__inner-wrap {
-  max-width: 950px;  /* 稍微放大正文宽度 */
+  max-width: 950px;
   margin: 0 auto;
-  padding: 25px 35px 25px 35px;
+  padding: 25px 35px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   line-height: 1.65;
 }
 
-/* 一级标题（如 Biography / Education） */
+/* 标题 / content */
 .page__title {
   font-size: 32px !important;
   font-weight: 700;
@@ -67,16 +72,12 @@ img.author__avatar {
   border-bottom: 2px solid #eee;
   padding-bottom: 8px;
 }
-
-/* 正文段落 */
 .page__content p {
   font-size: 18.5px;
   line-height: 1.8;
   margin-bottom: 18px;
   color: #222;
 }
-
-/* 强调文字块（如 Research Interests） */
 .page__content strong {
   display: block;
   font-size: 20px;
@@ -85,8 +86,6 @@ img.author__avatar {
   color: #333;
   text-transform: capitalize;
 }
-
-/* 列表 */
 .page__content ul {
   margin: 0 0 22px 22px;
   padding: 0;
@@ -98,25 +97,58 @@ img.author__avatar {
   line-height: 1.65;
 }
 
-/* 左侧头像和正文对齐 */
+/* 使正文第一节顶部不多出空白（头像对齐问题） */
 .page__content section:first-child {
   margin-top: 0;
   padding-top: 0;
 }
 
 /* ===============================
-   导航栏
+   导航栏（仅针对 nav#site-nav，避免影响其他布局）
+   说明：尽量不要对 masthead 或全局容器应用 broad flex。
    =============================== */
+
+/* 平滑滚动偏移 */
 :root { scroll-padding-top: 70px; }
 html { scroll-behavior: smooth; }
 
-/* 顶栏容器 */
-.masthead__inner-wrap {
-  padding-left: 0 !important;
-  box-sizing: border-box;
+/* 只对 nav#site-nav 做垂直居中与布局管理 */
+nav#site-nav {
+  display: flex !important;
+  align-items: center !important; /* 垂直居中菜单项 */
+  width: 100%;
 }
 
-/* 网站标题（左上角） */
+/* visible-links 是 nav 的一部分，保证它为 flex 并垂直居中 */
+nav#site-nav > .visible-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem;
+  flex-wrap: nowrap !important;
+}
+
+/* hidden-links 也保证为 inline-flex（兜底） */
+nav#site-nav > .hidden-links {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* 每个 li 元素垂直居中，不要影响 sidebar */
+nav#site-nav .visible-links > li,
+nav#site-nav .hidden-links > li {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* 把主题切换按钮固定在最右 */
+#theme-toggle {
+  margin-left: auto !important;
+  order: 999 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* 保持左上标题样式（不改变其垂直居中） */
 .masthead__menu-item--lg.persist > a,
 .site-title a {
   font-size: 1.3rem !important;
@@ -126,7 +158,7 @@ html { scroll-behavior: smooth; }
   padding-right: 1rem !important;
 }
 
-/* 菜单项 */
+/* 右侧菜单项大小（略增大） */
 .masthead__menu-item:not(.masthead__menu-item--lg) > a {
   font-size: 1.05rem !important;
   font-weight: 450 !important;
@@ -134,44 +166,12 @@ html { scroll-behavior: smooth; }
   white-space: nowrap !important;
 }
 
-/* 保持菜单项可见，避免 greedy-nav 折叠 */
+/* 如果你仍然要尽量防止 greedy 折叠（兜底） */
 nav#site-nav.greedy-nav .hidden-links { display: none !important; }
-nav#site-nav.greedy-nav .visible-links {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-}
-nav#site-nav.greedy-nav .visible-links li {
-  display: inline-flex !important;
-}
-
-/* 让导航栏菜单始终在中线水平居中 */
-.masthead,
-.masthead__inner-wrap,
-.greedy-nav,
-.greedy-nav .visible-links,
-.greedy-nav .hidden-links {
-  display: flex;
-  align-items: center;  /* 垂直居中对齐 */
-}
-
-/* 修正菜单项和图标的垂直对齐 */
-.masthead__menu-item a,
-#theme-toggle a {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 保证图标也在中间 */
-  height: 100%;
-  line-height: normal; /* 避免被文字行高撑偏 */
-  padding: 0.5rem 0.75rem;
-}
-
-
-/* 顶栏右侧的主题切换按钮 */
-#site-nav { display: flex; align-items: center; }
-#theme-toggle { margin-left: auto; }
+nav#site-nav.greedy-nav .visible-links { flex-wrap: nowrap !important; }
 
 /* ===============================
-   移动端优化
+   移动端
    =============================== */
 @media (max-width: 768px) {
   .masthead__inner-wrap { padding-left: 1rem !important; }
@@ -185,6 +185,6 @@ nav#site-nav.greedy-nav .visible-links li {
 }
 
 /* ===============================
-   其他
+   小修（避免意外影响）
    =============================== */
 .page { margin-top: 0 !important; }

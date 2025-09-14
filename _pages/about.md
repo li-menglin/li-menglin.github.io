@@ -29,26 +29,24 @@ header: false
 
 <section id="education">
   <h2 class="page__title">Education</h2>
-  <div class="education-list">
 
-    <div class="education-item">
-      <div class="edu-logo">
-        <img src="/images/sysu-logo.png" alt="SYSU Logo">
-      </div>
-      <div class="edu-content">
-        <h3>Sun Yat-sen University (SYSU), Guangzhou, China</h3>
-        <p><em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em></p>
-        <span class="date">Sept. 2022 – Jun. 2026</span>
-        <ul>
-          <li>GPA: 3.6/4.0 (Top 10/75)</li>
-          <li>Courses: Radar Principles, Optics, Quantum Mechanics, Particle Accelerators, etc.</li>
-          <li>Awards: First-Class Scholarship, CMC 2nd Prize, SYSU Innovation Program</li>
-        </ul>
-      </div>
+  <div class="content-card education-item">
+    <div class="edu-logo">
+      <img src="/images/sysu-logo.png" alt="SYSU Logo">
     </div>
-
+    <div class="edu-content">
+      <h3>Sun Yat-sen University (SYSU), Guangzhou, China</h3>
+      <p class="degree"><em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em></p>
+      <span class="date">Sept. 2022 – Jun. 2026</span>
+      <ul>
+        <li><strong>GPA:</strong> 3.6/4.0 (Top 10/75)</li>
+        <li><strong>Courses:</strong> Radar Principles, Optics, Quantum Mechanics, Particle Accelerators, etc.</li>
+        <li><strong>Awards:</strong> First-Class Scholarship, CMC 2nd Prize, SYSU Innovation Program</li>
+      </ul>
+    </div>
   </div>
 </section>
+
 
 <section id="research">
   <h2 class="page__title">Research Experience</h2>

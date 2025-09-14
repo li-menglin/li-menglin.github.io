@@ -31,7 +31,7 @@ header: false
 
     <div class="education-item">
       <div class="edu-logo">
-        <img src="/assets/img/sysu-logo.png" alt="SYSU Logo">
+        <img src="/images/sysu-logo.png" alt="SYSU Logo">
       </div>
       <div class="edu-content">
         <h3>Sun Yat-sen University (SYSU), Guangzhou, China</h3>

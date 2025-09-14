@@ -169,7 +169,7 @@ nav#site-nav .hidden-links > li {
 /*菜单栏对齐正文*/
 /* 只针对菜单项（除标题外）设置左 margin，避免整体右移 */
 nav#site-nav .visible-links > li:not(.masthead__menu-item--lg) {
-  margin-left: 35px; /* 根据 .page__inner-wrap padding 调整 */
+  margin-left: 0px; /* 根据 .page__inner-wrap padding 调整 */
 }
 
 

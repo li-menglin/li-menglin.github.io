@@ -1,2 +1,112 @@
+---
+---
 /* 占位用，避免 Jekyll 报错 */
 /* 所有自定义样式请写在 assets/css/custom.css */
+/* ========== Research Experience 卡片 ========== */
+.research-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 两列 */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.research-cards .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.research-cards h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #007acc;
+}
+
+.research-cards p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.research-cards ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+
+/* ========== Education 时间轴 ========== */
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 3px solid #007acc;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #007acc;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.timeline-content .date {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* ========== Publications 样式 ========== */
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-list li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.pub-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007acc;
+  font-weight: bold;
+}
+
+.pub-list p {
+  margin: 0;
+  line-height: 1.5;
+}

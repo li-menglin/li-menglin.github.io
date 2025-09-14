@@ -73,30 +73,54 @@ section {
 
 
 /* ========== Education Section ========== */
-.education-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-}
-
+/* --- Education Section --- */
 .education-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.education-item:hover {
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  transform: translateY(-3px);
-  transition: all 0.2s ease-in-out;
+.education-item .edu-logo {
+  flex: 0 0 80px;   /* 控制 logo 宽度 */
 }
 
-/* 左侧校徽 */
+.education-item .edu-logo img {
+  max-width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.education-item .edu-content {
+  flex: 1;
+}
+
+.education-item h3 {
+  font-size: 1.2rem;
+  margin: 0 0 6px 0;
+  color: #222;
+}
+
+.education-item .degree {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.education-item .date {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.education-item ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* 左侧校徽 
 .edu-logo img {
   width: 60px;
   height: 60px;
@@ -104,7 +128,7 @@ section {
   border-radius: 8px;
 }
 
-/* 右侧文字内容 */
+ 右侧文字内容 
 .edu-content {
   flex: 1;
 }
@@ -135,3 +159,4 @@ section {
   color: #444;
   line-height: 1.5;
 }
+*/

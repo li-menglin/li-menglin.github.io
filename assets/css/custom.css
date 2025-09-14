@@ -97,7 +97,7 @@ img.author__avatar {
   line-height: 1.65;
 }
 
-/* 使正文第一节顶部不多出空白（头像对齐问题） */
+/* 使正文不多出空白（头像对齐问题） */
 .page__content section:first-child {
   margin-top: 0;
   padding-top: 0;
@@ -165,6 +165,12 @@ nav#site-nav .hidden-links > li {
   padding: 0 0.1rem !important;
   white-space: nowrap !important;
 }
+
+/*菜单栏对齐正文*/
+nav#site-nav > .visible-links {
+  margin-left: calc(35px + 0.5rem); /* 35px 是正文 padding */
+}
+
 
 /* 合并自 custom.scss */
 /*.greedy-nav { max-width: 100% !important; }

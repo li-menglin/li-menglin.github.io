@@ -144,6 +144,28 @@ nav#site-nav.greedy-nav .visible-links li {
   display: inline-flex !important;
 }
 
+/* 让导航栏菜单始终在中线水平居中 */
+.masthead,
+.masthead__inner-wrap,
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .hidden-links {
+  display: flex;
+  align-items: center;  /* 垂直居中对齐 */
+}
+
+/* 修正菜单项和图标的垂直对齐 */
+.masthead__menu-item a,
+#theme-toggle a {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 保证图标也在中间 */
+  height: 100%;
+  line-height: normal; /* 避免被文字行高撑偏 */
+  padding: 0.5rem 0.75rem;
+}
+
+
 /* 顶栏右侧的主题切换按钮 */
 #site-nav { display: flex; align-items: center; }
 #theme-toggle { margin-left: auto; }

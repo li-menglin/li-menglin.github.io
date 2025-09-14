@@ -48,36 +48,54 @@ header: false
   </div>
 </section>
 
-<section id="research-experience">
+<section id="research">
   <h2 class="page__title">Research Experience</h2>
-  <div class="research-cards">
 
-    <div class="card">
-      <h3>Study of Dual-End Readout PET Detectors</h3>
-      <p><strong>Supervisor:</strong> Prof. Jie Feng | <strong>Institution:</strong> Sun Yat-sen University</p>
-      <p>Investigated SiPM-based PET detectors, focusing on timing resolution optimization for TOF-PET systems.</p>
-    </div>
+  <div class="research-grid">
 
-    <div class="card">
-      <h3>Cosmic-Ray Telescope Hardware Development</h3>
-      <p><strong>Supervisor:</strong> Prof. Su | <strong>Institution:</strong> Sun Yat-sen University</p>
-      <p>Built a plastic scintillator telescope with full readout chain (spectroscopy, single-channel, coincidence), calibrated thresholds, and measured counting rates.</p>
-    </div>
+    <!-- Research Card 1 -->
+    <a href="/research/research1.html" class="research-card">
+      <div class="card-image">
+        <img src="/images/research1-cover.jpg" alt="Research Project 1">
+      </div>
+      <div class="card-content">
+        <h3>Cosmic Ray Telescope with Plastic Scintillators</h3>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>FMCW Radar for Cardiopulmonary Monitoring</h3>
-      <p><strong>Course Project:</strong> Radar Principles and Systems | <strong>Institution:</strong> SYSU</p>
-      <p>Simulated FMCW radar signals in Mathematica, extracted respiratory and heartbeat frequencies, and visualized spectra.</p>
-    </div>
+    <!-- Research Card 2 -->
+    <a href="/research/research2.html" class="research-card">
+      <div class="card-image">
+        <img src="/images/research2-cover.jpg" alt="Research Project 2">
+      </div>
+      <div class="card-content">
+        <h3>Dual-End Readout PET Detectors with SiPM</h3>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>LLP Search with CODEX-b Experiment</h3>
-      <p><strong>Supervisor:</strong> Prof. Tang | <strong>Institution:</strong> SYSU</p>
-      <p>Applied Monte Carlo methods to compute LLP decay distributions and derived sensitivity curves for dark photon and axion models.</p>
-    </div>
+    <!-- Research Card 3 -->
+    <a href="/research/research3.html" class="research-card">
+      <div class="card-image">
+        <img src="/images/research3-cover.jpg" alt="Research Project 3">
+      </div>
+      <div class="card-content">
+        <h3>FMCW Radar for Cardiopulmonary Monitoring</h3>
+      </div>
+    </a>
+
+    <!-- Research Card 4 -->
+    <a href="/research/research4.html" class="research-card">
+      <div class="card-image">
+        <img src="/images/research4-cover.jpg" alt="Research Project 4">
+      </div>
+      <div class="card-content">
+        <h3>Semiconductor Physics & Microelectronics</h3>
+      </div>
+    </a>
 
   </div>
 </section>
+
 
 
 <section id="Skills">

@@ -12,10 +12,10 @@ main:
   url: "#Biography"
 
 - title: "Education"
-  url: "#Education"
+  url: "#education"
 
 - title: "Research Experience"
-  url: "#Research Experience"
+  url: "#research"
   
 - title: "Skills"
   url: "#Skills"

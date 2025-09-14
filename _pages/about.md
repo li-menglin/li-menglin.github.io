@@ -68,7 +68,7 @@ header: false
     <!-- Research Card 2 -->
     <a href="/research/research2.html" class="research-card">
       <div class="card-image">
-        <img src="/images/research2-cover.jpg" alt="Research Project 2">
+        <img src="/images/research2-cover.png" alt="Research Project 2">
       </div>
       <div class="card-content">
         <h3>Dual-End Readout PET Detectors with SiPM</h3>
@@ -78,7 +78,7 @@ header: false
     <!-- Research Card 3 -->
     <a href="/research/research3.html" class="research-card">
       <div class="card-image">
-        <img src="/images/research3-cover.jpg" alt="Research Project 3">
+        <img src="/images/research3-cover.png" alt="Research Project 3">
       </div>
       <div class="card-content">
         <h3>FMCW Radar for Cardiopulmonary Monitoring</h3>
@@ -88,7 +88,7 @@ header: false
     <!-- Research Card 4 -->
     <a href="/research/research4.html" class="research-card">
       <div class="card-image">
-        <img src="/images/research4-cover.jpg" alt="Research Project 4">
+        <img src="/images/research4-cover.png" alt="Research Project 4">
       </div>
       <div class="card-content">
         <h3>Semiconductor Physics & Microelectronics</h3>

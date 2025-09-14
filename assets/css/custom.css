@@ -167,12 +167,13 @@ nav#site-nav .hidden-links > li {
 }
 
 /* 合并自 custom.scss */
-.greedy-nav { max-width: 100% !important; }
-.masthead__menu { flex: 1 1 auto; }
+/*.greedy-nav { max-width: 100% !important; }
+.masthead__menu { flex: 1 1 auto; }*/
 
 /* 如果你仍然要尽量防止 greedy 折叠（兜底） */
-nav#site-nav.greedy-nav .hidden-links { display: none !important; }
-nav#site-nav.greedy-nav .visible-links { flex-wrap: nowrap !important; }
+/*nav#site-nav.greedy-nav .hidden-links { display: none !important; }*/
+/*nav#site-nav.greedy-nav .visible-links { flex-wrap: nowrap !important; }*/
+
 
 /* ===============================
    移动端

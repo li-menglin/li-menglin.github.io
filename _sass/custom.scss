@@ -1,40 +1,44 @@
 /* 占位用，避免 Jekyll 报错 */
 /* 所有自定义样式请写在 assets/css/custom.css */
 /* ========== Research Experience 卡片 ========== */
-.research-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 两列 */
-  gap: 20px;
+/* ========== Research Experience Section ========== */
+.research-grid {
+  display: flex;
+  flex-direction: column;   /* 垂直排列 */
+  gap: 30px;                /* 卡片间距 */
   margin-top: 20px;
 }
 
-.research-cards .card {
+.research-card {
+  display: block;
   background: #fff;
   border-radius: 12px;
-  padding: 20px;
+  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.research-cards .card:hover {
+.research-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.research-cards h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #007acc;
+.card-image img {
+  width: 100%;
+  height: 220px;       /* 固定高度，保证整齐 */
+  object-fit: cover;   /* 保持比例裁切 */
 }
 
-.research-cards p {
-  margin: 0.5rem 0;
-  line-height: 1.5;
+.card-content {
+  padding: 15px 20px;
+  text-align: center;
 }
 
-.research-cards ul {
-  padding-left: 20px;
+.card-content h3 {
   margin: 0;
+  font-size: 1.3rem;
+  color: #007acc;
 }
 
 

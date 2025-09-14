@@ -1,162 +1,137 @@
-/* 占位用，避免 Jekyll 报错 */
-/* 所有自定义样式请写在 assets/css/custom.css */
-/* ========== Research Experience 卡片 ========== */
-/* ========== Research Experience Section ========== */
-/* Section spacing */
+/* ========== Section 全局 spacing ========== */
 section {
   margin-bottom: 60px;  /* 控制 section 之间的空白 */
 }
 
-/* Research grid */
+/* ========== 通用卡片风格（所有 section 统一） ========== */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.card-content {
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 标题 */
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* 强调/副标题 */
+.card p em {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card .date {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin: 5px 0 12px 0;
+}
+
+/* 列表统一 */
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ========== Research Section ========== */
 .research-grid {
   display: grid;
-  grid-template-columns: 1fr; /* 一列排列，大卡片效果 */
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
 .research-card {
   display: block;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
   text-decoration: none;
-  background: #fff;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
 }
 
-.research-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-/* Research images: 固定比例缩放 */
 .research-card .card-image {
   width: 100%;
-  aspect-ratio: 16/9;  /* 图片比例：16:9，可改成 4/3 */
+  aspect-ratio: 16/9;
   overflow: hidden;
 }
 
 .research-card .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* 自动裁剪，保持比例 */
+  object-fit: cover;
 }
 
 .research-card .card-content {
-  padding: 20px;
   text-align: center;
   background: #fafafa;
 }
 
-.research-card .card-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Biography, Skills, Publications: 卡片风格 */
-.bio-card, .skill-card, .pub-card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
+/* ========== Biography Section ========== */
+.bio-card {
   padding: 20px;
-  margin-bottom: 20px;
-  background: #fff;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-.bio-card:hover, .skill-card:hover, .pub-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-
-
 
 /* ========== Education Section ========== */
-/* --- Education Section --- */
 .education-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  padding: 20px;
 }
 
-.education-item .edu-logo {
-  flex: 0 0 80px;   /* 控制 logo 宽度 */
+.edu-logo {
+  flex: 0 0 80px;
 }
 
-.education-item .edu-logo img {
-  max-width: 80px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.education-item .edu-content {
-  flex: 1;
-}
-
-.education-item h3 {
-  font-size: 1.2rem;
-  margin: 0 0 6px 0;
-  color: #222;
-}
-
-.education-item .degree {
-  margin: 0 0 6px 0;
-  font-size: 1rem;
-  color: #444;
-}
-
-.education-item .date {
-  display: inline-block;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.education-item ul {
-  margin: 0;
-  padding-left: 18px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* 左侧校徽 
 .edu-logo img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
   border-radius: 8px;
 }
 
- 右侧文字内容 
 .edu-content {
   flex: 1;
 }
 
-.edu-content h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #007acc;
+/* ========== Skills Section ========== */
+.skill-card {
+  padding: 20px;
 }
 
-.edu-content p {
-  margin: 5px 0;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.edu-content .date {
-  display: block;
-  margin: 5px 0 10px 0;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-.edu-content ul {
-  margin: 0;
+.skill-card ul {
+  list-style-type: disc;
   padding-left: 18px;
-  font-size: 0.9rem;
-  color: #444;
-  line-height: 1.5;
 }
-*/
+
+/* ========== Publications Section ========== */
+.pub-card {
+  padding: 20px;
+}
+
+.pub-card ul {
+  list-style-type: none;  /* 去掉默认圆点 */
+  padding-left: 0;
+}
+
+.pub-card li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

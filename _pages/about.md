@@ -26,11 +26,14 @@ header: false
 </section>
 
 <section id="education">
-  <h2>Education</h2>
-  <div class="timeline">
+  <h2 class="page__title">Education</h2>
+  <div class="education-list">
 
-    <div class="timeline-item">
-      <div class="timeline-content">
+    <div class="education-item">
+      <div class="edu-logo">
+        <img src="/assets/img/sysu-logo.png" alt="SYSU Logo">
+      </div>
+      <div class="edu-content">
         <h3>Sun Yat-sen University (SYSU), Guangzhou, China</h3>
         <p><em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em></p>
         <span class="date">Sept. 2022 – Jun. 2026</span>
@@ -46,7 +49,7 @@ header: false
 </section>
 
 <section id="research-experience">
-  <h2>Research Experience</h2>
+  <h2 class="page__title">Research Experience</h2>
   <div class="research-cards">
 
     <div class="card">
@@ -91,7 +94,7 @@ header: false
 </section>
 
 <section id="publications">
-  <h2>Publications</h2>
+  <h2 class="page__title">Publications</h2>
   <ul class="pub-list">
     <li>
       <p><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>

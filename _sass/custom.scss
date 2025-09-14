@@ -2,44 +2,73 @@
 /* 所有自定义样式请写在 assets/css/custom.css */
 /* ========== Research Experience 卡片 ========== */
 /* ========== Research Experience Section ========== */
+/* Section spacing */
+section {
+  margin-bottom: 60px;  /* 控制 section 之间的空白 */
+}
+
+/* Research grid */
 .research-grid {
-  display: flex;
-  flex-direction: column;   /* 垂直排列 */
-  gap: 30px;                /* 卡片间距 */
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr; /* 一列排列，大卡片效果 */
+  gap: 30px;
 }
 
 .research-card {
   display: block;
-  background: #fff;
+  border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .research-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-.card-image img {
+/* Research images: 固定比例缩放 */
+.research-card .card-image {
   width: 100%;
-  height: 220px;       /* 固定高度，保证整齐 */
-  object-fit: cover;   /* 保持比例裁切 */
+  aspect-ratio: 16/9;  /* 图片比例：16:9，可改成 4/3 */
+  overflow: hidden;
 }
 
-.card-content {
-  padding: 15px 20px;
+.research-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 自动裁剪，保持比例 */
+}
+
+.research-card .card-content {
+  padding: 20px;
   text-align: center;
+  background: #fafafa;
 }
 
-.card-content h3 {
+.research-card .card-content h3 {
   margin: 0;
-  font-size: 1.3rem;
-  color: #007acc;
+  font-size: 1.2rem;
+  color: #333;
 }
+
+/* Biography, Skills, Publications: 卡片风格 */
+.bio-card, .skill-card, .pub-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bio-card:hover, .skill-card:hover, .pub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 
 
 

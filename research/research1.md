@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cosmic Ray Telescope with Plastic Scintillators
+title: null
 permalink: /research/research1.html
 ---
 
@@ -13,7 +13,7 @@ permalink: /research/research1.html
     </figure>
 
     <p class="research-meta">
-      <strong>Advised by Prof. XXX, SYSU</strong><br>
+      <strong>Advised by Prof. Jie Feng, SYSU</strong><br>
       <em>Research Assistant</em> | Oct. 2024 – Present
     </p>
 

@@ -71,7 +71,7 @@ header: false
         <img src="/images/research2-cover.png" alt="Research Project 2">
       </div>
       <div class="card-content">
-        <h3>Dual-End Readout PET Detectors with SiPM</h3>
+        <h3>FMCW Radar for Non-Contact Cardiopulmonary Monitoring</h3>
       </div>
     </a>
 
@@ -81,7 +81,7 @@ header: false
         <img src="/images/research3-cover.png" alt="Research Project 3">
       </div>
       <div class="card-content">
-        <h3>FMCW Radar for Cardiopulmonary Monitoring</h3>
+        <h3>Analysis of Long-Lived Particle Properties with Multiple Detectors</h3>
       </div>
     </a>
 
@@ -91,7 +91,7 @@ header: false
         <img src="/images/research4-cover.png" alt="Research Project 4">
       </div>
       <div class="card-content">
-        <h3>Semiconductor Physics & Microelectronics</h3>
+        <h3>Machine Learning for Beam-Space Traffic Pattern Analysis</h3>
       </div>
     </a>
 

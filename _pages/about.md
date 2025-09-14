@@ -56,7 +56,7 @@ header: false
     <!-- Research Card 1 -->
     <a href="/research/research1.html" class="research-card">
       <div class="card-image">
-        <img src="/images/research1-cover.jpg" alt="Research Project 1">
+        <img src="/images/research1-cover.png" alt="Research Project 1">
       </div>
       <div class="card-content">
         <h3>Cosmic Ray Telescope with Plastic Scintillators</h3>

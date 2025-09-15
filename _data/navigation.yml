@@ -14,7 +14,7 @@ main:
 - title: "Education"
   url: "#education"
 
-- title: "Research Experience"
+- title: "Research"
   url: "#research"
   
 - title: "Skills"
@@ -22,3 +22,6 @@ main:
 
 - title: "Publications"
   url: "#publications"
+  
+- title: "Beyond Academia"
+  url: "#beyond"

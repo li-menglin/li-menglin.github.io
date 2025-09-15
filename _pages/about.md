@@ -140,7 +140,7 @@ header: false
       <!-- 卡片1 -->
       <div class="beyond-item">
         <div class="beyond-image">
-          <img src="images/travel.jpg" alt="Travel">
+          <img src="images/travel.png" alt="Travel">
         </div>
         <div class="beyond-content">
           <h3>Travel</h3>
@@ -150,7 +150,7 @@ header: false
       <!-- 卡片2 -->
       <div class="beyond-item">
         <div class="beyond-image">
-          <img src="images/music.jpg" alt="Music">
+          <img src="images/music.png" alt="Music">
         </div>
         <div class="beyond-content">
           <h3>Music</h3>
@@ -160,11 +160,21 @@ header: false
       <!-- 卡片3 -->
       <div class="beyond-item">
         <div class="beyond-image">
-          <img src="images/photography.jpg" alt="Photography">
+          <img src="images/pickleball.jpg" alt="pickleball">
         </div>
         <div class="beyond-content">
-          <h3>Photography</h3>
+          <h3>pickleball</h3>
           <p>Through my lens, I like to capture everyday details, transforming ordinary moments into memorable images.</p>
+        </div>
+      </div>
+      <!-- 卡片4 -->
+      <div class="beyond-item">
+        <div class="beyond-image">
+          <img src="images/badminton.jpg" alt="badminton">
+        </div>
+        <div class="beyond-content">
+          <h3>badmintonl</h3>
+          <p>I enjoy exploring new cities and natural landscapes, capturing unique perspectives through photography.</p>
         </div>
       </div>
     </div>

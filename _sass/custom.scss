@@ -366,18 +366,17 @@ section {
 }
 
 /* Beyond section 卡片整体 */
+/* Beyond section */
 .beyond-card {
   padding: 20px !important;
 }
 
-/* grid 布局 */
 .beyond-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
 
-/* 单个项目卡片 */
 .beyond-item {
   background: #fff;
   border-radius: 12px;
@@ -390,17 +389,15 @@ section {
 
 .beyond-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
 }
 
-/* 图片 */
 .beyond-image img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
 }
 
-/* 内容 */
 .beyond-content {
   padding: 14px 16px;
 }
@@ -422,6 +419,7 @@ section {
 /* 移动端适配 */
 @media (max-width: 768px) {
   .beyond-image img {
-    height: 140px;
+    height: 130px;
   }
 }
+

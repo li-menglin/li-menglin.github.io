@@ -52,7 +52,7 @@ header: false
 
 
 <section id="research">
-  <h2 class="page__title">Research Experience</h2>
+  <h2 class="page__title">Research Experiences</h2>
 
   <div class="research-grid">
 
@@ -129,5 +129,44 @@ header: false
         <p><strong>M. Li</strong>, et al., “FMCW Radar for Non-Contact Cardiopulmonary Monitoring,” Preprint, 2025.</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- ===== Beyond Section ===== -->
+<section id="beyond" class="section">
+  <div class="card beyond-card">
+    <h2>Beyond Academia</h2>
+    <div class="beyond-grid">
+      <!-- 卡片1 -->
+      <div class="beyond-item">
+        <div class="beyond-image">
+          <img src="images/travel.jpg" alt="Travel">
+        </div>
+        <div class="beyond-content">
+          <h3>Travel</h3>
+          <p>I enjoy exploring new cities and natural landscapes, capturing unique perspectives through photography.</p>
+        </div>
+      </div>
+      <!-- 卡片2 -->
+      <div class="beyond-item">
+        <div class="beyond-image">
+          <img src="images/music.jpg" alt="Music">
+        </div>
+        <div class="beyond-content">
+          <h3>Music</h3>
+          <p>Electronic music fascinates me with its structure and creativity. I also experiment with mixing and loops.</p>
+        </div>
+      </div>
+      <!-- 卡片3 -->
+      <div class="beyond-item">
+        <div class="beyond-image">
+          <img src="images/photography.jpg" alt="Photography">
+        </div>
+        <div class="beyond-content">
+          <h3>Photography</h3>
+          <p>Through my lens, I like to capture everyday details, transforming ordinary moments into memorable images.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

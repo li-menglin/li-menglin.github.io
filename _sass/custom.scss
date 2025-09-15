@@ -88,17 +88,23 @@ section {
 }
 
 /* ========== Education Section ========== */
+/* Education 卡片整体 */
+.education-card {
+  padding: 20px;
+}
+
+/* Education 内部布局 */
 .education-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  padding: 20px;
+  margin-top: 15px;  /* 标题和内容之间的间距 */
 }
 
+/* logo */
 .edu-logo {
   flex: 0 0 80px;
 }
-
 .edu-logo img {
   width: 70px;
   height: 70px;
@@ -106,9 +112,39 @@ section {
   border-radius: 8px;
 }
 
-.edu-content {
-  flex: 1;
+/* 内容 */
+.edu-content h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
 }
+
+.edu-content p em {
+  font-size: 1rem;
+  color: #444;
+}
+
+.edu-content .date {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* 列表格式化 */
+.edu-content ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  line-height: 1.6;  /* 行距统一 */
+  color: #333;
+}
+
+.edu-content ul li {
+  margin-bottom: 8px; /* 每条之间留点间距 */
+}
+
 
 /* ========== Skills Section ========== */
 .skill-card {

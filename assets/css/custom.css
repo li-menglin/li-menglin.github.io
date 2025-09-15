@@ -55,7 +55,7 @@ img.author__avatar {
    =============================== */
 .page__inner-wrap {
   max-width: 1000px;
-  margin: 0 auto 0 0px !important; /* 上右下左，左边距改为 20px */
+  margin: -10px auto 0 0px !important; /* 上右下左，左边距改为 20px */
   padding: 0 35px 25px 35px !important;
   background: #fff;
   border-radius: 8px;

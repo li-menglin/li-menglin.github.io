@@ -101,19 +101,19 @@ header: false
 
 <section id="Skills">
   <div class="skill-card">
-  <h2 class="page__title">Skills</h2>
-    
+    <h2 class="page__title">Skills</h2>
     <ul>
-      <li><strong>Programming:</strong> C++, Python, MATLAB, Mathematica</li>
-      <li><strong>Simulation Tools:</strong> Pythia8, Geant4, Proteus, mmWave Studio</li>
-      <li><strong>Data Analysis:</strong> Origin, SciDAVis</li>
-      <li><strong>Standardized Tests:</strong> TOEFL 102; GRE 322</li>
-      <li><strong>Problem-Solving:</strong> Strong analytical and modeling skills</li>
-      <li><strong>Communication:</strong> Experienced in academic presentations</li>
-      <li><strong>Learning:</strong> Fast learner with system-level thinking</li>
+      <li><strong>Programming Ability →</strong> Proficient in C++, Python, MATLAB, and Mathematica</li>
+      <li><strong>Simulation & Modeling →</strong> Skilled with Pythia8, Geant4, Proteus, and mmWave Studio</li>
+      <li><strong>Data Analysis →</strong> Experienced in Origin and SciDAVis for scientific visualization</li>
+      <li><strong>Language Proficiency →</strong> TOEFL 102; GRE 322</li>
+      <li><strong>Analytical Thinking →</strong> Strong problem-solving and mathematical modeling skills</li>
+      <li><strong>Communication →</strong> Experienced in delivering academic presentations</li>
+      <li><strong>Learning Agility →</strong> Fast learner with system-level perspective</li>
     </ul>
   </div>
 </section>
+
 
 <section id="publications">
   <div class="pub-card">

@@ -6,23 +6,25 @@ header: false
 ---
 
 <section id="Biography">
-  <h2 class="page__title">Biography</h2>
-  <div class="bio-card">
-    <p>
-      I am a bachelor’s student in Physics, with a minor in Electronics and Information Science, at Sun Yat-sen University (SYSU). 
-      My research interests span the intersection of physics and information science, with a particular focus on biomedical signal processing, 
-      radar sensing technologies, and optoelectronic devices. 
-      With a GPA above 3.6/4.0 and multiple major scholarships and competition awards, I have cultivated a strong academic foundation 
-      and extensive research experience across both experimental and computational domains. 
-      I am eager to further my research as a Ph.D. student starting in Fall 2026.
-    </p>
-    <strong>Research Interests</strong>
-    <ul>
-      <li>Radar Technologies for Healthcare Monitoring</li>
-      <li>Biomedical Signal Processing</li>
-      <li>Optoelectronic Devices (e.g., SiPMs)</li>
-      <li>Silicon Photonics</li>
-    </ul>
+  <div class="bio-card card">
+    <h2 class="page__title">Biography</h2>
+    <div class="card-content">
+      <p>
+        I am a bachelor’s student in Physics, with a minor in Electronics and Information Science, at Sun Yat-sen University (SYSU). 
+        My research interests span the intersection of physics and information science, with a particular focus on biomedical signal processing, 
+        radar sensing technologies, and optoelectronic devices. 
+        With a GPA above 3.6/4.0 and multiple major scholarships and competition awards, I have cultivated a strong academic foundation 
+        and extensive research experience across both experimental and computational domains. 
+        I am eager to further my research as a Ph.D. student starting in Fall 2026.
+      </p>
+      <strong>Research Interests</strong>
+      <ul>
+        <li>Radar Technologies for Healthcare Monitoring</li>
+        <li>Biomedical Signal Processing</li>
+        <li>Optoelectronic Devices (e.g., SiPMs)</li>
+        <li>Silicon Photonics</li>
+      </ul>
+    </div>
   </div>
 </section>
 

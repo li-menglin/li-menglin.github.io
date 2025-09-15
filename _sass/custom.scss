@@ -191,6 +191,130 @@ section {
   margin-bottom: 10px;
 }
 
+/* ===========================
+   Fix / polish: Research cards on homepage
+   append this at the end of assets/css/custom.css
+   =========================== */
+
+/* Grid (主页上的四张大卡片) */
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 一列大卡片；若需要两列改成 repeat(2,1fr) */
+  gap: 30px;
+  align-items: start;
+}
+
+/* 卡片外壳：确保包含标题、图片与内容 */
+.research-card {
+  display: block !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
+}
+
+/* 卡片悬停（保留现有互动） */
+.research-card:hover,
+.research-card:focus {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.14) !important;
+}
+
+/* 图片区域：固定比例裁剪，自动缩放 */
+.research-card .card-image {
+  width: 100% !important;
+  aspect-ratio: 16/9 !important;    /* 保持 16:9，可改为 4/3 */
+  overflow: hidden !important;
+  background: #efefef;              /* 图片加载前的占位色 */
+}
+.research-card .card-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* 卡片内容：确保标题被包含在卡片内部（左对齐，更学术/干练） */
+.research-card .card-content {
+  padding: 20px !important;
+  text-align: left !important;      /* 标题与段落左对齐 */
+  background: #fafafa !important;   /* 与视觉保持区分 */
+  line-height: 1.6 !important;
+}
+
+/* 卡片内标题（去下划线、加字号、Futura 风格） */
+.research-card .card-content h3,
+.research-card .card-content .card-title { /* 兼容不同命名 */
+  display: block !important;
+  margin: 0 0 10px 0 !important;
+  font-family: "Futura", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1.25rem !important;     /* 主标题尺寸（可微调） */
+  font-weight: 700 !important;
+  color: #111 !important;
+  text-decoration: none !important;  /* 去掉下划线 */
+  border-bottom: none !important;    /* 确保没有下划线或分割线 */
+  line-height: 1.2 !important;
+}
+
+/* 如果卡片里使用 <a> 包裹标题，确保链接不显示下划线 */
+.research-card .card-content a,
+.research-card .card-content a:link,
+.research-card .card-content a:visited {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* 一般元信息（角色 / 时间）样式 */
+.research-card .card-content .meta,
+.research-card .card-content .sub {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* 卡片正文（要点列表） */
+.research-card .card-content p,
+.research-card .card-content ul,
+.research-card .card-content li {
+  font-family: Arial, Helvetica, sans-serif !important; /* 正文字体保持 Arial */
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #222 !important;
+}
+
+/* 确保内部的 h2/h3 不会继承到带下划线的 section 规则 */
+/*（如果你在别处有为 h2 添加 border-bottom 的规则，这里显式覆盖） */
+.research-card h2,
+.research-card h3 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+/* 响应式：小屏上保留舒适间距 */
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .research-card .card-content {
+    padding: 16px !important;
+  }
+  .research-card .card-content h3 {
+    font-size: 1.05rem !important;
+  }
+}
+
+/* ===== 调试建议（非必须）：如果你之前有把 section 标题强制展示为卡片内的代码，
+      请确认没有把 "section#research h2" 放入其他 .card 的样式，从而把标题
+      单独留在卡片外。上述样式会修正显示与视觉包含，但最稳妥的方法是：
+      确保每个卡片的 HTML 中有 <div class="card-content"><h3>...</h3>...</div>. */
+
+
 /* 移动端优化 */
 @media (max-width: 768px) {
   #research-detail .content-card { padding: 25px; }

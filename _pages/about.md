@@ -38,8 +38,9 @@ header: false
       </div>
       <div class="edu-content">
         <h3>Sun Yat-sen University (SYSU), Guangzhou, China</h3>
-        <p><em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em></p>
-        <span class="date">Sept. 2022 – Jun. 2026</span>
+        <em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em>
+        <span class="edu-date">Sept. 2022 – Jun. 2026</span>
+
         <ul>
           <li><strong>GPA:</strong> 3.6 / 4.0 (Top 10 / 75)</li>
           <li><strong>Relevant Courses:</strong> Radar Principles, Optics, Quantum Mechanics, Particle Accelerators, etc.</li>
@@ -49,6 +50,7 @@ header: false
     </div>
   </div>
 </section>
+
 
 
 <section id="research">

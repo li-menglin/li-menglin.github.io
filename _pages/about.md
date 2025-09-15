@@ -135,7 +135,7 @@ header: false
 <!-- ===== Beyond Section ===== -->
 <section id="beyond" class="section">
   <div class="card beyond-card">
-    <h2>Beyond Academia</h2>
+    <h2 class="page__title">Beyond Academia</h2>
     <div class="beyond-grid">
       <!-- 卡片1 -->
       <div class="beyond-item">

@@ -30,8 +30,8 @@ header: false
 
 
 <section id="education">
-  <h2 class="page__title">Education</h2>
   <div class="education-container">
+  <h2 class="page__title">Education</h2>
 
     <div class="card education-item">
       <div class="edu-logo">
@@ -103,8 +103,9 @@ header: false
 </section>
 
 <section id="Skills">
-  <h2 class="page__title">Skills</h2>
   <div class="skill-card">
+  <h2 class="page__title">Skills</h2>
+    
     <ul>
       <li><strong>Programming:</strong> C++, Python, MATLAB, Mathematica</li>
       <li><strong>Simulation Tools:</strong> Pythia8, Geant4, Proteus, mmWave Studio</li>
@@ -118,8 +119,8 @@ header: false
 </section>
 
 <section id="publications">
-  <h2 class="page__title">Publications</h2>
   <div class="pub-card">
+  <h2 class="page__title">Publications</h2>
     <ul class="pub-list">
       <li>
         <p><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>

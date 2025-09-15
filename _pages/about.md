@@ -30,10 +30,9 @@ header: false
 
 
 <section id="education">
-  <div class="education-container">
-  <h2 class="page__title">Education</h2>
-
-    <div class="card education-item">
+  <div class="card education-card">
+    <h2 class="page__title">Education</h2>
+    <div class="education-item">
       <div class="edu-logo">
         <img src="/images/sysu-logo.png" alt="SYSU Logo">
       </div>
@@ -42,16 +41,14 @@ header: false
         <p><em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em></p>
         <span class="date">Sept. 2022 – Jun. 2026</span>
         <ul>
-          <li><strong>GPA:</strong> 3.6/4.0 (Top 10/75)</li>
-          <li><strong>Courses:</strong> Radar Principles, Optics, Quantum Mechanics, Particle Accelerators, etc.</li>
-          <li><strong>Awards:</strong> First-Class Scholarship, CMC 2nd Prize, SYSU Innovation Program</li>
+          <li><strong>GPA:</strong> 3.6 / 4.0 (Top 10 / 75)</li>
+          <li><strong>Relevant Courses:</strong> Radar Principles, Optics, Quantum Mechanics, Particle Accelerators, etc.</li>
+          <li><strong>Honors & Awards:</strong> First-Class Scholarship, CMC 2nd Prize, SYSU Innovation Program</li>
         </ul>
       </div>
     </div>
-
   </div>
 </section>
-
 
 
 <section id="research">

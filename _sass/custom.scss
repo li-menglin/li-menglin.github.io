@@ -395,3 +395,133 @@ section {
 @media (max-width: 768px) {
   .beyond-image img { height: 130px; }
 }
+/* =========================
+   Education: 字体/字号/间距（Arial 正文，Futura 标题）
+   追加到 assets/css/custom.css 的末尾
+   ========================= */
+
+/* 标题字体（页内大标题和院校标题使用 Futura / 退而求其次 Helvetica/Arial） */
+.education-card .page__title,
+.education-card h3 {
+  font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+/* Page title（Education）大小，保持与主页其他 section 一致 */
+.education-card .page__title {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+/* 教育记录主行（校名） */
+.education-card .edu-content h3 {
+  font-size: 20px;          /* 学校行大小 */
+  margin: 0 0 6px 0;
+}
+
+/* degree 行及日期（缩小间距，使 degree 与 date 更紧凑） */
+.education-card .edu-content em {
+  display: block;
+  font-style: italic;
+  font-size: 16px;
+  color: #444;
+  margin: 2px 0 6px 0;      /* degree 与校名间小间距 */
+}
+
+/* 日期与下面的 GPA / Courses 保持较大间距 */
+.education-card .edu-date {
+  display: block;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 22px;      /* 增大与后面列表的间距 */
+}
+
+/* 正文字体：Arial，尺寸与 Biography 稍大（你之前的偏好） */
+.education-card .edu-content,
+.education-card .edu-content p,
+.education-card .edu-content ul,
+.education-card .edu-content li {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18.5px;        /* 与之前正文接近，略大于 bio（若需再调可改为 18px） */
+  line-height: 1.65;        /* 舒适行距 */
+  color: #222;
+}
+
+/* 列表总体样式 */
+.education-card .edu-content ul {
+  margin-top: 8px;
+  padding-left: 24px;
+}
+
+/* 每个条目：标题式的粗体标签 + 可读的正文行 */
+/* 将 <li><strong>GPA:</strong> value</li> 格式改为：标签在上一行/块级显示（更清晰） */
+.education-card .edu-content ul li {
+  margin-bottom: 18px;
+}
+
+/* 强调标签（GPA / Relevant Courses / Honors）独立为一块（和截图风格一致） */
+.education-card .edu-content ul li > strong {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 10px; /* 标签和具体内容之间的距离 */
+}
+
+/* 标签下面的值（如果在同一 li 中）保持正常正文样式 */
+.education-card .edu-content ul li > span,
+.education-card .edu-content ul li {
+  font-size: 18.5px;
+  line-height: 1.65;
+  color: #222;
+}
+
+/* 如果你想让“GPA 值”在新行单独显示（更像截图），可以这样： */
+/* 用法：<li><strong>GPA:</strong><div class="edu-value">3.6 / 4.0 ...</div></li> */
+.education-card .edu-value {
+  margin-left: 0;
+  font-size: 18.5px;
+  color: #222;
+}
+
+/* logo 区域（左侧校徽） */
+.education-card .edu-logo {
+  flex: 0 0 80px;
+  display: flex;
+  align-items: flex-start;
+}
+.education-card .edu-logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* card 外观保持一致（和其他 section 风格统一） */
+.education-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 小屏自适应：logo 放上面，内容下方 */
+@media (max-width: 768px) {
+  .education-card .education-item {
+    flex-direction: column;
+  }
+  .education-card .edu-logo {
+    margin-bottom: 12px;
+  }
+  .education-card .page__title {
+    font-size: 26px;
+  }
+  .education-card .edu-content,
+  .education-card .edu-content ul li {
+    font-size: 17.5px;
+    line-height: 1.6;
+  }
+}

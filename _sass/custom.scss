@@ -298,7 +298,7 @@ section {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* 标题 Education */
+/* 标题 */
 .education-card .section-title {
   font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.5rem;
@@ -309,11 +309,12 @@ section {
   color: #222;
 }
 
-/* 左右对齐 */
+/* logo + 基本信息左右对齐 */
 .education-card .education-item {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  margin-bottom: 12px;
 }
 
 /* logo */
@@ -327,7 +328,7 @@ section {
   border-radius: 8px;
 }
 
-/* 右边文字 */
+/* 右边主内容 */
 .education-card .edu-main {
   flex: 1;
 }
@@ -349,28 +350,29 @@ section {
   display: block;
   font-size: 15px;
   color: #666;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
-/* 描述/GPA/课程/荣誉：统一列表 */
+/* 描述部分（独立，不受右边缩进影响） */
+.education-card .edu-desc {
+  margin-top: 8px;
+}
+
+/* 列表样式（去掉粗体，统一行距） */
 .education-card .edu-desc ul {
   margin: 0;
-  padding-left: 20px;   /* 左缩进 */
-  list-style-type: disc; /* 自动带点 */
+  padding-left: 20px;
+  list-style-type: disc;
 }
 .education-card .edu-desc ul li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.55;   /* 更紧凑 */
   color: #222;
-  margin-bottom: 6px;   /* 行间距紧凑 */
-}
-.education-card .edu-desc ul li strong {
-  font-weight: 700;
-  margin-right: 4px;
+  margin-bottom: 4px;  /* 行间隔小一点 */
 }
 
-/* 响应式：移动端 logo 上下排列 */
+/* 移动端响应式 */
 @media (max-width: 768px) {
   .education-card .education-item {
     flex-direction: column;
@@ -383,9 +385,10 @@ section {
   }
   .education-card .edu-desc ul li {
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 }
+
 
 
 /* ========== 去掉主页正文外层边框 ========== */

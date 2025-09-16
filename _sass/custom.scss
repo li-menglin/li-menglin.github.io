@@ -301,10 +301,10 @@ section {
 /* 标题 */
 .education-card .section-title {
   font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 16px 0;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   color: #222;
 }
@@ -314,7 +314,7 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 /* logo */
@@ -325,7 +325,7 @@ section {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 /* 右边主内容 */
@@ -336,19 +336,19 @@ section {
   font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 6px 0;
+  margin: 0 0 5px 0;
   color: #111;
 }
 .education-card .edu-main em {
   display: block;
   font-style: italic;
-  font-size: 18px;
+  font-size: 20px;
   color: #444;
-  margin: 2px 0 6px 0;
+  margin: 2px 0 5px 0;
 }
 .education-card .edu-main .edu-date {
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   color: #666;
   margin-bottom: 0;
 }

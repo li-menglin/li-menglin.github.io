@@ -28,25 +28,33 @@ header: false
   </div>
 </section>
 
-<div class="education-card">
-  <div class="education-item">
-    <div class="edu-logo">
-      <img src="/images/sysu-logo.png" alt="SYSU Logo">
-    </div>
-    <div class="edu-main">
-      <h3>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</h3>
-      <em>Sun Yat-sen University</em>
-      <span class="edu-date">Sept. 2022 – Jun. 2026</span>
-      <div class="edu-desc">
-        <p><strong>GPA:</strong> 3.65 / 4.0</p>
-        <ul>
-          <li><strong>Relevant Coursework</strong> <span>Quantum Mechanics, Solid State Physics, Microelectronics</span></li>
-          <li><strong>Awards</strong> <span>Outstanding Research Project, Academic Excellence Scholarship</span></li>
-        </ul>
+<section id="education">
+  <div class="education-card">
+    <h2 class="section-title">Education</h2>
+    <div class="education-item">
+      <!-- 左边 logo -->
+      <div class="edu-logo">
+        <img src="sysu-logo.png" alt="SYSU Logo">
+      </div>
+      <!-- 右边文字 -->
+      <div class="edu-main">
+        <h3>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</h3>
+        <em>Sun Yat-sen University</em>
+        <span class="edu-date">Sept. 2022 – Jun. 2026</span>
+
+        <!-- 描述部分 -->
+        <div class="edu-desc">
+          <ul>
+            <li><strong>GPA:</strong> 3.65 / 4.0</li>
+            <li><strong>Relevant Coursework:</strong> Quantum Mechanics, Solid State Physics, Microelectronics</li>
+            <li><strong>Honors & Awards:</strong> Outstanding Research Project, Academic Excellence Scholarship</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
 
 
 <section id="research">

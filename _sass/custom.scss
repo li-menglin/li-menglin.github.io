@@ -492,6 +492,7 @@ section {
 
 .page__inner-wrap {
   padding: 0 !important;
+  margin-left: 40px !important; /* ✅ 整体右移 40px */
 }
 
 .card {
@@ -502,3 +503,10 @@ section {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   margin-bottom: 32px;
 }
+
+@media (min-width: 769px) {
+  .page__inner-wrap {
+    margin-left: 40px !important;
+  }
+}
+

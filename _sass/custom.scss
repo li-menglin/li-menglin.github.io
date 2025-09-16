@@ -301,7 +301,7 @@ section {
 /* 标题 */
 .education-card .section-title {
   font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0 0 16px 0;
   padding-bottom: 8px;
@@ -322,10 +322,10 @@ section {
   flex: 0 0 80px;
 }
 .education-card .edu-logo img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* 右边主内容 */
@@ -342,13 +342,13 @@ section {
 .education-card .edu-main em {
   display: block;
   font-style: italic;
-  font-size: 16px;
+  font-size: 18px;
   color: #444;
   margin: 2px 0 6px 0;
 }
 .education-card .edu-main .edu-date {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   color: #666;
   margin-bottom: 0;
 }
@@ -361,15 +361,15 @@ section {
 /* 列表样式（去掉粗体，统一行距） */
 .education-card .edu-desc ul {
   margin: 0;
-  padding-left: 30px;
+  padding-left: 40px;
   list-style-type: disc;
 }
 .education-card .edu-desc ul li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1.55;   /* 更紧凑 */
+  line-height: 1.7;   /* 更紧凑 */
   color: #222;
-  margin-bottom: 6px;  /* 行间隔小一点 */
+  margin-bottom: 8px;  /* 行间隔小一点 */
 }
 
 /* 移动端响应式 */

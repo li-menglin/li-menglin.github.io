@@ -1,3 +1,269 @@
 /* =============================
    Global Styles
    ============================= */
+/* ------------------------------
+   全局基础设置
+------------------------------ */
+body {
+  font-family: "Arial", sans-serif !important;
+  background: #fff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #222 !important;
+  line-height: 1.6 !important;
+}
+
+.page__content {
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+}
+
+/* ------------------------------
+   导航栏
+------------------------------ */
+.navbar {
+  background: #fff !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+.navbar ul {
+  list-style: none !important;
+  display: flex !important;
+  gap: 18px !important;
+  margin: 0 !important;
+  padding: 8px 20px !important;
+}
+
+.navbar li a {
+  text-decoration: none !important;
+  color: #333 !important;
+  font-size: 0.95rem !important;
+  padding: 6px 8px !important;
+}
+
+.navbar li a:hover {
+  color: #0077cc !important;
+}
+
+/* ------------------------------
+   照片栏
+------------------------------ */
+.profile-section {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.profile-section img {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+.profile-text {
+  flex: 1 !important;
+}
+
+/* ------------------------------
+   Section 通用卡片
+------------------------------ */
+.card {
+  background: #fff !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  margin-bottom: 24px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* section 标题 */
+.page__title {
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+  color: #111 !important;
+  border-bottom: 2px solid #f0f0f0 !important;
+  padding-bottom: 6px !important;
+}
+
+/* ------------------------------
+   Biography
+------------------------------ */
+.biography-card p {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 10px !important;
+}
+
+/* ------------------------------
+   Education
+------------------------------ */
+.education-card {
+  padding: 20px !important;
+}
+
+.education-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  padding: 14px !important;
+}
+
+.edu-logo {
+  flex: 0 0 80px !important;
+}
+
+.edu-logo img {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: contain !important;
+  border-radius: 8px !important;
+}
+
+.education-item .edu-content {
+  padding: 6px 0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  color: #222 !important;
+}
+
+.edu-date {
+  display: block !important;
+  margin: 4px 0 10px 0 !important;
+  font-size: 0.9rem !important;
+  color: #666 !important;
+}
+
+/* ------------------------------
+   Skills
+------------------------------ */
+.skill-card ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.skill-card li {
+  margin-bottom: 8px !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+/* ------------------------------
+   Publications
+------------------------------ */
+.publication-card ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.publication-card li {
+  margin-bottom: 10px !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* ------------------------------
+   Research Experience
+   （主页四个小卡片 + 详情页）
+------------------------------ */
+.research-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  gap: 20px !important;
+}
+
+.research-card {
+  background: #fff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  padding: 16px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.research-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.research-card h3 {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  color: #222 !important;
+  text-decoration: underline !important;
+}
+
+.research-card p {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  color: #555 !important;
+}
+
+/* Research detail 页面 */
+.research-detail {
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+}
+
+.research-detail h1 {
+  font-size: 1.6rem !important;
+  margin-bottom: 16px !important;
+}
+
+.research-detail p {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 12px !important;
+}
+
+/* ------------------------------
+   Beyond
+------------------------------ */
+.beyond-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  gap: 20px !important;
+}
+
+.beyond-card {
+  background: #fff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  padding: 16px !important;
+  text-align: center !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.beyond-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.beyond-card img {
+  width: 100% !important;
+  height: 120px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  margin-bottom: 10px !important;
+}
+
+.beyond-card h3 {
+  font-size: 1rem !important;
+  margin-bottom: 6px !important;
+  color: #222 !important;
+}
+
+.beyond-card p {
+  font-size: 0.9rem !important;
+  color: #555 !important;
+}

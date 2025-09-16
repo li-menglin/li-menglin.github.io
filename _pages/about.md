@@ -36,24 +36,25 @@ header: false
       <div class="edu-logo">
         <img src="/images/sysu-logo.png" alt="SYSU Logo">
       </div>
-      <!-- 右边文字 -->
+      <!-- 右边主要内容 -->
       <div class="edu-main">
         <h3>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</h3>
         <em>Sun Yat-sen University</em>
         <span class="edu-date">Sept. 2022 – Jun. 2026</span>
-
-        <!-- 描述部分 -->
-        <div class="edu-desc">
-          <ul>
-            <li><strong>GPA:</strong> 3.65 / 4.0</li>
-            <li><strong>Relevant Coursework:</strong> Quantum Mechanics, Solid State Physics, Microelectronics</li>
-            <li><strong>Honors & Awards:</strong> Outstanding Research Project, Academic Excellence Scholarship</li>
-          </ul>
-        </div>
       </div>
+    </div>
+
+    <!-- 说明部分（独立于右侧主信息，靠左对齐） -->
+    <div class="edu-desc">
+      <ul>
+        <li>GPA: 3.65 / 4.0</li>
+        <li>Quantum Mechanics, Solid State Physics, Microelectronics</li>
+        <li>Outstanding Research Project, Academic Excellence Scholarship</li>
+      </ul>
     </div>
   </div>
 </section>
+
 
 
 

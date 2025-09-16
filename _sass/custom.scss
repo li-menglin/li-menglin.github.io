@@ -140,6 +140,21 @@ section {
   color: #222;
 }
 
+.education-item .edu-content ul {
+  margin: 0;                  /* 去掉默认外边距 */
+  padding-left: 0;            /* 去掉缩进，列表更靠左 */
+  font-family: Arial, Helvetica, sans-serif; /* 保持和正文一致 */
+  font-size: 1rem;            /* 统一正文大小 */
+  line-height: 1.7;           /* 行距和正文保持一致 */
+  color: #222;                /* 正文颜色 */
+  list-style-position: inside; /* 可选：让项目符号对齐文字 */
+}
+
+.education-item .edu-content ul li {
+  margin-bottom: 8px;         /* 列表项间距，稍微紧凑 */
+}
+
+
 /* 移动端教育布局 */
 @media (max-width: 768px) {
   .education-item {

@@ -34,7 +34,7 @@ header: false
     <div class="education-item">
       <!-- 左边 logo -->
       <div class="edu-logo">
-        <img src="sysu-logo.png" alt="SYSU Logo">
+        <img src="/images/sysu-logo.png" alt="SYSU Logo">
       </div>
       <!-- 右边文字 -->
       <div class="edu-main">

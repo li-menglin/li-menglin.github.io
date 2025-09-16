@@ -201,3 +201,344 @@ nav#site-nav .visible-links > li:not(.masthead__menu-item--lg) {
    小修（避免意外影响）
    =============================== */
 .page { margin-top: 0 !important; }
+
+
+
+/* ========================================
+   Master overrides for Academic homepage
+   - Put this at end of your custom stylesheet
+   - Body font: Arial; Titles: Futura (fallbacks provided)
+   ======================================== */
+
+/* ---------- fonts / variables ---------- */
+:root{
+  --body-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --title-font: "Futura", "Helvetica Neue", Arial, sans-serif;
+  --card-bg: #ffffff;
+  --card-border: rgba(0,0,0,0.08);
+  --card-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  --card-hover-shadow: 0 10px 28px rgba(0,0,0,0.14);
+  --content-max-width: 1000px; /* 调整正文最大宽度 */
+  --content-padding: 28px;     /* 正文内边距（左右） */
+}
+
+/* ---------- base / page container ---------- */
+/* Keep site background / theme default — do not force gray/white on body */
+body {
+  font-family: var(--body-font);
+  font-size: 18px;            /* 全站正文字号（可调整） */
+  line-height: 1.65;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove theme outer "page" borders/shadows so only per-section cards remain */
+.page,
+.page__inner-wrap,
+.page__content {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* main content container: control width and horizontal offset */
+.page__content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;                     /* centered base */
+  padding: 18px var(--content-padding); 
+  /* if you want shift to the right: increase padding-left using media queries
+     or add: padding-left: calc(var(--content-padding) + 20px); */
+}
+
+/* make sure article/page element doesn't have extra margins */
+article.page { margin-top: 0 !important; }
+
+/* ---------- Heading fonts ---------- */
+.page__title,
+section h1, section h2 {
+  font-family: var(--title-font);
+  color: #111;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-top: 0;
+}
+
+/* default section title size */
+.page__title {
+  font-size: 1.5rem;   /* ~24px */
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding-bottom: 8px;
+}
+
+/* ---------- unified card base ---------- */
+.card,
+.bio-card,
+.skill-card,
+.pub-card,
+.education-card,
+.research-section-card,
+.research-card,
+.beyond-card,
+.beyond-item {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--card-shadow) !important;
+  overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+/* hover/focus */
+.card:hover,
+.bio-card:hover,
+.skill-card:hover,
+.pub-card:hover,
+.education-card:hover,
+.research-section-card:hover,
+.research-card:hover,
+.beyond-item:hover,
+.card:focus-within {
+  transform: translateY(-6px) !important;
+  box-shadow: var(--card-hover-shadow) !important;
+  outline: none;
+}
+
+/* card internal content default (consistent across sections) */
+.card .card-content,
+.bio-card .card-content,
+.skill-card .card-content,
+.pub-card .card-content,
+.education-card .card-content,
+.research-section-card .card-content,
+.research-card .card-content,
+.beyond-card .card-content {
+  padding: 20px !important;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #222;
+}
+
+/* section spacing */
+section { margin-bottom: 60px; }
+
+/* ---------- Biography (keeps existing look) ---------- */
+.bio-card { /* ensure outer card wrapper */ }
+.bio-card .card-content p { margin-bottom: 14px; }
+
+/* ---------- Education: card wrapper + content ---------- */
+/* Outer card that contains title + entries */
+.education-card {
+  padding: 18px;            /* outer padding */
+  max-width: 100%;
+}
+
+/* Inside, each education row */
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+/* logo area */
+.education-card .edu-logo {
+  flex: 0 0 80px;
+  display: flex;
+  align-items: flex-start;
+}
+.education-card .edu-logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* content area */
+.education-card .edu-content {
+  flex: 1;
+  font-family: var(--body-font);
+  color: #222;
+}
+
+/* school name */
+.education-card .edu-content h3 {
+  font-family: var(--title-font);
+  font-size: 1.15rem; /* ~18.5px */
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+
+/* degree line (compact with school name) */
+.education-card .edu-content em {
+  display: block;
+  margin: 2px 0 4px 0;     /* tight to school name */
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  color: #444;
+}
+
+/* date: tight to degree but with bigger gap to following list */
+.education-card .edu-date {
+  display: block;
+  font-size: 0.95rem;
+  color: #555;
+  margin: 6px 0 18px 0;   /* larger gap to GPA / list below */
+  line-height: 1.3;
+}
+
+/* list items (GPA, Courses, Awards) — consistent with body but slightly smaller */
+.education-card .edu-content ul {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+}
+.education-card .edu-content ul li { margin-bottom: 12px; }
+.education-card .edu-content ul li > strong { display: inline-block; margin-right: 8px; font-weight:700; }
+
+/* ---------- Research Experiences: outer card containing the grid ---------- */
+/* We make the whole section a single card with title inside it (nested cards) */
+.research-section-card {
+  padding: 18px;
+}
+
+/* put title inside the outer card (consistent look) */
+.research-section-card > .card-content { padding: 0; } /* we'll control spacing separately */
+.research-section-card > .card-content .section-header {
+  padding: 16px 20px 12px 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* inner research-grid: large cards arranged vertically by default */
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr;      /* default single column, large cards stacked */
+  gap: 22px;
+  padding: 20px;                  /* inner padding inside outer card */
+}
+
+/* larger screens can show two columns if width allows */
+@media(min-width:1200px){
+  .research-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* each research card (inner) */
+.research-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+/* prominent image area (fixed aspect) */
+.research-card .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #efefef; /* placeholder while image loads */
+  overflow: hidden;
+}
+.research-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* content area inside each research card: title and short meta or excerpt */
+.research-card .card-content {
+  padding: 20px;
+  background: #fafafa;
+  text-align: left;
+}
+.research-card .card-content h3 {
+  font-family: var(--title-font);
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+  color: #111;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* small meta (role / date) style if needed */
+.research-card .card-content .meta {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* body inside card (bullet points etc.) */
+.research-card .card-content p,
+.research-card .card-content ul,
+.research-card .card-content li {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* ensure card h2/h3 inside research card have no bottom border */
+.research-card h2, .research-card h3 { border-bottom: none; padding-bottom: 0; }
+
+/* ---------- Research detail page (academic styling) ---------- */
+#research-detail .content-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  max-width: 920px;
+  margin: 30px auto 60px auto;
+  font-family: "Times New Roman", "Georgia", serif; /* body font for detail page */
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+#research-detail .page__title {
+  font-family: var(--title-font);
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* figure + caption (centered) */
+.research-figure { text-align: center; margin: 30px 0; }
+.research-figure img { max-width: 100%; height: auto; border-radius: 8px; }
+.research-figure figcaption { font-size: 0.95rem; color:#555; font-style:italic; margin-top:8px; }
+
+/* paragraphs & lists in research detail */
+.research-body p { margin-bottom: 18px; }
+.research-body ul { padding-left: 22px; margin-bottom: 18px; }
+.research-body li { margin-bottom: 10px; }
+
+/* ---------- Beyond section (hobbies) ---------- */
+.beyond-card { padding: 18px; }
+.beyond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; padding: 12px 0 0 0; }
+.beyond-item { display:flex; flex-direction:column; }
+.beyond-image img { width:100%; height:160px; object-fit:cover; display:block; }
+.beyond-content { padding:12px 14px; }
+.beyond-content h3 { font-family: var(--title-font); font-size:1.05rem; margin:0 0 8px 0; }
+
+/* ---------- accessibility & small screens ---------- */
+@media (max-width: 768px) {
+  .page__content { padding-left: 18px; padding-right: 18px; }
+  .research-grid { grid-template-columns: 1fr; gap: 16px; padding: 14px; }
+  .research-card .card-image { aspect-ratio: 4/3; }
+  .education-item { flex-direction: column; }
+  .edu-logo { margin-bottom: 12px; }
+  #research-detail .content-card { padding: 24px; margin: 16px; }
+}
+
+/* ---------- small tuning: remove accidental double-card wrapping ----------
+   If you previously wrapped items twice (e.g., .card > .card), ensure outer
+   wrappers use classes: .education-card (outer) and inner row uses .education-item
+   This CSS avoids double shadows/borders by being specific to the outer classes.
+*/

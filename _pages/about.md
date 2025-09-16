@@ -28,29 +28,25 @@ header: false
   </div>
 </section>
 
-
-<section id="education">
-  <div class="card education-card">
-    <h2 class="page__title">Education</h2>
-    <div class="education-item">
-      <div class="edu-logo">
-        <img src="/images/sysu-logo.png" alt="SYSU Logo">
-      </div>
-      <div class="edu-content">
-        <h3>Sun Yat-sen University (SYSU), Guangzhou, China</h3>
-        <em>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</em>
-        <span class="edu-date">Sept. 2022 – Jun. 2026</span>
-
+<div class="education-card">
+  <div class="education-item">
+    <div class="edu-logo">
+      <img src="sysu-logo.png" alt="SYSU Logo">
+    </div>
+    <div class="edu-main">
+      <h3>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</h3>
+      <em>Sun Yat-sen University</em>
+      <span class="edu-date">Sept. 2022 – Jun. 2026</span>
+      <div class="edu-desc">
+        <p><strong>GPA:</strong> 3.65 / 4.0</p>
         <ul>
-          <li><strong>GPA:</strong> 3.6 / 4.0 (Top 10 / 75)</li>
-          <li><strong>Relevant Courses:</strong> Radar Principles, Optics, Quantum Mechanics, Particle Accelerators, etc.</li>
-          <li><strong>Honors & Awards:</strong> First-Class Scholarship, CMC 2nd Prize, SYSU Innovation Program</li>
+          <li><strong>Relevant Coursework</strong> <span>Quantum Mechanics, Solid State Physics, Microelectronics</span></li>
+          <li><strong>Awards</strong> <span>Outstanding Research Project, Academic Excellence Scholarship</span></li>
         </ul>
       </div>
     </div>
   </div>
-</section>
-
+</div>
 
 
 <section id="research">

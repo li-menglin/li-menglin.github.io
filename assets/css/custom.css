@@ -1,14 +1,96 @@
 /* ===============================
-   引入主题入口（保留）
+   Replace this entire file with the block below
+   (keeps theme import if you need it; if you put this text inside main.scss,
+   remove the @import line below)
    =============================== */
-@import "main";
 
+/* If you need to keep theme import, uncomment next line.
+   (If this file is already being imported by main.scss, you don't need it here.)
+*/
+/* @import "main"; */
 
 /* ===============================
-   强制恢复：头像（高优先级，避免被覆盖）
-   说明：侧栏内 div 和 img 同名 class（author__avatar），
-   所以尽量用更具体的选择器定位 img 元素。
+   Variables & basics
    =============================== */
+:root {
+  --sidebar-width: 260px;        /* 左栏照片列宽（可微调） */
+  --gutter: 32px;                /* 左栏与正文间距 */
+  --content-max-width: 1100px;   /* 正文主体最大宽度（可增减） */
+  --content-inner-pad: 28px;     /* 卡片内部左右 padding */
+  --body-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --title-font: "Futura", "Helvetica Neue", Arial, sans-serif;
+  --card-bg: #ffffff;
+  --card-border: rgba(0,0,0,0.08);
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --card-hover-shadow: 0 10px 28px rgba(0,0,0,0.14);
+}
+
+/* -------------------------------
+   Reset / base
+   ------------------------------- */
+body {
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1.65;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* page wrapper / remove theme-level outer boxes so we control card visuals */
+.page,
+.page__inner-wrap,
+.page__content {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* make the main content area centered and allow alignment with the left sidebar */
+.page__content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-left: calc(var(--content-inner-pad));
+  padding-right: calc(var(--content-inner-pad));
+  box-sizing: border-box;
+}
+
+/* article/page top margin */
+article.page { margin-top: 0 !important; }
+
+/* section spacing */
+section { margin-bottom: 60px; }
+
+/* headings */
+.page__title,
+section h1, section h2 {
+  font-family: var(--title-font);
+  color: #111;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-top: 0;
+}
+
+.page__title {
+  font-size: 1.5rem; /* ~24px */
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding-bottom: 8px;
+}
+
+/* ===============================
+   Sidebar (left column) - avatar / meta
+   - We anchor the sidebar to the left edge of the centered content by using
+     a left margin equal to half of the viewport extra space:
+       margin-left: calc((100% - content-max-width) / 2)
+   - The page content (.page__content) gets left offset equal to sidebar width + gutter,
+     so the content sits to the right of the sidebar while remaining centered overall.
+   =============================== */
+
+/* avatar image force */
 .sidebar .author__avatar img.author__avatar,
 img.author__avatar {
   width: 220px !important;
@@ -19,16 +101,13 @@ img.author__avatar {
   margin: 0 auto 15px auto !important;
 }
 
-/* ===============================
-   Sidebar：姓名 / 简介 / 联系方式
-   =============================== */
+/* sidebar name/bio */
 .author__name {
   font-size: 30px !important;
   font-weight: 700 !important;
   text-align: center;
   margin-bottom: 10px;
 }
-
 .author__bio {
   font-size: 16.5px !important;
   line-height: 1.5 !important;
@@ -36,244 +115,44 @@ img.author__avatar {
   margin-bottom: 15px;
   color: #555;
 }
-
 .author__urls li {
   font-size: 0.85rem !important;
   line-height: 1.25;
   margin-bottom: 5px;
 }
 .author__urls li a { font-size: inherit !important; }
-.author__urls li i {
-  font-size: 0.9rem !important;
-  margin-right: 5px;
-  color: #444;
+.author__urls li i { font-size: 0.9rem !important; margin-right: 5px; color: #444; }
+
+/* Positioning the sidebar so it aligns to the centered content */
+.sidebar {
+  box-sizing: border-box;
+  width: var(--sidebar-width);
+  /* place the sidebar aligned to the left edge of the centered content */
+  margin-left: calc((100% - var(--content-max-width)) / 2);
+  float: left;
+  position: relative;
+  z-index: 2;
 }
 
-
-/* ===============================
-   正文区（page）
-   =============================== */
+/* Shift the page content right so it sits to the right of the sidebar */
+article.page .page__inner-wrap,
+.page__content > .card, /* also adjust if page__inner-wrap isn't used */
 .page__inner-wrap {
-  max-width: 1000px;
-  margin: -15px auto 0 -5px !important; /* 上右下左，左边距改为 20px */
-  padding: 0 35px 25px 35px !important;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  line-height: 1.65;
-}
-
-/* 标题 / content */
-.page__title {
-  font-size: 32px !important;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-align: left;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 8px;
-}
-.page__content p {
-  font-size: 18.5px;
-  line-height: 1.8;
-  margin-bottom: 18px;
-  color: #222;
-}
-.page__content strong {
-  display: block;
-  font-size: 20px;
-  font-weight: 600;
-  margin: 22px 0 12px;
-  color: #333;
-  text-transform: capitalize;
-}
-.page__content ul {
-  margin: 0 0 22px 22px;
-  padding: 0;
-  list-style-type: disc;
-}
-.page__content li {
-  font-size: 18px;
-  margin-bottom: 10px;
-  line-height: 1.65;
-}
-
-/* 使正文不多出空白（头像对齐问题） */
-.page__content section:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-/* ===============================
-   导航栏（仅针对 nav#site-nav，避免影响其他布局）
-   说明：尽量不要对 masthead 或全局容器应用 broad flex。
-   =============================== */
-
-/* 平滑滚动偏移 */
-:root { scroll-padding-top: 70px; }
-html { scroll-behavior: smooth; }
-
-/* 只对 nav#site-nav 做垂直居中与布局管理 */
-nav#site-nav {
-  display: flex !important;
-  align-items: center !important; /* 垂直居中菜单项 */
-  width: 100%;
-}
-
-/* visible-links 是 nav 的一部分，保证它为 flex 并垂直居中 */
-nav#site-nav > .visible-links {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem;
-  flex-wrap: nowrap !important;
-}
-
-/* hidden-links 也保证为 inline-flex（兜底） */
-nav#site-nav > .hidden-links {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* 每个 li 元素垂直居中，不要影响 sidebar */
-nav#site-nav .visible-links > li,
-nav#site-nav .hidden-links > li {
-  display: inline-flex !important;
-  align-items: center !important;
-}
-
-/* 把主题切换按钮固定在最右 */
-#theme-toggle {
-  margin-left: auto !important;
-  order: 999 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-}
-
-/* 保持左上标题样式（不改变其垂直居中） */
-.masthead__menu-item--lg.persist > a,
-.site-title a {
-  font-size: 1.3rem !important;
-  color: #111 !important;
-  font-weight: 700 !important;
-  white-space: nowrap !important;
-  padding-right: 1rem !important;
-}
-
-/* 右侧菜单项大小（略增大） */
-.masthead__menu-item:not(.masthead__menu-item--lg) > a {
-  font-size: 1.05rem !important;
-  font-weight: 450 !important;
-  padding: 0 0.1rem !important;
-  white-space: nowrap !important;
-}
-
-/*菜单栏对齐正文*/
-/* 只针对菜单项（除标题外）设置左 margin，避免整体右移 */
-nav#site-nav .visible-links > li:not(.masthead__menu-item--lg) {
-  margin-left: -16px; /* 根据 .page__inner-wrap padding 调整 */
-}
-
-
-
-/* 合并自 custom.scss */
-/*.greedy-nav { max-width: 100% !important; }
-.masthead__menu { flex: 1 1 auto; }*/
-
-/* 如果你仍然要尽量防止 greedy 折叠（兜底） */
-/*nav#site-nav.greedy-nav .hidden-links { display: none !important; }*/
-/*nav#site-nav.greedy-nav .visible-links { flex-wrap: nowrap !important; }*/
-
-
-/* ===============================
-   移动端
-   =============================== */
-@media (max-width: 768px) {
-  .masthead__inner-wrap { padding-left: 1rem !important; }
-  .masthead__menu-item--lg.persist > a,
-  .site-title a { font-size: 1rem !important; padding-right: 0.6rem !important; }
-  .masthead__menu-item:not(.masthead__menu-item--lg) > a {
-    font-size: 1rem !important;
-    padding: 0 0.8rem !important;
-  }
-  nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
-}
-
-/* ===============================
-   小修（避免意外影响）
-   =============================== */
-.page { margin-top: 0 !important; }
-
-
-
-/* ========================================
-   Master overrides for Academic homepage
-   - Put this at end of your custom stylesheet
-   - Body font: Arial; Titles: Futura (fallbacks provided)
-   ======================================== */
-
-/* ---------- fonts / variables ---------- */
-:root{
-  --body-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --title-font: "Futura", "Helvetica Neue", Arial, sans-serif;
-  --card-bg: #ffffff;
-  --card-border: rgba(0,0,0,0.08);
-  --card-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  --card-hover-shadow: 0 10px 28px rgba(0,0,0,0.14);
-  --content-max-width: 1000px; /* 调整正文最大宽度 */
-  --content-padding: 28px;     /* 正文内边距（左右） */
-}
-
-/* ---------- base / page container ---------- */
-/* Keep site background / theme default — do not force gray/white on body */
-body {
-  font-family: var(--body-font);
-  font-size: 18px;            /* 全站正文字号（可调整） */
-  line-height: 1.65;
-  color: #222;
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove theme outer "page" borders/shadows so only per-section cards remain */
-.page,
-.page__inner-wrap,
-.page__content {
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-/* main content container: control width and horizontal offset */
-.page__content {
+  /* ensure content sits to right of sidebar + gutter */
+  margin-left: calc(var(--sidebar-width) + var(--gutter));
   max-width: var(--content-max-width);
-  margin: 0 auto;                     /* centered base */
-  padding: 18px var(--content-padding); 
-  /* if you want shift to the right: increase padding-left using media queries
-     or add: padding-left: calc(var(--content-padding) + 20px); */
+  box-sizing: border-box;
 }
 
-/* make sure article/page element doesn't have extra margins */
-article.page { margin-top: 0 !important; }
-
-/* ---------- Heading fonts ---------- */
-.page__title,
-section h1, section h2 {
-  font-family: var(--title-font);
-  color: #111;
-  font-weight: 700;
-  letter-spacing: -0.2px;
-  margin-top: 0;
+/* On narrow screens, remove float & offsets */
+@media (max-width: 980px) {
+  .sidebar { float: none; margin-left: 0; width: 100%; display: block; text-align: center; }
+  article.page .page__inner-wrap, .page__inner-wrap { margin-left: 0; padding-left: 18px; padding-right: 18px; }
 }
 
-/* default section title size */
-.page__title {
-  font-size: 1.5rem;   /* ~24px */
-  margin-bottom: 18px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  padding-bottom: 8px;
-}
-
-/* ---------- unified card base ---------- */
+/* ===============================
+   Card base (uniform) — controls padding + visual look inside
+   =============================== */
 .card,
 .bio-card,
 .skill-card,
@@ -291,7 +170,7 @@ section h1, section h2 {
   transition: transform .22s ease, box-shadow .22s ease;
 }
 
-/* hover/focus */
+/* Hover */
 .card:hover,
 .bio-card:hover,
 .skill-card:hover,
@@ -306,7 +185,7 @@ section h1, section h2 {
   outline: none;
 }
 
-/* card internal content default (consistent across sections) */
+/* unified card-content padding and text sizing (consistent) */
 .card .card-content,
 .bio-card .card-content,
 .skill-card .card-content,
@@ -315,180 +194,136 @@ section h1, section h2 {
 .research-section-card .card-content,
 .research-card .card-content,
 .beyond-card .card-content {
-  padding: 20px !important;
-  font-family: var(--body-font);
-  font-size: 1rem;
-  line-height: 1.65;
-  color: #222;
+  padding: calc(var(--content-inner-pad)) !important;
+  font-family: var(--body-font) !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+  color: #222 !important;
 }
 
-/* section spacing */
-section { margin-bottom: 60px; }
-
-/* ---------- Biography (keeps existing look) ---------- */
-.bio-card { /* ensure outer card wrapper */ }
-.bio-card .card-content p { margin-bottom: 14px; }
-
-/* ---------- Education: card wrapper + content ---------- */
-/* Outer card that contains title + entries */
-.education-card {
-  padding: 18px;            /* outer padding */
-  max-width: 100%;
+/* For the page blocks you sometimes put title outside — ensure title inside card works */
+.card > .card-content > .page__title,
+.education-card > .card-content > .page__title,
+.research-section-card > .card-content > .page__title {
+  margin-bottom: 12px;
 }
 
-/* Inside, each education row */
-.education-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  margin-top: 12px;
+/* ===============================
+   Page content typography (titles, paragraphs, lists)
+   =============================== */
+.page__content p { font-size: 18.5px; line-height: 1.8; margin-bottom: 18px; color: #222; }
+.page__content strong { display: block; font-size: 20px; font-weight:600; margin: 22px 0 12px; color:#333; text-transform: capitalize; }
+.page__content ul { margin:0 0 22px 22px; padding:0; list-style-type: disc; }
+.page__content li { font-size: 18px; margin-bottom: 10px; line-height: 1.65; }
+
+/* ===============================
+   NAVBAR TWEAKS:
+   - increase nav font slightly, right-shift the menu so it lines up with page content
+   =============================== */
+nav#site-nav { display:flex !important; align-items:center !important; width:100%; }
+nav#site-nav > .visible-links { display:flex !important; align-items:center !important; gap: 0.6rem; flex-wrap: nowrap !important; }
+
+/* enlarge nav links (slightly) */
+.masthead__menu-item--lg.persist > a,
+.site-title a { font-size: 1.35rem !important; color: #111 !important; font-weight:700 !important; white-space:nowrap !important; padding-right: 1rem !important; }
+
+.masthead__menu-item:not(.masthead__menu-item--lg) > a { font-size: 1.08rem !important; font-weight: 500 !important; padding: 0 0.25rem !important; white-space:nowrap !important; }
+
+/* Shift the nav inner block so menu items align with page content */
+.masthead__inner-wrap,
+.masthead__menu {
+  max-width: var(--content-max-width) !important;
+  margin: 0 auto !important;
+  padding-left: calc(var(--sidebar-width) + var(--gutter)) !important; /* push inside items to align with content */
+  box-sizing: border-box;
 }
 
-/* logo area */
-.education-card .edu-logo {
-  flex: 0 0 80px;
-  display: flex;
-  align-items: flex-start;
-}
-.education-card .edu-logo img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  border-radius: 8px;
+/* Keep theme toggle always pinned to very right of nav (not part of greedy hidden-links) */
+#theme-toggle { margin-left: auto !important; order: 999 !important; display:inline-flex !important; align-items:center !important; }
+
+/* If greedy-nav tries to hide things, force visible on desktop */
+@media (min-width: 769px) {
+  nav#site-nav.greedy-nav .hidden-links { display: none !important; }
+  nav#site-nav.greedy-nav .visible-links { flex-wrap: nowrap !important; min-width: 0; }
 }
 
-/* content area */
-.education-card .edu-content {
-  flex: 1;
-  font-family: var(--body-font);
-  color: #222;
+/* On small screens remove the left-offset so nav fits */
+@media (max-width: 768px) {
+  .masthead__inner-wrap, .masthead__menu { padding-left: 1rem !important; }
+  .masthead__menu-item--lg.persist > a, .site-title a { font-size: 1rem !important; padding-right: 0.6rem !important; }
+  .masthead__menu-item:not(.masthead__menu-item--lg) > a { font-size:1rem !important; padding: 0 0.8rem !important; }
+  nav#site-nav.greedy-nav .visible-links { flex-wrap: wrap !important; }
 }
+
+/* ===============================
+   Education card (single card contains the title + entries)
+   - keep B.Sc. and date compact, ensure date -> GPA spacing larger
+   =============================== */
+.education-card { padding: 18px; max-width:100%; }
+.education-card .card-content { padding: 18px !important; }
+
+/* education entry row */
+.education-item { display:flex; align-items:flex-start; gap: 18px; margin-top: 12px; }
+.education-card .edu-logo { flex: 0 0 80px; display:flex; align-items:flex-start; }
+.education-card .edu-logo img { width:70px; height:70px; object-fit:contain; border-radius:8px; }
+.education-card .edu-content { flex:1; font-family: var(--body-font); color:#222; }
 
 /* school name */
-.education-card .edu-content h3 {
-  font-family: var(--title-font);
-  font-size: 1.15rem; /* ~18.5px */
-  margin: 0 0 6px 0;
-  font-weight: 700;
-}
+.education-card .edu-content h3 { font-family: var(--title-font); font-size: 1.15rem; margin:0 0 6px 0; font-weight:700; }
 
-/* degree line (compact with school name) */
-.education-card .edu-content em {
-  display: block;
-  margin: 2px 0 4px 0;     /* tight to school name */
-  font-style: italic;
-  font-size: 0.98rem;
-  line-height: 1.3;
-  color: #444;
-}
+/* degree (compact with school name) */
+.education-card .edu-content em { display:block; margin:2px 0 4px 0; font-style:italic; font-size:0.98rem; line-height:1.3; color:#444; }
 
-/* date: tight to degree but with bigger gap to following list */
-.education-card .edu-date {
-  display: block;
-  font-size: 0.95rem;
-  color: #555;
-  margin: 6px 0 18px 0;   /* larger gap to GPA / list below */
-  line-height: 1.3;
-}
+/* date: tight to degree; larger gap to GPA/list */
+.education-card .edu-date { display:block; font-size:0.95rem; color:#555; margin:6px 0 18px 0; line-height:1.3; }
 
-/* list items (GPA, Courses, Awards) — consistent with body but slightly smaller */
-.education-card .edu-content ul {
-  margin: 0;
-  padding-left: 22px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #222;
-}
-.education-card .edu-content ul li { margin-bottom: 12px; }
-.education-card .edu-content ul li > strong { display: inline-block; margin-right: 8px; font-weight:700; }
+/* GPA and list items */
+.education-card .edu-content ul { margin:0; padding-left:22px; font-size:1rem; line-height:1.6; color:#222; }
+.education-card .edu-content ul li { margin-bottom:12px; }
+.education-card .edu-content ul li > strong { display:inline-block; margin-right:8px; font-weight:700; }
 
-/* ---------- Research Experiences: outer card containing the grid ---------- */
-/* We make the whole section a single card with title inside it (nested cards) */
-.research-section-card {
-  padding: 18px;
-}
+/* ===============================
+   Research: outer card contains title + grid of inner cards
+   - inner .research-card has image then card-content with title and meta
+   - default layout: large stacked cards; wide screens -> 2 columns
+   =============================== */
+.research-section-card { padding: 18px; }
+.research-section-card > .card-content { padding: 0; }
 
-/* put title inside the outer card (consistent look) */
-.research-section-card > .card-content { padding: 0; } /* we'll control spacing separately */
-.research-section-card > .card-content .section-header {
-  padding: 16px 20px 12px 20px;
+.research-section-card .section-header {
+  padding: 16px 20px 12px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
-/* inner research-grid: large cards arranged vertically by default */
-.research-grid {
-  display: grid;
-  grid-template-columns: 1fr;      /* default single column, large cards stacked */
-  gap: 22px;
-  padding: 20px;                  /* inner padding inside outer card */
-}
+/* inner grid */
+.research-grid { display:grid; grid-template-columns: 1fr; gap: 22px; padding: 20px; }
 
-/* larger screens can show two columns if width allows */
-@media(min-width:1200px){
+/* break to 2 columns on wide screens */
+@media (min-width:1200px) {
   .research-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* each research card (inner) */
-.research-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-}
+/* each inner card */
+.research-card { display:block; text-decoration:none; color:inherit; border-radius:10px; overflow:hidden; background:var(--card-bg); border:1px solid var(--card-border); }
 
-/* prominent image area (fixed aspect) */
-.research-card .card-image {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: #efefef; /* placeholder while image loads */
-  overflow: hidden;
-}
-.research-card .card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+/* image area (fixed aspect) */
+.research-card .card-image { width:100%; aspect-ratio: 16/9; background:#efefef; overflow:hidden; }
+.research-card .card-image img { width:100%; height:100%; object-fit:cover; display:block; }
 
-/* content area inside each research card: title and short meta or excerpt */
-.research-card .card-content {
-  padding: 20px;
-  background: #fafafa;
-  text-align: left;
-}
-.research-card .card-content h3 {
-  font-family: var(--title-font);
-  font-size: 1.25rem;
-  margin: 0 0 8px 0;
-  color: #111;
-  font-weight: 700;
-  line-height: 1.2;
-}
+/* content area: title below image (left aligned) */
+.research-card .card-content { padding: 22px; background:#fafafa; text-align:left; }
+.research-card .card-content h3 { font-family: var(--title-font); font-size:1.25rem; margin:0 0 8px 0; color:#111; font-weight:700; line-height:1.2; text-decoration:none; border-bottom:none; }
 
-/* small meta (role / date) style if needed */
-.research-card .card-content .meta {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 10px;
-}
+/* meta and excerpt */
+.research-card .card-content .meta { font-size:0.95rem; color:#555; margin-bottom:10px; }
+.research-card .card-content p, .research-card .card-content ul, .research-card .card-content li { font-family: var(--body-font); font-size:1rem; line-height:1.6; color:#222; }
 
-/* body inside card (bullet points etc.) */
-.research-card .card-content p,
-.research-card .card-content ul,
-.research-card .card-content li {
-  font-family: var(--body-font);
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #222;
-}
+/* ensure no underline on titles/links */
+.research-card a, .research-card a:link, .research-card a:visited { text-decoration:none; color:inherit; }
 
-/* ensure card h2/h3 inside research card have no bottom border */
-.research-card h2, .research-card h3 { border-bottom: none; padding-bottom: 0; }
-
-/* ---------- Research detail page (academic styling) ---------- */
+/* ===============================
+   Research detail page (academic look)
+   =============================== */
 #research-detail .content-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -497,39 +332,39 @@ section { margin-bottom: 60px; }
   box-shadow: var(--card-shadow);
   max-width: 920px;
   margin: 30px auto 60px auto;
-  font-family: "Times New Roman", "Georgia", serif; /* body font for detail page */
+  font-family: "Times New Roman", "Georgia", serif;
   font-size: 1.05rem;
   line-height: 1.8;
 }
-#research-detail .page__title {
-  font-family: var(--title-font);
-  font-size: 2rem;
-  margin-top: 10px;
-  margin-bottom: 28px;
-  text-align: center;
-}
+#research-detail .page__title { font-family: var(--title-font); font-size:2rem; margin-top:10px; margin-bottom:28px; text-align:center; }
 
 /* figure + caption (centered) */
-.research-figure { text-align: center; margin: 30px 0; }
-.research-figure img { max-width: 100%; height: auto; border-radius: 8px; }
-.research-figure figcaption { font-size: 0.95rem; color:#555; font-style:italic; margin-top:8px; }
+.research-figure { text-align:center; margin: 30px 0; }
+.research-figure img { max-width:100%; height:auto; border-radius:8px; }
+.research-figure figcaption { font-size:0.95rem; color:#555; font-style:italic; margin-top:8px; }
 
-/* paragraphs & lists in research detail */
-.research-body p { margin-bottom: 18px; }
-.research-body ul { padding-left: 22px; margin-bottom: 18px; }
-.research-body li { margin-bottom: 10px; }
+/* research body spacing */
+.research-body p { margin-bottom:18px; }
+.research-body ul { padding-left:22px; margin-bottom:18px; }
+.research-body li { margin-bottom:10px; }
 
-/* ---------- Beyond section (hobbies) ---------- */
-.beyond-card { padding: 18px; }
-.beyond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; padding: 12px 0 0 0; }
-.beyond-item { display:flex; flex-direction:column; }
+/* ===============================
+   Beyond (hobbies) grid - consistent card look
+   =============================== */
+.beyond-card { padding:18px; }
+.beyond-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:18px; padding:12px 0 0 0; }
+.beyond-item { display:flex; flex-direction:column; background:var(--card-bg); border-radius:12px; overflow:hidden; box-shadow:var(--card-shadow); }
 .beyond-image img { width:100%; height:160px; object-fit:cover; display:block; }
 .beyond-content { padding:12px 14px; }
-.beyond-content h3 { font-family: var(--title-font); font-size:1.05rem; margin:0 0 8px 0; }
+.beyond-content h3 { font-family: var(--title-font); font-size:1.05rem; margin:0 0 8px 0; color:#222; }
 
-/* ---------- accessibility & small screens ---------- */
-@media (max-width: 768px) {
-  .page__content { padding-left: 18px; padding-right: 18px; }
+/* ===============================
+   responsive tweaks
+   =============================== */
+@media (max-width: 980px) {
+  /* remove left offset on small screens */
+  .sidebar { width: 100%; margin-left: 0; float: none; text-align: center; }
+  article.page .page__inner-wrap, .page__inner-wrap { margin-left: 0; padding-left: 18px !important; padding-right: 18px !important; }
   .research-grid { grid-template-columns: 1fr; gap: 16px; padding: 14px; }
   .research-card .card-image { aspect-ratio: 4/3; }
   .education-item { flex-direction: column; }
@@ -537,8 +372,5 @@ section { margin-bottom: 60px; }
   #research-detail .content-card { padding: 24px; margin: 16px; }
 }
 
-/* ---------- small tuning: remove accidental double-card wrapping ----------
-   If you previously wrapped items twice (e.g., .card > .card), ensure outer
-   wrappers use classes: .education-card (outer) and inner row uses .education-item
-   This CSS avoids double shadows/borders by being specific to the outer classes.
-*/
+/* important: keep theme toggle on the far right even when greedy runs */
+#theme-toggle { z-index: 9999; }

@@ -10,7 +10,7 @@
 =============================== */
 .sidebar .author__avatar img.author__avatar,
 img.author__avatar {
-  width: 220px !important;
+  width: 240px !important;
   height: auto !important;
   max-width: none !important;
   border-radius: 50% !important;
@@ -22,14 +22,14 @@ img.author__avatar {
    Sidebar：姓名 / 简介 / 联系方式
 =============================== */
 .author__name {
-  font-size: 30px !important;
+  font-size: 32px !important;
   font-weight: 700 !important;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .author__bio {
-  font-size: 16.5px !important;
+  font-size: 18px !important;
   line-height: 1.5 !important;
   text-align: center;
   margin-bottom: 15px;
@@ -37,7 +37,7 @@ img.author__avatar {
 }
 
 .author__urls li {
-  font-size: 0.85rem !important;
+  font-size: 0.9rem !important;
   line-height: 1.25;
   margin-bottom: 5px;
 }

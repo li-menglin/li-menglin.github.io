@@ -322,8 +322,8 @@ section {
   flex: 0 0 80px;
 }
 .education-card .edu-logo img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   border-radius: 8px;
 }
@@ -348,7 +348,7 @@ section {
 }
 .education-card .edu-main .edu-date {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   color: #666;
   margin-bottom: 0;
 }
@@ -361,7 +361,7 @@ section {
 /* 列表样式（去掉粗体，统一行距） */
 .education-card .edu-desc ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 30px;
   list-style-type: disc;
 }
 .education-card .edu-desc ul li {
@@ -369,7 +369,7 @@ section {
   font-size: 1rem;
   line-height: 1.55;   /* 更紧凑 */
   color: #222;
-  margin-bottom: 4px;  /* 行间隔小一点 */
+  margin-bottom: 6px;  /* 行间隔小一点 */
 }
 
 /* 移动端响应式 */

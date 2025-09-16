@@ -159,6 +159,85 @@ section {
   }
 }
 
+/* ==============================
+   Education — 列表与字体统一修正（覆盖旧规则）
+   放在 custom.css 最末尾以确保生效
+   ============================== */
+
+/* 1) 基本字体与行距与主体一致（保持与 Biography 相同） */
+.education-card .edu-content,
+.education-card .edu-content p,
+.education-card .edu-content ul,
+.education-card .edu-content li,
+.education-card .edu-content span,
+.education-card .edu-value {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  font-size: 1rem !important;      /* 与 body 的 1rem 保持一致 */
+  line-height: 1.7 !important;     /* 与主页正文一致 */
+  color: #222 !important;
+}
+
+/* 2) 列表对齐与样式：
+   - 使用 outside（默认行为），避免 inside 导致首行折行看起来“多空白”
+   - padding-left 控制缩进，使列表左对齐且与正文对齐 */
+.education-card .edu-content ul {
+  margin: 0 0 12px 0 !important;   /* 底部间距：保持节奏感 */
+  padding-left: 20px !important;   /* 列表缩进（与页面其它列表一致） */
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  color: #222 !important;
+}
+
+/* 每个 li 的垂直间距（既不拥挤也不过度宽松） */
+.education-card .edu-content ul li {
+  margin: 0 0 12px 0 !important;
+}
+
+/* 3) strong 作为标签时保持同行显示（不要单独成行），并留出间距 */
+.education-card .edu-content ul li > strong {
+  display: inline-block !important;   /* 同行显示，便于阅读 */
+  margin-right: 8px !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;         /* 与正文同级或略小 */
+  color: #222 !important;
+  vertical-align: baseline !important;
+}
+
+/* 4) 保证 degree / date 保持原来的紧凑设置（不覆盖你之前的紧致样式） */
+/* 如果你之前为 .edu-content em 或 .edu-date 设置了更紧凑的样式，这里不覆盖它们。
+   若需要强制覆盖，解除下面注释： */
+/*
+.education-card .edu-content em {
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+  color: #444 !important;
+}
+.education-card .edu-date {
+  font-size: 0.95rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 14px !important;
+}
+*/
+
+/* 5) 兜底：针对可能存在的“把 strong 设为 block”规则，强制复原为 inline-block */
+.education-card .edu-content ul li > strong[style],
+.education-card .edu-content ul li strong {
+  /* 已在上方覆盖，保持作为兜底 */
+}
+
+/* 6) 响应式：移动端保持间距和字体缩放 */
+@media (max-width: 768px) {
+  .education-card .edu-content,
+  .education-card .edu-content ul,
+  .education-card .edu-content ul li > strong {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  .education-card .edu-content ul { padding-left: 18px !important; }
+}
+
 
 /* ========== Research detail page ========== */
 #research-detail .content-card {

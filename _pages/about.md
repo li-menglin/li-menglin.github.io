@@ -31,7 +31,7 @@ header: false
 <div class="education-card">
   <div class="education-item">
     <div class="edu-logo">
-      <img src="sysu-logo.png" alt="SYSU Logo">
+      <img src="/images/sysu-logo.png" alt="SYSU Logo">
     </div>
     <div class="edu-main">
       <h3>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</h3>

@@ -525,3 +525,39 @@ section {
     line-height: 1.6;
   }
 }
+
+/* =======================
+   去掉主页正文外层边框
+   ======================= */
+
+/* 去除 page/article 默认边框和背景 */
+.page {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* 包裹正文的内层容器 */
+.page__inner-wrap {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important; /* 如果你需要缩小上下空白，可以调节这里 */
+}
+
+/* 具体正文区域 */
+.page__content {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 保持每个 section 自己的卡片外观 */
+.card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 32px;
+}

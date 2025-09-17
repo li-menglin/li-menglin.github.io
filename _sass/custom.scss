@@ -62,61 +62,93 @@ section {
 }
 
 /* ========== Research detail page ========== */
+#research-detail {
+  background: #f8f8f8;
+  padding: 40px 0;
+}
+
 #research-detail .content-card {
   background: #fff;
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  max-width: 900px;
-  margin: 30px auto 60px auto;
-  font-family: "Times New Roman", "Georgia", serif; /* 学术化衬线字体 */
-  font-size: 1.05rem;
-  line-height: 1.8;
+  padding: 60px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.85;
 }
 
 #research-detail .page__title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  line-height: 1.3;
+  margin-bottom: 15px;
 }
 
-/* 图表和图例 */
-.research-figure {
+#research-detail .meta {
   text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.research-body h2 {
+  font-size: 1.5rem;
+  margin: 40px 0 18px 0;
+  font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  border-left: 5px solid #444;
+  padding-left: 12px;
+}
+
+.research-body p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.equation {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 1.1rem;
+}
+
+.research-body ul {
+  margin: 0 0 20px 24px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.research-body li {
+  margin-bottom: 12px;
+}
+
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   margin: 35px 0;
 }
 
-.research-figure img {
+.figure-grid figure {
+  text-align: center;
+}
+
+.figure-grid img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
 }
 
-.research-figure figcaption {
+.figure-grid figcaption {
   font-size: 0.9rem;
   color: #555;
   margin-top: 8px;
   font-style: italic;
-  text-align: center;
 }
 
-/* 段落与列表 */
-.research-body p {
-  margin-bottom: 20px;
-}
-
-.research-body ul {
-  padding-left: 22px;
-  margin-bottom: 20px;
-}
-
-.research-body li {
-  margin-bottom: 10px;
-}
 
 /* ========== Research cards on homepage ========== */
 .research-grid {

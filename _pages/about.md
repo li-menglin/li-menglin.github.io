@@ -32,7 +32,7 @@ header: false
   <h2 class="page__title">Education</h2>
   <div class="edu-top">
     <!-- 左边 Logo -->
-    <img src="sysu-logo.png" alt="SYSU Logo" class="edu-logo">
+    <img src="/images/sysu-logo.png" alt="SYSU Logo" class="edu-logo">
 
     <!-- 右边文字 -->
     <div class="edu-info">

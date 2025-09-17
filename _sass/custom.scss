@@ -305,6 +305,7 @@ section {
 .education-card .edu-top {
   display: flex;
   align-items: center;
+  padding-left: 20px;
   gap: 16px;
 }
 
@@ -325,7 +326,7 @@ section {
 .education-card .edu-school {
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 0 0 4px 0;
+  margin: 0 0 1px 0;
 }
 
 /* 学位 & 日期 */
@@ -333,7 +334,7 @@ section {
 .education-card .edu-date {
   font-size: 1rem;
   margin: 0;
-  line-height: 1.5; /* 行距与下方列表一致 */
+  line-height: 1.7; /* 行距与下方列表一致 */
 }
 
 /* 下半部分：描述/GPA/课程/荣誉 */
@@ -344,7 +345,7 @@ section {
 /* 列表内容（继承全局设置，只加必要的缩进） */
 .education-card .edu-desc ul {
   margin: 0;
-  padding-left: 20px; /* 与全局 .card ul 保持一致 */
+  padding-left: 40px; /* 与全局 .card ul 保持一致 */
   list-style-type: disc;
 }
 

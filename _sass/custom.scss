@@ -283,93 +283,73 @@ section {
   }
 }
 
-/* ========== Education: 字体/字号/间距优化 ========== */
-/* Section 统一底部间距 */
-section {
-  margin-bottom: 60px;
+
+/* ===================== Education Section ===================== */
+
+/* Section 标题 */
+.education-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
-/* 教育卡片整体 */
+/* 整个教育经历卡片 */
 .education-card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-/* 标题 */
-.education-card .section-title {
-  font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin: 0 0 16px 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  color: #222;
-}
-
-/* logo + 基本信息左右对齐 */
-.education-card .education-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 8px;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px; /* 与其他 section 统一的间距 */
 }
 
-/* logo */
-.education-card .edu-logo {
-  flex: 0 0 80px;
+/* 上半部分：logo + 学校/学位/date */
+.education-card .edu-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
-.education-card .edu-logo img {
+
+/* 左边 logo */
+.education-card .edu-logo {
+  flex-shrink: 0;
   width: 100px;
   height: 100px;
   object-fit: contain;
-  border-radius: 12px;
 }
 
-/* 右边主内容 */
-.education-card .edu-main {
+/* 右边内容 */
+.education-card .edu-info {
   flex: 1;
 }
-.education-card .edu-main h3 {
-  font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 5px 0;
-  color: #111;
-}
-.education-card .edu-main em {
-  display: block;
-  font-style: italic;
-  font-size: 20px;
-  color: #444;
-  margin: 2px 0 5px 0;
-}
-.education-card .edu-main .edu-date {
-  display: block;
-  font-size: 20px;
-  color: #666;
-  margin-bottom: 0;
+
+/* 学校名称 */
+.education-card .edu-school {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 4px 0;
 }
 
-/* 描述部分（独立，不受右边缩进影响） */
+/* 学位 & 日期 */
+.education-card .edu-degree,
+.education-card .edu-date {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5; /* 行距与下方列表一致 */
+}
+
+/* 下半部分：描述/GPA/课程/荣誉 */
 .education-card .edu-desc {
   margin-top: 8px;
 }
 
-/* 列表样式（去掉粗体，统一行距） */
+/* 列表内容（继承全局设置，只加必要的缩进） */
 .education-card .edu-desc ul {
   margin: 0;
-  padding-left: 40px;
+  padding-left: 20px; /* 与全局 .card ul 保持一致 */
   list-style-type: disc;
 }
+
 .education-card .edu-desc ul li {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;   /* 更紧凑 */
-  color: #222;
-  margin-bottom: 8px;  /* 行间隔小一点 */
+  margin-bottom: 6px; /* 控制条目间距 */
 }
 
 /* 移动端响应式 */

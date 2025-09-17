@@ -21,8 +21,10 @@ permalink: /research/research1.html
       <h1 class="page__title">
         Development of a SiPM-Based Cosmic-Ray Telescope and Neutron Detection System
       </h1>
-      <p class="meta">Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng</p>
-      <p class="meta">October 2024 to now</p>
+      <p class="meta">
+        Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng
+        October 2024 to now
+      </p>
       
       <section class="research-body">
         <h2>Background</h2>

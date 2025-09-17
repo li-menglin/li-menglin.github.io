@@ -28,32 +28,31 @@ header: false
   </div>
 </section>
 
-<section id="education">
-  <div class="education-card">
-    <h2 class="section-title">Education</h2>
-    <div class="education-item">
-      <!-- 左边 logo -->
-      <div class="edu-logo">
-        <img src="/images/sysu-logo.png" alt="SYSU Logo">
-      </div>
-      <!-- 右边主要内容 -->
-      <div class="edu-main">
-        <h3>B.Sc. in Physics (Major), Electronics and Information Science (Minor)</h3>
-        <em>Sun Yat-sen University</em>
-        <span class="edu-date">Sept. 2022 – Jun. 2026</span>
-      </div>
-    </div>
+<div class="education-card">
+  <h2 class="page__title">Education</h2>
+  <div class="edu-top">
+    <!-- 左边 Logo -->
+    <img src="sysu-logo.png" alt="SYSU Logo" class="edu-logo">
 
-    <!-- 说明部分（独立于右侧主信息，靠左对齐） -->
-    <div class="edu-desc">
-      <ul>
-        <li>GPA: 3.65 / 4.0</li>
-        <li>Quantum Mechanics, Solid State Physics, Microelectronics</li>
-        <li>Outstanding Research Project, Academic Excellence Scholarship</li>
-      </ul>
+    <!-- 右边文字 -->
+    <div class="edu-info">
+      <p class="edu-school">Sun Yat-sen University</p>
+      <p class="edu-degree">B.Sc. in Physics (Major), Electronics and Information Science (Minor)</p>
+      <p class="edu-date">Sept. 2022 – Jun. 2026</p>
     </div>
   </div>
-</section>
+
+  <!-- 下半部分：GPA、课程、荣誉等 -->
+  <div class="edu-desc">
+    <ul>
+      <li>GPA: 3.65/4.0</li>
+      <li>Biomedical Signal Processing</li>
+      <li>Quantum Mechanics</li>
+      <li>Honors: Excellent Student Award</li>
+    </ul>
+  </div>
+</div>
+
 
 
 

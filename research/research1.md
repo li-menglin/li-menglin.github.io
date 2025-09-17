@@ -43,16 +43,6 @@ permalink: /research/research1.html
         </p>
 
         <h2>Experimental Setup</h2>
-        <div class="figure-grid">
-          <figure>
-            <img src="/images/research1setup.png" alt="Setup diagram">
-            <figcaption>Schematic diagram of the telescope system with scintillators and SiPMs.</figcaption>
-          </figure>
-          <figure>
-            <img src="/images/research1platform.png" alt="Experiment photo">
-            <figcaption>Laboratory setup including scintillator modules and readout electronics.</figcaption>
-          </figure>
-        </div>
         <p>
         The telescope comprises two plastic scintillator paddles oriented vertically, separated by a fixed baseline so that through-going cosmic muons traverse 
         both detectors in succession.Each scintillator is optically coupled to a SiPM whose output is processed by a spectroscopy amplifier to produce a shaped 

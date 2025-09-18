@@ -156,131 +156,18 @@ section {
 
 
 /* ========== Research cards on homepage ========== */
-.research-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* 一列大卡片 */
-  gap: 30px;
-  align-items: start;
-}
-
-.research-card {
-  display: block !important;
-  text-decoration: none !important;
-  color: inherit !important;
-  background: #fff !important;
-  border: 1px solid rgba(0,0,0,0.08) !important;
-  border-radius: 12px !important;
-  overflow: hidden !important;
-  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05) !important;
-}
-
-.research-card:hover, .research-card:focus {
-  transform: translateY(-6px) !important;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.14) !important;
-}
-
-.research-card .card-image {
-  width: 100% !important;
-  aspect-ratio: 16/9 !important;
-  overflow: hidden !important;
-  background: #efefef;
-}
-
-.research-card .card-image img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
-.research-card .card-content {
-  padding: 20px !important;
-  text-align: auto !important;
-  background: #fff !important;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif !important; 
-  line-height: 1.6 !important;
-}
-
-.research-card .card-content h3, .research-card .card-content .card-title {
-  display: block !important;
-  margin: 0 0 10px 0 !important;
-  font-family: "Futura", "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 1.25rem !important;
-  font-weight: 700 !important;
-  color: #111 !important;
-  text-decoration: none !important;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
-  border-bottom: none !important;
-  line-height: 1.2 !important;
-}
-
-.research-card .card-content a {
-  text-decoration: none !important;
-  color: inherit !important;
-}
-
-.research-card .card-content .meta, .research-card .card-content .sub {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.research-card .card-content p, 
-.research-card .card-content ul, 
-.research-card .card-content li {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #222 !important;
-}
-
-.research-card h2, .research-card h3 {
-  border-bottom: none !important;
-  padding-bottom: 0 !important;
-  padding-left: 20px !important;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif !important; 
-}
-
-@media (max-width: 768px) {
-  .research-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
-  .research-card .card-content {
-    padding: 16px !important;
-  }
-  .research-card .card-content h3 {
-    font-size: 1.05rem !important;
-  }
-}
-
-/* 移动端优化 (detail) */
-@media (max-width: 768px) {
-  #research-detail .content-card {
-    padding: 25px;
-  }
-  #research-detail .page__title {
-    font-size: 1.6rem;
-    margin-bottom: 25px;
-  }
-}
-
-/* --- 外层研究卡片：与其他 section 的卡片一致 --- */
+/* 外层研究卡片：与其他 section 一致 */
 .research-outer {
-  /* 使用与 .card 保持相同的视觉风格（若 .card 已包含这些，可只保留 .research-outer 的 margin） */
   background: #fff;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   padding: 20px;
-  margin-bottom: 60px; /* 与其他 section 保持统一外间距 */
+  margin-bottom: 60px;
 }
 
-/* 外层标题（在卡片内）与其它 section 标题保持一致 */
-.research-outer .page__title,
-.research-outer h2 {
+/* 标题保持一致 */
+.research-outer .page__title {
   margin: 0 0 16px 0;
   font-size: 1.5rem;
   font-weight: 700;
@@ -289,28 +176,49 @@ section {
   padding-bottom: 8px;
 }
 
-/* 使内层 grid 在外层卡片里占满宽度并保持单列（覆盖必要项）*/
-.research-outer .research-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* 保证单列（每项为大卡片） */
-  gap: 24px;
-  margin-top: 12px;
+/* 内部分项：研究经历 */
+.research-entry {
+  margin: 20px 0;
 }
 
-/* 兼容旧有 .research-card 样式（如果原来用了 !important），确保内层卡片仍保留其外观 */
-.research-outer .research-card {
-  /* 保持你现有 .research-card 行为；如果需要可在此处微调内外边距 */
+.research-entry h3 {
+  margin: 12px 0 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif;
+  color: #111;
 }
 
-/* 响应式：移动端仍为单列 */
+/* 图片 */
+.research-entry .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #efefef;
+}
+
+.research-entry .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 分隔线 */
+.research-outer hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 20px 0;
+}
+
+/* 移动端优化 */
 @media (max-width: 768px) {
-  .research-outer {
-    padding: 16px;
-    margin-bottom: 40px;
-  }
-  .research-outer .research-grid { gap: 18px; }
-  .research-outer .page__title { font-size: 1.35rem; margin-bottom: 12px; }
+  .research-outer { padding: 16px; margin-bottom: 40px; }
+  .research-entry { margin: 16px 0; }
+  .research-entry h3 { font-size: 1.1rem; }
 }
+
 
 
 /* ========== Beyond Section ========== */
@@ -411,9 +319,9 @@ section {
 
 /* 学校名称 */
 .education-card .edu-school {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  margin: 0 0 0px 0;
+  margin: 0 0 -2px 0;
   font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
 }
 
@@ -434,7 +342,7 @@ section {
 /* 列表内容（继承全局设置，只加必要的缩进） */
 .education-card .edu-desc ul {
   margin: 0;
-  padding-left: 40px; /* 与全局 .card ul 保持一致 */
+  padding-left: 20px; /* 与全局 .card ul 保持一致 */
   list-style-type: disc;
 }
 

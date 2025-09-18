@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5 {
   font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   font-weight: 700;
   color: #222;
+  padding-left: 10px;
   margin-top: 0;
 }
 
@@ -38,7 +39,7 @@ section {
 
 .card-content, .bio-card, .skill-card, .pub-card, 
 .education-card, .research-card, .beyond-card {
-  padding: 20px;
+  padding: 10px;
   font-size: 1.05rem;
   line-height: 1.7;
 }

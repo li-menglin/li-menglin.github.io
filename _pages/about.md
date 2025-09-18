@@ -57,44 +57,39 @@ header: false
 <section id="research">
   <div class="card research-outer">
     <h2 class="page__title">Research Experiences</h2>
-    
-    <!-- Research Entry 1 -->
-    <div class="research-entry">
-      <div class="card-image">
-        <img src="/images/research1-cover.png" alt="Research Project 1">
-      </div>
-      <h3>Cosmic Ray Telescope with Plastic Scintillators</h3>
-    </div>
-    <hr>
 
-    <!-- Research Entry 2 -->
-    <div class="research-entry">
-      <div class="card-image">
-        <img src="/images/research2-cover.png" alt="Research Project 2">
-      </div>
-      <h3>FMCW Radar for Non-Contact Cardiopulmonary Monitoring</h3>
-    </div>
-    <hr>
+    <div class="research-grid">
+      <a class="research-card" href="/research/research1.html" aria-label="Cosmic Ray Telescope with Plastic Scintillators">
+        <div class="card-image"><img src="/images/research1-cover.png" alt="Cosmic Ray Telescope"></div>
+        <div class="card-content">
+          <h3>Cosmic Ray Telescope with Plastic Scintillators</h3>
+        </div>
+      </a>
 
-    <!-- Research Entry 3 -->
-    <div class="research-entry">
-      <div class="card-image">
-        <img src="/images/research3-cover.png" alt="Research Project 3">
-      </div>
-      <h3>Analysis of Long-Lived Particle Properties with Multiple Detectors</h3>
-    </div>
-    <hr>
+      <a class="research-card" href="/research/research2.html" aria-label="FMCW Radar for Non-Contact Cardiopulmonary Monitoring">
+        <div class="card-image"><img src="/images/research2-cover.png" alt="FMCW Radar"></div>
+        <div class="card-content">
+          <h3>FMCW Radar for Non-Contact Cardiopulmonary Monitoring</h3>
+        </div>
+      </a>
 
-    <!-- Research Entry 4 -->
-    <div class="research-entry">
-      <div class="card-image">
-        <img src="/images/research4-cover.png" alt="Research Project 4">
-      </div>
-      <h3>Machine Learning for Beam-Space Traffic Pattern Analysis</h3>
-    </div>
+      <a class="research-card" href="/research/research3.html" aria-label="Analysis of Long-Lived Particle Properties">
+        <div class="card-image"><img src="/images/research3-cover.png" alt="Long-Lived Particle Analysis"></div>
+        <div class="card-content">
+          <h3>Analysis of Long-Lived Particle Properties with Multiple Detectors</h3>
+        </div>
+      </a>
 
+      <a class="research-card" href="/research/research4.html" aria-label="Machine Learning for Beam-Space Traffic Pattern Analysis">
+        <div class="card-image"><img src="/images/research4-cover.png" alt="Beam-Space Traffic"></div>
+        <div class="card-content">
+          <h3>Machine Learning for Beam-Space Traffic Pattern Analysis</h3>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
+
 
 
 <section id="Skills">

@@ -41,6 +41,7 @@ img.author__avatar {
 .author__urls li {
   font-size: 0.9rem !important;
   line-height: 1.25;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif !important; 
   margin-bottom: 5px;
 }
 
@@ -60,7 +61,7 @@ img.author__avatar {
 .page__inner-wrap {
   max-width: 1000px;
   margin: -15px auto 0 -5px !important; /* 上右下左，左边距改为20px */
-  padding: 0 35px 25px 35px !important;
+  padding: 0 35px 25px 30px !important;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
@@ -164,16 +165,17 @@ nav#site-nav .hidden-links > li {
 /* 保持左上标题样式（不改变其垂直居中） */
 .masthead__menu-item--lg.persist > a,
 .site-title a {
-  font-size: 1.3rem !important;
+  font-size: 1.4rem !important;
   color: #111 !important;
   font-weight: 700 !important;
   white-space: nowrap !important;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif !important; 
   padding-right: 1rem !important;
 }
 
 /* 右侧菜单项大小（略增大） */
 .masthead__menu-item:not(.masthead__menu-item--lg) > a {
-  font-size: 1.05rem !important;
+  font-size: 1.1rem !important;
   font-weight: 450 !important;
   font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   padding: 0 0.1rem !important;

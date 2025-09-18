@@ -23,7 +23,7 @@ img.author__avatar {
 =============================== */
 .author__name {
   font-size: 31px !important;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif !important; 
   font-weight: 700 !important;
   text-align: center;
   margin-bottom: 10px;
@@ -32,7 +32,7 @@ img.author__avatar {
 .author__bio {
   font-size: 17.5px !important;
   line-height: 1.5 !important;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif !important; 
   text-align: center;
   margin-bottom: 15px;
   color: #555;
@@ -41,18 +41,15 @@ img.author__avatar {
 .author__urls li {
   font-size: 0.9rem !important;
   line-height: 1.25;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   margin-bottom: 5px;
 }
 
 .author__urls li a {
   font-size: inherit !important;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
 }
 
 .author__urls li i {
   font-size: 0.9rem !important;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   margin-right: 5px;
   color: #444;
 }

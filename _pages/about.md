@@ -54,58 +54,48 @@ header: false
 </div>
 
 
-
-
-
 <section id="research">
   <div class="card research-outer">
-  <h2 class="page__title">Research Experiences</h2>
+    <h2 class="page__title">Research Experiences</h2>
     
-  <div class="research-grid">
-
-    <!-- Research Card 1 -->
-    <a href="/research/research1.html" class="research-card">
+    <!-- Research Entry 1 -->
+    <div class="research-entry">
       <div class="card-image">
         <img src="/images/research1-cover.png" alt="Research Project 1">
       </div>
-      <div class="card-content">
-        <h3>Cosmic Ray Telescope with Plastic Scintillators</h3>
-      </div>
-    </a>
+      <h3>Cosmic Ray Telescope with Plastic Scintillators</h3>
+    </div>
+    <hr>
 
-    <!-- Research Card 2 -->
-    <a href="/research/research2.html" class="research-card">
+    <!-- Research Entry 2 -->
+    <div class="research-entry">
       <div class="card-image">
         <img src="/images/research2-cover.png" alt="Research Project 2">
       </div>
-      <div class="card-content">
-        <h3>FMCW Radar for Non-Contact Cardiopulmonary Monitoring</h3>
-      </div>
-    </a>
+      <h3>FMCW Radar for Non-Contact Cardiopulmonary Monitoring</h3>
+    </div>
+    <hr>
 
-    <!-- Research Card 3 -->
-    <a href="/research/research3.html" class="research-card">
+    <!-- Research Entry 3 -->
+    <div class="research-entry">
       <div class="card-image">
         <img src="/images/research3-cover.png" alt="Research Project 3">
       </div>
-      <div class="card-content">
-        <h3>Analysis of Long-Lived Particle Properties with Multiple Detectors</h3>
-      </div>
-    </a>
+      <h3>Analysis of Long-Lived Particle Properties with Multiple Detectors</h3>
+    </div>
+    <hr>
 
-    <!-- Research Card 4 -->
-    <a href="/research/research4.html" class="research-card">
+    <!-- Research Entry 4 -->
+    <div class="research-entry">
       <div class="card-image">
         <img src="/images/research4-cover.png" alt="Research Project 4">
       </div>
-      <div class="card-content">
-        <h3>Machine Learning for Beam-Space Traffic Pattern Analysis</h3>
-      </div>
-    </a>
+      <h3>Machine Learning for Beam-Space Traffic Pattern Analysis</h3>
+    </div>
 
   </div>
-  </div>
 </section>
+
 
 <section id="Skills">
   <div class="skill-card">

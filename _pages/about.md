@@ -58,8 +58,9 @@ header: false
 
 
 <section id="research">
+  <div class="card research-outer">
   <h2 class="page__title">Research Experiences</h2>
-
+    
   <div class="research-grid">
 
     <!-- Research Card 1 -->
@@ -102,6 +103,7 @@ header: false
       </div>
     </a>
 
+  </div>
   </div>
 </section>
 

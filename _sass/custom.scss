@@ -82,7 +82,7 @@ section {
 #research-detail .page__title {
   font-size: 2.2rem;
   font-weight: 700;
-  font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   text-align: center;
   margin-bottom: 15px;
 }
@@ -196,6 +196,7 @@ section {
   padding: 20px !important;
   text-align: left !important;
   background: #fafafa !important;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   line-height: 1.6 !important;
 }
 
@@ -207,6 +208,7 @@ section {
   font-weight: 700 !important;
   color: #111 !important;
   text-decoration: none !important;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   border-bottom: none !important;
   line-height: 1.2 !important;
 }
@@ -362,6 +364,7 @@ section {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0 0 1px 0;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
 }
 
 /* 学位 & 日期 */
@@ -369,6 +372,7 @@ section {
 .education-card .edu-date {
   font-size: 1rem;
   margin: 0;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   line-height: 1.7; /* 行距与下方列表一致 */
 }
 

@@ -156,17 +156,18 @@ section {
 
 
 /* ========== Research cards on homepage ========== */
-/* 外层研究卡片：与其他 section 一致 */
+
+/* 外层大卡片（与其它 section 风格一致） */
 .research-outer {
   background: #fff;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   padding: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 60px; /* 与其他 section 保持一致 */
 }
 
-/* 标题保持一致 */
+/* 外层标题 */
 .research-outer .page__title {
   margin: 0 0 16px 0;
   font-size: 1.5rem;
@@ -176,49 +177,104 @@ section {
   padding-bottom: 8px;
 }
 
-/* 内部分项：研究经历 */
-.research-entry {
-  margin: 20px 0;
+/* 内层网格（单列） */
+.research-outer .research-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 12px;
 }
 
-.research-entry h3 {
-  margin: 12px 0 0 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif;
-  color: #111;
+/* ---- 可点击的内层卡片（去掉阴影，仅弱边框） ---- */
+.research-outer .research-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;                      /* 保持轻盈 */
+  border: 1px solid rgba(0,0,0,0.045);          /* 很淡的边框 */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  box-shadow: none;                              /* 无阴影 */
 }
 
-/* 图片 */
-.research-entry .card-image {
+/* hover / focus：轻微上移 + 边框颜色加深（没有阴影） */
+.research-outer .research-card:hover,
+.research-outer .research-card:focus {
+  transform: translateY(-4px);
+  border-color: rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.005);
+  outline: none;
+}
+
+/* keyboard focus 可见性（便于无鼠标操作） */
+.research-outer .research-card:focus-visible {
+  box-shadow: none;
+  outline: 3px solid rgba(21,156,228,0.12);
+  outline-offset: 2px;
+}
+
+/* 图片区域 */
+.research-outer .research-card .card-image {
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
-  border-radius: 8px;
-  background: #efefef;
+  background: #f5f5f5;
 }
 
-.research-entry .card-image img {
+.research-outer .research-card .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
 }
 
-/* 分隔线 */
+/* 可选：hover 时图片轻微放大（更有活力，但可去掉） */
+.research-outer .research-card:hover .card-image img {
+  transform: scale(1.03);
+}
+
+/* 卡片正文 */
+.research-outer .research-card .card-content {
+  padding: 16px;
+  background: transparent;
+}
+
+/* 标题样式保留（稍大） */
+.research-outer .research-card .card-content h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif;
+}
+
+/* 如果你有 meta/sub 文本，可以这样样式化（可选）
+.research-outer .research-card .card-content .meta {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #555;
+}
+ */
+
+/* 分隔（如果你仍希望有轻分割，可在必要处加 hr） */
 .research-outer hr {
   border: none;
-  border-top: 1px solid rgba(0,0,0,0.08);
-  margin: 20px 0;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  margin: 18px 0;
 }
 
-/* 移动端优化 */
+/* 响应式调整（移动端） */
 @media (max-width: 768px) {
   .research-outer { padding: 16px; margin-bottom: 40px; }
-  .research-entry { margin: 16px 0; }
-  .research-entry h3 { font-size: 1.1rem; }
+  .research-outer .research-grid { gap: 16px; }
+  .research-outer .research-card .card-content { padding: 12px; }
+  .research-outer .research-card .card-content h3 { font-size: 1.02rem; }
+  .research-outer .research-card .card-image { aspect-ratio: 16/9; }
 }
-
 
 
 /* ========== Beyond Section ========== */

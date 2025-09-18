@@ -267,6 +267,48 @@ section {
   }
 }
 
+/* Research Section - 嵌套卡片效果 */
+.research-card {
+  background: none !important;   /* 外层去掉背景，让内部更突出 */
+  box-shadow: none !important;   /* 外层无阴影 */
+  border: none !important;
+  padding: 0 !important;
+}
+
+.research-inner {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.research-inner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+}
+
+.research-inner .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.research-inner .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.research-inner .card-content {
+  padding: 20px;
+  background: #fff;
+}
+
+
 /* ========== Beyond Section ========== */
 .beyond-card {
   padding: 20px;
@@ -367,7 +409,7 @@ section {
 .education-card .edu-school {
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 0 0 1px 0;
+  margin: 0 0 0px 0;
   font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
 }
 

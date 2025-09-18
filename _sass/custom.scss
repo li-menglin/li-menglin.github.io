@@ -1,7 +1,6 @@
 /* ========== 全局字体设置 ========== */
 body {
-  /*font-family: Arial, Helvetica, sans-serif; 正文字体 Arial*/
-  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
+  font-family: Arial, Helvetica, sans-serif; /*正文字体 Arial*/
   font-size: 1rem;
   line-height: 1.7; /* 稍疏朗，统一行距 */
   color: #222;
@@ -11,7 +10,7 @@ body {
 
 /* 所有 section 标题（统一使用 Futura 或推荐字体） */
 h1, h2, h3, h4, h5 {
-  font-family: "Futura", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   font-weight: 700;
   color: #222;
   margin-top: 0;

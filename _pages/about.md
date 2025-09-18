@@ -95,15 +95,16 @@ header: false
 <section id="Skills">
   <div class="skill-card">
     <h2 class="page__title">Skills</h2>
-    <ul>
-      <li><strong>Programming Ability </strong> Proficient in C++, Python, MATLAB, and Mathematica</li>
-      <li><strong>Simulation & Modeling </strong> Skilled with Pythia8, Geant4, Proteus, and mmWave Studio</li>
-      <li><strong>Data Analysis </strong> Experienced in Origin and SciDAVis for scientific visualization</li>
-      <li><strong>Language Proficiency </strong> TOEFL Score: 102 (R 30, L 26, S 19 W 25) </li>
-      <li><strong>Learning Agility </strong>GRE Score: 322 (V 155, Q 167, W)</li>
-    </ul>
+    <div class="skill-content">
+      <p><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</p>
+      <p><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</p>
+      <p><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</p>
+      <p><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 26, S 19, W 25)</p>
+      <p><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W)</p>
+    </div>
   </div>
 </section>
+
 
 
 <section id="publications">

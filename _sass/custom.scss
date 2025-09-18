@@ -1,11 +1,12 @@
 /* ========== 全局字体设置 ========== */
 body {
-  font-family: Arial, Helvetica, sans-serif; /*正文字体 Arial*/
-  font-size: 1.05rem;
+  /*font-family: Arial, Helvetica, sans-serif; 正文字体 Arial*/
+  font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
   line-height: 1.7; /* 稍疏朗，统一行距 */
   color: #222;
   margin: 0;
-  padding-top: 70px; /* 为固定导航栏留空间，可按实际高度调整 */
+  padding-top: 50px; /* 为固定导航栏留空间，可按实际高度调整 */
 }
 
 /* 所有 section 标题（统一使用 Futura 或推荐字体） */
@@ -38,7 +39,7 @@ section {
 .card-content, .bio-card, .skill-card, .pub-card, 
 .education-card, .research-card, .beyond-card {
   padding: 20px;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 
@@ -46,10 +47,10 @@ section {
 .card ul, .bio-card ul, .skill-card ul, .pub-card ul, .education-card ul {
   margin: 0;
   /*padding-left: 20px;*/
-  padding-left: -5px;
+  padding-left: -10px;
   line-height: 1.7;
   list-style-position: inside;  /* 符号算在缩进内 */
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 /* Section 标题统一 */

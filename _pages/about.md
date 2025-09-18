@@ -96,31 +96,24 @@ header: false
   <div class="skill-card">
     <h2 class="page__title">Skills</h2>
     <div class="skill-content">
-      <p><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</p>
-      <p><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</p>
-      <p><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</p>
-      <p><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 26, S 19, W 25)</p>
-      <p><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W)</p>
+      <div><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</div>
+      <div><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</div>
+      <div><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</div>
+      <div><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 26, S 19, W 25)</div>
+      <div><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W)</div>
     </div>
   </div>
 </section>
 
 
 
+
 <section id="publications">
   <div class="pub-card">
-  <h2 class="page__title">Publications</h2>
-    <ul class="pub-list">
-      <li>
-        <p><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>
-      </li>
-      <li>
-        <p><strong>M. Li</strong>, T. Tang, “Sensitivity Studies of Long-Lived Particles in CODEX-b,” <em>Proceedings of XXX Conference</em>, 2024.</p>
-      </li>
-      <li>
-        <p><strong>M. Li</strong>, et al., “FMCW Radar for Non-Contact Cardiopulmonary Monitoring,” Preprint, 2025.</p>
-      </li>
-    </ul>
+    <h2 class="page__title">Publications</h2>
+    <div class="pub-content">
+      <p><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>
+    </div>
   </div>
 </section>
 
@@ -152,21 +145,21 @@ header: false
       <!-- 卡片3 -->
       <div class="beyond-item">
         <div class="beyond-image">
-          <img src="images/pickleball.jpg" alt="pickleball">
+          <img src="images/pickleball.png" alt="pickleball">
         </div>
         <div class="beyond-content">
           <h3>pickleball</h3>
-          <p>Through my lens, I like to capture everyday details, transforming ordinary moments into memorable images.</p>
+          <p>I enjoy playing pickleball as a fun and social way to stay active and meet new friends.</p>
         </div>
       </div>
       <!-- 卡片4 -->
       <div class="beyond-item">
         <div class="beyond-image">
-          <img src="images/badminton.jpg" alt="badminton">
+          <img src="images/badminton.png" alt="badminton">
         </div>
         <div class="beyond-content">
           <h3>badmintonl</h3>
-          <p>I enjoy exploring new cities and natural landscapes, capturing unique perspectives through photography.</p>
+          <p>I enjoy playing pickleball as a fun and social way to stay active and meet new friends.</p>
         </div>
       </div>
     </div>

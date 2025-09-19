@@ -45,6 +45,7 @@ header: false
 <div class="edu-desc">
   <ul class="edu-list">
     <li><strong>GPA:</strong> 3.6/4.0</li>
+    <li><strong>Rank:</strong> Top 10 out of 75</li>
     <li><strong>Core Courses:</strong> Computer Programming, Optics, Statistical Methods in Physics, Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators, Principles of Laser, Radar Principles and Systems, etc.</li>
     <li>
       <strong>Honors:</strong>

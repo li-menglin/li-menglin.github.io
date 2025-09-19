@@ -58,6 +58,11 @@ section {
   font-size: 1.15rem;
 }
 
+.research-list li {
+  line-height: 1.7;   /* 行距，默认一般是 1.5，可以改成 1.6 ~ 2 之间 */
+  margin-bottom: 6px; /* 条目之间的间距，更松散一点 */
+}
+
 /* Section 标题统一 */
 .bio-card h2, .skill-card h2, .pub-card h2, .education-card h2, .beyond-card h2 {
   margin: 0 0 16px 0;
@@ -439,6 +444,7 @@ section {
 .edu-list {
   padding-left: 20px;   /* 保留缩进 */
   margin: 0;
+  line-height: 1.7;
 }
 
 .edu-list li {
@@ -456,6 +462,7 @@ section {
   list-style-type: disc;  /* 这里保留小点 */
   padding-left: 20px;
   margin-top: 6px;
+  line-height: 1.7;
 }
 
 .honors-list li {

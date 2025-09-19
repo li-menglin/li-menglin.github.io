@@ -16,7 +16,7 @@ header: false
         and extensive research experience across both experimental and computational domains. I am eager to further my research as a Ph.D. student starting in 
         Fall 2026.
       </p>
-      <strong>Research Interests</strong>
+      <strong>Research Interests: </strong>
       <ul class="interest-list">
         <li>Radar Technologies for Healthcare Monitoring</li>
         <li>Biomedical Signal Processing</li>

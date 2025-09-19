@@ -437,42 +437,40 @@ section {
 }
 
 .edu-list {
-  list-style-type: none;
-  padding-left: 0;
+  padding-left: 20px;   /* 保留缩进 */
   margin: 0;
 }
 
 .edu-list li {
   margin-bottom: 10px;
+  list-style-type: disc; /* 小圆点 */
 }
 
 .edu-list li strong {
+  display: inline;       /* 关键！保持和后面内容在同一行 */
   margin-right: 6px;
 }
 
 /* Honors 子列表 */
 .honors-list {
-  list-style-type: none;
-  padding-left: 0;
+  list-style-type: disc;  /* 这里保留小点 */
+  padding-left: 20px;
   margin-top: 6px;
 }
 
 .honors-list li {
-  display: flex;
-  justify-content: space-between;  /* 左右对齐 */
+  display: flex;                /* 左右对齐 */
+  justify-content: space-between;
   margin-bottom: 4px;
 }
 
-.honors-list li span {
-  display: inline-block;
-}
-
 .honor-year {
-  color: #666;   /* 年份淡一些 */
+  color: #666;
   font-weight: 500;
   margin-left: 20px;
-  white-space: nowrap;  /* 避免年份折行 */
+  white-space: nowrap;
 }
+
 
 
 /* ========== 去掉主页正文外层边框 ========== */

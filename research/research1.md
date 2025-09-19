@@ -29,58 +29,49 @@ permalink: /research/research1.html
       <section class="research-body">
         <h2>Background</h2>
         <p>
-          Cosmic rays, originating from outer space, interact with the Earth’s atmosphere and generate cascades of secondary particles. At sea level, a 
-          significant fraction of these secondary cosmic rays consists of muons, which are highly penetrating charged particles capable of traversing dense 
-          materials with minimal attenuation. This unique property makes muons valuable probes for experimental studies. To detect them, we employ plastic 
-          scintillator detectors coupled with silicon photomultipliers (SiPMs), while complementary measurements of neutrons are performed with a helium-3 
-          proportional counter. 
-        </p>
-        <p>
-          The experimental platform centers on a cosmic ray telescope composed of two vertically aligned plastic scintillator detectors. Our project pursues two 
-          primary objectives. First, by measuring muon count rates under varying conditions—such as different materials or detector positions—we aim to explore 
-          the feasibility of muon imaging. Second, by analyzing the energy deposition of minimum ionizing particles (MIPs) in the scintillators and the 
-          characteristic Landau distribution, we seek to establish a reliable calibration method for multi-channel detectors. Additionally, the He-3 neutron 
-          detector is used to measure the expected proton–triton coincidence peak, thereby validating the platform as a testbed for energy calibration of 
-          radiation detectors.
-        </p>
+  Cosmic rays originating from outer space interact with the Earth’s atmosphere to produce extensive showers of secondary particles. 
+  At sea level, a large fraction of these secondaries consists of muons—highly penetrating charged particles that can traverse dense 
+  materials with only modest energy loss. This penetrating nature makes muons especially valuable as natural probes for detector studies.
+</p>
+<p>
+  To detect muons, we employ plastic scintillator detectors coupled with silicon photomultipliers (SiPMs), while complementary 
+  measurements of neutrons are performed with a helium-3 proportional counter. The experimental platform, built around a simple cosmic-ray 
+  telescope, serves two primary objectives. First, by measuring muon count rates under varying configurations—such as shielding materials or 
+  detector spacing—we investigate the feasibility of muon imaging. Second, by analyzing the characteristic Landau distribution of minimum 
+  ionizing particles (MIPs), we establish a reliable calibration method for multi-channel detectors. In parallel, the He-3 counter is used 
+  to identify the distinct proton–triton coincidence peak, thereby validating the platform as a practical testbed for detector energy calibration.
+</p>
 
-        <h2>Experimental Setup</h2>
-        <p>
-        The telescope comprises two plastic scintillator paddles oriented vertically, separated by a fixed baseline so that through-going cosmic muons traverse 
-        both detectors in succession.Each scintillator is optically coupled to a SiPM whose output is processed by a spectroscopy amplifier to produce a shaped 
-        analog signal. The amplified outputs are then passed to single-channel analyzers (SCAs) to generate standardized logic pulses. A coincidence unit requires 
-        simultaneous pulses from both scintillators to assert a valid muon trigger. The coincidence output is used as the gate signal to the digital multichannel 
-        analyzer (MCA) for time-synchronous spectral acquisition.
-        </p>
-        <p>
-        The He-3 tube is positioned coaxially between the two scintillators so that muons and neutrons interacting in the detector volume are recorded under 
-        identical trigger conditions.When a muon traverses the He-3 gas, it deposits energy primarily via ionization; the MCA records the resulting pulse-height 
-        spectrum, which exhibits the characteristic Landau distribution associated with minimum ionizing particles (MIPs). These muon-induced spectra serve as an 
-        established reference for energy-response calibration.
-        </p>
-        <div class="figure-grid">
-          <figure>
-            <img src="/images/research1setup.png" alt="Setup diagram">
-            <figcaption>Schematic diagram of the telescope system with scintillators and SiPMs.</figcaption>
-          </figure>
-          <figure>
-            <img src="/images/research1platform.png" alt="Experiment photo">
-            <figcaption>Laboratory setup including scintillator modules and readout electronics.</figcaption>
-          </figure>
-        </div>
-        <p>
-        Thermal and fast neutrons captured by the He-3 nucleus undergo the well-known reaction
-        <span style="white-space:nowrap;">\(n + {}^{3}\mathrm{He} \rightarrow p + t + 764\ \mathrm{keV}\)</span>,
-        producing a proton–triton (p–t) pair whose combined kinetic energy is deposited locally and recorded as a distinct feature (the p–t peak) in the MCA 
-        spectrum. Observation of the p–t peak under the same gated acquisition conditions provides an independent spectral marker that validates the energy scale 
-        derived from muon events.
-        </p>
-        <p>
-        All detector signals are time-stamped and gated by the coincidence logic to suppress uncorrelated background. The physical arrangement (scintillator 
-        baseline, He-3 tube position, and electronic gating) is chosen to maximize geometric acceptance for through-going muons while ensuring the He-3 counter is 
-        fully within the trigger volume. The resulting configuration yields a robust platform for cross-referencing muon energy-deposition signatures and neutron 
-        capture features for detector energy calibration and response characterization.
-        </p>
+<h2>Experimental Setup</h2>
+<p>
+  The telescope consists of two vertically aligned plastic scintillator paddles, separated by a defined baseline so that through-going 
+  muons produce coincident signals. Each scintillator is coupled to a SiPM, with the output processed by a spectroscopy amplifier and then 
+  shaped by single-channel analyzers (SCAs). Logic pulses from both channels are fed into a coincidence unit, whose output serves as a 
+  trigger for the digital multichannel analyzer (MCA). This gating ensures that only true through-going muons initiate spectral acquisition.
+</p>
+<p>
+  A helium-3 tube is placed coaxially between the scintillators so that both muons and neutrons interacting in the gas volume are measured 
+  under identical trigger conditions. When a muon passes through the tube, it deposits energy via ionization, producing a Landau-like pulse-height 
+  spectrum characteristic of MIPs. These muon spectra provide a well-defined reference for detector calibration.
+</p>
+<div class="figure-grid">
+  <figure>
+    <img src="/images/research1setup.png" alt="Setup diagram">
+    <figcaption>Schematic of the telescope system with scintillators and SiPM readout.</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/research1platform.png" alt="Experiment photo">
+    <figcaption>Laboratory implementation including scintillator paddles and electronics.</figcaption>
+  </figure>
+</div>
+<p>
+  Neutron detection relies on the well-known capture reaction 
+  <span class="equation">\( n + {}^{3}\mathrm{He} \rightarrow p + t + 764\ \mathrm{keV} \)</span>, 
+  in which the released proton–triton pair deposits its full kinetic energy in the gas. This appears as a distinct “p–t peak” in the MCA 
+  spectrum, providing an independent anchor point for the energy scale. With all signals gated by coincidence logic, uncorrelated background 
+  is strongly suppressed, ensuring clean identification of both muon and neutron events. Altogether, this arrangement forms a robust and 
+  versatile platform for cross-checking detector calibration using naturally occurring cosmic muons and compact neutron sources.
+</p>
 
 
 

@@ -168,7 +168,7 @@ section {
 .research-figure {
   margin: 30px auto;
   max-width: 700px;         /* 限制宽度，避免太宽 */
-  text-align: center;
+  text-align: center !important;
 }
 
 .research-figure img {

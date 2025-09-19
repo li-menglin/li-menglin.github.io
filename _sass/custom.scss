@@ -164,6 +164,29 @@ section {
   font-style: italic;
 }
 
+/* 单张研究配图（与 figure-grid 风格协调） */
+.research-figure {
+  margin: 30px auto;
+  max-width: 700px;         /* 限制宽度，避免太宽 */
+  text-align: center;
+}
+
+.research-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.research-figure figcaption {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 8px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
 .equation {
   text-align: center;          /* 居中 */
   font-size: 1.1rem;           /* 比正文略大，正文是1rem */

@@ -86,66 +86,60 @@ permalink: /research/research1.html
 
 
     <h2>Methodology and Analysis</h2>
-          <p>
-      Our methodology combines the use of <strong>plastic scintillator detectors</strong> 
-      and a <strong>He-3 neutron detector</strong> to calibrate the multichannel analyzer 
-      (MCA) and to investigate cosmic-ray muons and neutron signals. The scintillators, 
-      each coupled with a silicon photomultiplier (SiPM), provide coincidence triggers 
-      for penetrating muons. These coincidence events gate the MCA, ensuring that 
-      only particles traversing both detectors are recorded, thereby reducing background 
-      noise and enabling precise energy calibration.
-    </p>
-
     <p>
-      When a muon passes through the He-3 tube, it primarily deposits energy 
-      through ionization, creating electron–ion pairs along its path. These 
-      ionization events follow a statistical process, and the energy deposition 
-      distribution approximates a <strong>Landau distribution</strong>, characteristic 
-      of high-energy charged particles in thin absorbers. Using the known gas density 
-      and stopping power, the most probable energy loss can be estimated to be on the 
-      order of a few keV, which serves as the reference for detector calibration.
-    </p>
+        To calibrate the detection platform, we utilized plastic scintillators coupled with SiPMs, 
+        together with a He-3 neutron detector, to measure the energy deposition of cosmic-ray muons. 
+        The underlying principle follows the Bethe–Bloch description of energy loss by charged particles in matter:
+      </p>
 
-    <figure class="research-figure">
-      <img src="images/methodology-setup.png" alt="Schematic of detector setup">
-      <figcaption>
-        Experimental setup: two vertically aligned scintillators providing coincidence 
-        triggers, with a central He-3 detector connected to the MCA for calibration.
-      </figcaption>
-    </figure>
+      <!-- Bethe–Bloch equation -->
+      <p class="equation">
+        -&lt;dE/dx&gt; = K z² (Z/A) (1/β²) [ ½ ln (2 m<sub>e</sub>c² β²γ² T<sub>max</sub> / I² ) - β² - δ/2 ]
+      </p>
 
-    <p>
-      For neutron detection, we constructed a source using <strong>Americium-241</strong> 
-      from commercial smoke detectors. The alpha particles emitted in its decay interact 
-      with a thin aluminum foil, inducing the nuclear reaction:
-    </p>
+      <p>
+        Here, <em>dE/dx</em> represents the stopping power, and for high-energy muons in thin absorbers, 
+        the deposited energy distribution follows a Landau shape. Based on the He-3 tube parameters 
+        (length 80 mm, 2 atm, 25 ℃), the most probable value (MPV) of the muon energy deposition was 
+        estimated to be <strong>3.828 keV</strong>.
+      </p>
 
-    <p class="equation">
-      α + <sup>27</sup>Al → <sup>30</sup>P + n
-    </p>
+      <!-- Figure: Muon stopping power -->
+      <figure class="research-figure">
+        <img src="/images/muon-stoppingpower.png" alt="Muon momentum vs stopping power">
+        <figcaption>Figure 1. Muon momentum versus stopping power, illustrating the Bethe–Bloch dependence.</figcaption>
+      </figure>
 
-    <p>
-      This reaction produces fast neutrons that can be captured by the He-3 tube via:
-    </p>
+      <!-- Figure: Muon Landau distribution -->
+      <figure class="research-figure">
+        <img src="/images/muon-landau.png" alt="Muon Landau distribution">
+        <figcaption>Figure 2. Simulated Landau distribution of muon energy deposition in the He-3 tube. 
+          The MPV is located at approximately 3.828 keV.</figcaption>
+      </figure>
 
-    <p class="equation">
-      n + <sup>3</sup>He → <sup>3</sup>H + p + 764 keV
-    </p>
+      <p>
+        To further validate the calibration, a compact neutron source was constructed using Americium-241 from a smoke detector. 
+        The α particles released in its decay were directed onto an aluminum foil, inducing the nuclear reaction:
+      </p>
 
-    <p>
-      The resulting proton–triton pair deposits a well-defined energy in the detector, 
-      leading to a distinct <strong>764 keV peak</strong> in the spectrum. This peak 
-      provides a clear benchmark for validating the energy calibration obtained from 
-      muon measurements, thus linking cosmic-ray muon ionization signals with neutron 
-      capture events.
-    </p>
+      <p class="equation">
+        α + <sup>27</sup>Al → <sup>30</sup>P + n
+      </p>
 
-    <p>
-      In summary, our methodology integrates cosmic-ray muon coincidence measurements 
-      with neutron capture calibration, establishing a robust platform for detector 
-      characterization and paving the way for potential applications in muon imaging 
-      and neutron spectroscopy.
-    </p>
+      <p>
+        The measured cross-section indicates the feasibility of this method. 
+        The calculated neutron yield is about <strong>12.0 particles per minute</strong>, 
+        sufficient for testing the He-3 tube response. 
+        The captured neutrons are expected to produce the characteristic proton–triton peak at 764 keV, 
+        which serves as an anchor point for detector energy calibration.
+      </p>
+
+      <!-- Figure: Alpha + Aluminum cross section -->
+      <figure class="research-figure">
+        <img src="/images/aluminum-crosssection.png" alt="Alpha-Aluminum reaction cross-section">
+        <figcaption>Figure 3. Reaction cross-section of α particles on aluminum, confirming the feasibility of neutron generation.</figcaption>
+      </figure>
+
 
 
 

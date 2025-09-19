@@ -17,7 +17,7 @@ header: false
         Fall 2026.
       </p>
       <strong>Research Interests</strong>
-      <ul>
+      <ul class="interest-list>
         <li>Radar Technologies for Healthcare Monitoring</li>
         <li>Biomedical Signal Processing</li>
         <li>Optoelectronic Devices (e.g., SiPMs)</li>

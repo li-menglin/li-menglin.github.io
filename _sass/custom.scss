@@ -188,12 +188,11 @@ section {
 
 
 .equation {
-  text-align: center;          /* 居中 */
+  text-align: center !important;          /* 居中 */
   font-size: 1.1rem;           /* 比正文略大，正文是1rem */
   line-height: 1.8;            /* 行距稍微放宽，和正文协调 */
   /* font-family: "Times New Roman", Georgia, serif; 使用衬线字体，更学术 */
   font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
-  font-style: italic;          /* 数学公式感 */
   color: #222;                 /* 与正文一致 */
   margin: 18px 0;              /* 上下间距 */
 }

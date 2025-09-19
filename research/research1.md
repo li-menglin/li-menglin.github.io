@@ -86,110 +86,66 @@ permalink: /research/research1.html
 
 
     <h2>Methodology and Analysis</h2>
-      <p>
-        This project uses a compact cosmic-ray telescope built from two vertically aligned plastic
-        scintillator detectors (plastic scintillator + SiPM readout) together with a <sup>3</sup>He proportional
-        counter. The combined instrument serves two complementary purposes: (1) to measure muon count-rate
-        variations under different material/geometry conditions for muon imaging tests, and (2) to provide an
-        energy-calibration reference for the detection chain by exploiting the distinctive energy depositions
-        produced by muons and by neutron-capture reactions in the <sup>3</sup>He tube.
-      </p>
+          <p>
+      Our methodology combines the use of <strong>plastic scintillator detectors</strong> 
+      and a <strong>He-3 neutron detector</strong> to calibrate the multichannel analyzer 
+      (MCA) and to investigate cosmic-ray muons and neutron signals. The scintillators, 
+      each coupled with a silicon photomultiplier (SiPM), provide coincidence triggers 
+      for penetrating muons. These coincidence events gate the MCA, ensuring that 
+      only particles traversing both detectors are recorded, thereby reducing background 
+      noise and enabling precise energy calibration.
+    </p>
 
-      <h3>Physical basis</h3>
-      <p>
-        At ground level the secondary cosmic-ray flux is dominated by muons, which behave as minimum-ionizing
-        particles (MIPs) when traversing gaseous detectors. Muons deposit energy mainly through ionization;
-        the resulting pulse-height spectrum in a thin detector follows a Landau-like distribution with a
-        characteristic most-probable value (MPV). By contrast, thermal neutrons captured in the <sup>3</sup>He
-        gas produce a mono-energetic reaction that yields a well-defined peak in the pulse-height spectrum.
-      </p>
+    <p>
+      When a muon passes through the He-3 tube, it primarily deposits energy 
+      through ionization, creating electron–ion pairs along its path. These 
+      ionization events follow a statistical process, and the energy deposition 
+      distribution approximates a <strong>Landau distribution</strong>, characteristic 
+      of high-energy charged particles in thin absorbers. Using the known gas density 
+      and stopping power, the most probable energy loss can be estimated to be on the 
+      order of a few keV, which serves as the reference for detector calibration.
+    </p>
 
-      <p class="equation">
-        <!-- Formula 1: neutron capture (keeps it as one of the three formulas) -->
-        \[
-        n + {}^{3}\mathrm{He}\;\rightarrow\; {}^{3}\mathrm{H} + p \;+\; 764\ \mathrm{keV}
-        \]
-        <br><small class="eq-note">(Neutron capture reaction in the \({}^{3}\)He proportional counter; the p–T peak near 764 keV is used as an absolute calibration mark.)</small>
-      </p>
+    <figure class="research-figure">
+      <img src="images/methodology-setup.png" alt="Schematic of detector setup">
+      <figcaption>
+        Experimental setup: two vertically aligned scintillators providing coincidence 
+        triggers, with a central He-3 detector connected to the MCA for calibration.
+      </figcaption>
+    </figure>
 
-      <h3>Experimental signal chain & gating</h3>
-      <p>
-        Each plastic-scintillator is instrumented with a silicon photomultiplier (SiPM). The SiPM signals are
-        amplified and shaped by a spectroscopy chain (preamplifier → shaping amplifier). Identical single-channel
-        discriminators (or a single-channel analyzer set to a stable threshold) produce timing pulses whose
-        coincidence forms the telescope trigger. The coincidence of the two scintillators is used as a gate
-        input to a multichannel analyzer (MCA); only events coincident with the telescope are therefore stored,
-        greatly suppressing uncorrelated backgrounds in the recorded spectra.
-      </p>
+    <p>
+      For neutron detection, we constructed a source using <strong>Americium-241</strong> 
+      from commercial smoke detectors. The alpha particles emitted in its decay interact 
+      with a thin aluminum foil, inducing the nuclear reaction:
+    </p>
 
-      <figure class="research-figure">
-        <img src="/images/setup-diagram.png" alt="Schematic of the telescope and readout chain">
-        <figcaption>Experimental layout: two vertically stacked plastic scintillators (SiPM readout) provide the telescope trigger; the gated MCA records spectra from the <sup>3</sup>He counter.</figcaption>
-      </figure>
+    <p class="equation">
+      α + <sup>27</sup>Al → <sup>30</sup>P + n
+    </p>
 
-      <h3>Landau MPV estimate (muon energy-loss)</h3>
-      <p>
-        Using standard stopping-power data and the tube geometry, the expected MPV of the muon energy-deposition
-        distribution in the He-3 gas can be estimated and compared to measured spectra. For our tube (80 mm length,
-        2 atm) the order-of-magnitude MPV is:
-      </p>
+    <p>
+      This reaction produces fast neutrons that can be captured by the He-3 tube via:
+    </p>
 
-      <p class="equation">
-        <!-- Formula 2: MPV calculation -->
-        \[
-        \text{MPV} \approx \rho \cdot \left(\frac{dE}{dx}\right) \cdot L
-        \quad\Rightarrow\quad
-        \text{MPV} \approx 2.47\times 10^{-4}\,\mathrm{g/cm^3}\times 1.937\,\mathrm{MeV\,g^{-1}cm^2}\times 8\,\mathrm{cm}
-        \approx 3.8\ \mathrm{keV}.
-        \]
-        <br><small class="eq-note">(Estimate used to locate the muon Landau peak for calibration/validation.)</small>
-      </p>
+    <p class="equation">
+      n + <sup>3</sup>He → <sup>3</sup>H + p + 764 keV
+    </p>
 
-      <h3>Neutron-source validation and p–T peak</h3>
-      <p>
-        To provide a direct, localized calibration point we employ alpha-induced neutron production (e.g. an
-        Americium-241 source impinging on thin Al foil) and register the neutron capture signature in the
-        <sup>3</sup>He tube. The p–T coincidence peak near 764 keV is easy to identify in the MCA spectrum and
-        serves to determine the channel-to-energy mapping of the acquisition system.
-      </p>
+    <p>
+      The resulting proton–triton pair deposits a well-defined energy in the detector, 
+      leading to a distinct <strong>764 keV peak</strong> in the spectrum. This peak 
+      provides a clear benchmark for validating the energy calibration obtained from 
+      muon measurements, thus linking cosmic-ray muon ionization signals with neutron 
+      capture events.
+    </p>
 
-      <figure class="research-figure">
-        <img src="/images/spectrum-example.png" alt="Example spectrum: neutron p-T peak and muon Landau region">
-        <figcaption>Example MCA spectrum (schematic): distinct p–T peak from neutron capture and the lower-energy muon Landau distribution.</figcaption>
-      </figure>
-
-      <h3>Geometric acceptance and expected muon rate</h3>
-      <p>
-        The telescope acceptance is determined by the scintillator geometry and separation. For two scintillators
-        of width \(W\) and separation \(d\) (vertical extent \(L = d + 2W\)), the maximum acceptance angle is
-        \(\theta = \arctan(W/L)\). This geometric factor, together with the local muon angular distribution,
-        gives the baseline expected count-rate used to evaluate imaging contrasts when materials or placements
-        are changed.
-      </p>
-
-      <p class="equation">
-        <!-- Formula 3: acceptance angle (keeps formulas ≤3) -->
-        \[
-        \theta = \arctan\!\left(\frac{W}{L}\right).
-        \]
-      </p>
-
-      <h3>Calibration workflow and checks</h3>
-      <p>
-        In practice the calibration proceeds as follows: (i) acquire a long background spectrum with the gated MCA
-        (telescope coincidence) to capture the muon Landau region; (ii) introduce the neutron source and record the
-        <sup>3</sup>He spectrum to identify the 764 keV p–T peak and derive channel-to-energy calibration; (iii) apply
-        the calibration to the telescope-gated spectra and compare the measured muon MPV with the theoretical estimate;
-        (iv) repeat for different detector separations, absorbers, or shielding configurations to inspect sensitivity
-        and imaging capability. Statistical uncertainties, electronics gain drift and environmental temperature
-        variations are quantified and included in the final error budget.
-      </p>
-
-      <p>
-        The combination of an absolute neutron capture marker and the muon Landau distribution provides a robust,
-        dual-purpose calibration strategy suitable for both energy scaling of the MCA and for verifying detector
-        uniformity across multiple channels.
-      </p>
+    <p>
+      In summary, our methodology integrates cosmic-ray muon coincidence measurements 
+      with neutron capture calibration, establishing a robust platform for detector 
+      characterization and paving the way for potential applications in muon imaging 
+      and neutron spectroscopy.
+    </p>
 
 
 

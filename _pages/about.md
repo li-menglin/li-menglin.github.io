@@ -49,9 +49,10 @@ header: false
     <li>
       <strong>Honors:</strong>
       <ul class="honors-list">
-        <li><span>First-Class Scholarship</span><span class="honor-year">2023 & 2024</span></li>
-        <li><span>Second Prize, The Chinese Mathematics Competitions for College Students (CMC)</span><span class="honor-year">2023</span></li>
-        <li><span>Outstanding Undergraduate Innovation and Entrepreneurship Training Program SYSU</span><span class="honor-year">2024</span></li>
+        <li><span>First-Class Academic Scholarship</span><span class="honor-year">2023 & 2024</span></li>
+        <li><span>Second Prize, Chinese Collegiate Mathematics Competition (CMC)</span><span class="honor-year">2023</span></li>
+        <li><span>Outstanding Undergraduate Research and Innovation Training Program, SYSU</span><span class="honor-year">2024</span></li>
+
       </ul>
     </li>
   </ul>

@@ -436,6 +436,43 @@ section {
   }
 }
 
+.edu-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.edu-list li {
+  margin-bottom: 10px;
+}
+
+.edu-list li strong {
+  margin-right: 6px;
+}
+
+/* Honors 子列表 */
+.honors-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 6px;
+}
+
+.honors-list li {
+  display: flex;
+  justify-content: space-between;  /* 左右对齐 */
+  margin-bottom: 4px;
+}
+
+.honors-list li span {
+  display: inline-block;
+}
+
+.honor-year {
+  color: #666;   /* 年份淡一些 */
+  font-weight: 500;
+  margin-left: 20px;
+  white-space: nowrap;  /* 避免年份折行 */
+}
 
 
 /* ========== 去掉主页正文外层边框 ========== */

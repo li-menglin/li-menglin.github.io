@@ -104,26 +104,26 @@ header: false
   <div class="skill-card">
     <h2 class="page__title">Skills</h2>
     <div class="skill-content">
-      <div><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</div>
-      <div><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</div>
-      <div><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</div>
-      <div><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 26, S 19, W 25)</div>
-      <div><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W)</div>
+      <p class="inline-item"><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</p>
+      <p class="inline-item"><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</p>
+      <p class="inline-item"><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</p>
+      <p class="inline-item"><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 26, S 19, W 25)</p>
+      <p class="inline-item"><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W)</p>
     </div>
   </div>
 </section>
-
-
-
 
 <section id="publications">
   <div class="pub-card">
     <h2 class="page__title">Publications</h2>
     <div class="pub-content">
-      <p><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>
+      <p class="inline-item"><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>
+      <p class="inline-item"><strong>M. Li</strong>, T. Tang, “Sensitivity Studies of Long-Lived Particles in CODEX-b,” <em>Proceedings of XXX Conference</em>, 2024.</p>
+      <p class="inline-item"><strong>M. Li</strong>, et al., “FMCW Radar for Non-Contact Cardiopulmonary Monitoring,” Preprint, 2025.</p>
     </div>
   </div>
 </section>
+
 
 <!-- ===== Beyond Section ===== -->
 <section id="beyond" class="section">

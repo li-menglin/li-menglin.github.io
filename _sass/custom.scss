@@ -267,6 +267,15 @@ section {
 .research-outer .research-card .card-content h3 a {
   text-decoration: none !important;
 }
+.research-card {
+  text-decoration: none !important;
+}
+
+.research-card:hover,
+.research-card:focus,
+.research-card:active {
+  text-decoration: none !important;
+}
 
 
 /* 如果你有 meta/sub 文本，可以这样样式化（可选）

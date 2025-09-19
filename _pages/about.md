@@ -167,7 +167,7 @@ header: false
           <img src="images/badminton.png" alt="badminton">
         </div>
         <div class="beyond-content">
-          <h3>badmintonl</h3>
+          <h3>badminton</h3>
           <p>Badminton has been one of my favorite sports for years, offering both relaxation and a good challenge.</p>
         </div>
       </div>

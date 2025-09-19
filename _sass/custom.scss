@@ -513,6 +513,6 @@ section {
 }
 
 .inline-item strong {
-  display: inline;            /* 保证加粗部分和后面内容在同一行 */
+  display: inline !important;            /* 保证加粗部分和后面内容在同一行 */
   margin-right: 6px;          /* 粗体和后面文字之间留点空隙 */
 }

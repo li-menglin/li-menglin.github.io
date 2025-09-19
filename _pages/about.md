@@ -42,15 +42,22 @@ header: false
   </div>
 
   <!-- 下半部分：GPA、课程、荣誉等 -->
-  <div class="edu-desc">
-    <ul>
-      <li><strong>GPA:</strong> 3.6/4.0</li>
-      <li><strong>Core Courses:</strong> Computer Programming, Optics, Statistical Methods in Physics, Atomic Physics, Quantum Mechanics, Principles of Particle 
-        Accelerators, Principles of Laser, Radar Principles and Systems, etc.</li>
-      <li><strong>Honors:</strong> First-Class Scholarship, Second Prize, The Chinese Mathematics Competitions for College Students, CMC, Outstanding 
-        Undergraduate Innovation and Entrepreneurship Training Program SYSU</li>
-    </ul>
-  </div>
+<div class="edu-desc">
+  <ul class="edu-list">
+    <li><strong>GPA:</strong> 3.6/4.0</li>
+    <li><strong>Core Courses:</strong> Computer Programming, Optics, Statistical Methods in Physics, Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators, Principles of Laser, Radar Principles and Systems, etc.</li>
+    <li>
+      <strong>Honors:</strong>
+      <ul class="honors-list">
+        <li><span>First-Class Scholarship</span><span class="honor-year">2023 & 2024</span></li>
+        <li><span>Second Prize, The Chinese Mathematics Competitions for College Students (CMC)</span><span class="honor-year">2023</span></li>
+        <li><span>Outstanding Undergraduate Innovation and Entrepreneurship Training Program SYSU</span><span class="honor-year">2024</span></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
 </div>
 
 

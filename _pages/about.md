@@ -168,7 +168,7 @@ header: false
         </div>
         <div class="beyond-content">
           <h3>badmintonl</h3>
-          <p>I enjoy playing pickleball as a fun and social way to stay active and meet new friends.</p>
+          <p>Badminton has been one of my favorite sports for years, offering both relaxation and a good challenge.</p>
         </div>
       </div>
     </div>

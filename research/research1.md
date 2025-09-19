@@ -16,101 +16,92 @@ permalink: /research/research1.html
   </script>
 </head>
 <body>
-  <div id="research-detail">
-    <div class="content-card">
-      <h1 class="page__title">
-        Development of a SiPM-Based Cosmic-Ray Telescope and Neutron Detection System
-      </h1>
-      <p class="meta">
-        Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
-        October 2024 to now
+<div id="research-detail">
+  <div class="content-card">
+    <h1 class="page__title">
+      Development of a SiPM-Based Cosmic-Ray Telescope and Neutron Detection System
+    </h1>
+    <p class="meta">
+      Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
+      October 2024 – present
+    </p>
+
+    <section class="research-body">
+      <h2>Background</h2>
+      <p>
+        Cosmic rays from outer space interact with the Earth’s atmosphere, generating extensive showers of secondary particles. 
+        At sea level, muons constitute the dominant component—highly penetrating charged particles capable of traversing dense materials 
+        with minimal energy loss. Their penetrating nature makes muons valuable natural probes for detector studies.
       </p>
-      
-      <section class="research-body">
-        <h2>Background</h2>
-        <p>
-  Cosmic rays originating from outer space interact with the Earth’s atmosphere to produce extensive showers of secondary particles. 
-  At sea level, a large fraction of these secondaries consists of muons—highly penetrating charged particles that can traverse dense 
-  materials with only modest energy loss. This penetrating nature makes muons especially valuable as natural probes for detector studies.
-</p>
-<p>
-  To detect muons, we employ plastic scintillator detectors coupled with silicon photomultipliers (SiPMs), while complementary 
-  measurements of neutrons are performed with a helium-3 proportional counter. The experimental platform, built around a simple cosmic-ray 
-  telescope, serves two primary objectives. First, by measuring muon count rates under varying configurations—such as shielding materials or 
-  detector spacing—we investigate the feasibility of muon imaging. Second, by analyzing the characteristic Landau distribution of minimum 
-  ionizing particles (MIPs), we establish a reliable calibration method for multi-channel detectors. In parallel, the He-3 counter is used 
-  to identify the distinct proton–triton coincidence peak, thereby validating the platform as a practical testbed for detector energy calibration.
-</p>
-
-<h2>Experimental Setup</h2>
-<p>
-  The telescope consists of two vertically aligned plastic scintillator paddles, separated by a defined baseline so that through-going 
-  muons produce coincident signals. Each scintillator is coupled to a SiPM, with the output processed by a spectroscopy amplifier and then 
-  shaped by single-channel analyzers (SCAs). Logic pulses from both channels are fed into a coincidence unit, whose output serves as a 
-  trigger for the digital multichannel analyzer (MCA). This gating ensures that only true through-going muons initiate spectral acquisition.
-</p>
-<p>
-  A helium-3 tube is placed coaxially between the scintillators so that both muons and neutrons interacting in the gas volume are measured 
-  under identical trigger conditions. When a muon passes through the tube, it deposits energy via ionization, producing a Landau-like pulse-height 
-  spectrum characteristic of MIPs. These muon spectra provide a well-defined reference for detector calibration.
-</p>
-<div class="figure-grid">
-  <figure>
-    <img src="/images/research1setup.png" alt="Setup diagram">
-    <figcaption>Schematic of the telescope system with scintillators and SiPM readout.</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/research1platform.png" alt="Experiment photo">
-    <figcaption>Laboratory implementation including scintillator paddles and electronics.</figcaption>
-  </figure>
-</div>
-<p>
-  Neutron detection relies on the well-known capture reaction 
-  <span class="equation">\( n + {}^{3}\mathrm{He} \rightarrow p + t + 764\ \mathrm{keV} \)</span>, 
-  in which the released proton–triton pair deposits its full kinetic energy in the gas. This appears as a distinct “p–t peak” in the MCA 
-  spectrum, providing an independent anchor point for the energy scale. With all signals gated by coincidence logic, uncorrelated background 
-  is strongly suppressed, ensuring clean identification of both muon and neutron events. Altogether, this arrangement forms a robust and 
-  versatile platform for cross-checking detector calibration using naturally occurring cosmic muons and compact neutron sources.
-</p>
-
-
-
-
-    <h2>Methodology and Analysis</h2>
-    <p>
-        To calibrate the detection platform, we utilized plastic scintillators coupled with SiPMs, 
-        together with a He-3 neutron detector, to measure the energy deposition of cosmic-ray muons. 
-        The underlying principle follows the Bethe–Bloch description of energy loss by charged particles in matter:
+      <p>
+        In this work, muons are detected using plastic scintillators coupled with silicon photomultipliers (SiPMs), while complementary 
+        neutron measurements are carried out with a helium-3 proportional counter. The platform, built around a simple cosmic-ray 
+        telescope, serves two main purposes: (i) to explore the feasibility of muon imaging by varying shielding materials and detector spacing, 
+        and (ii) to establish a robust calibration method for multi-channel detectors by analyzing the characteristic Landau distribution of 
+        minimum ionizing particles (MIPs). The He-3 counter further identifies the distinct proton–triton coincidence peak, providing an 
+        independent anchor for energy calibration.
       </p>
 
-      <!-- Bethe–Bloch equation -->
+      <h2>Experimental Setup</h2>
+      <p>
+        The telescope consists of two vertically aligned plastic scintillators separated by a defined baseline so that through-going 
+        muons produce coincident signals. Each scintillator is coupled to a SiPM, with signals processed by a spectroscopy amplifier, 
+        shaped by single-channel analyzers (SCAs), and combined in a coincidence unit. The resulting logic output triggers a digital 
+        multichannel analyzer (MCA), ensuring that only true muon events initiate spectral acquisition.
+      </p>
+      <p>
+        A helium-3 tube is positioned coaxially between the scintillators so that both muon and neutron interactions are measured 
+        under the same trigger conditions. Muon passage through the tube produces a Landau-like pulse-height spectrum, which provides 
+        a reliable reference for detector calibration.
+      </p>
+
+      <div class="figure-grid">
+        <figure>
+          <img src="/images/research1setup.png" alt="Setup diagram">
+          <figcaption>Figure 1. Schematic of the telescope system with scintillators and SiPM readout.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/research1platform.png" alt="Experiment photo">
+          <figcaption>Figure 2. Laboratory implementation including scintillator paddles and electronics.</figcaption>
+        </figure>
+      </div>
+
+      <p>
+        Neutron detection relies on the well-known reaction 
+        <span class="equation">\( n + {}^{3}\mathrm{He} \rightarrow p + t + 764\ \mathrm{keV} \)</span>, 
+        where the emitted proton–triton pair deposits its full kinetic energy in the gas, forming a distinct “p–t peak” in the MCA spectrum. 
+        With coincidence gating, uncorrelated background is strongly suppressed, allowing clean identification of both muon and neutron events. 
+        Together, this configuration establishes a versatile platform for cross-checking detector calibration using natural muons and compact neutron sources.
+      </p>
+
+      <h2>Methodology and Analysis</h2>
+      <p>
+        Detector calibration was performed with plastic scintillators and SiPMs, together with the He-3 neutron counter, to measure cosmic-ray muon energy deposition. 
+        The energy loss mechanism follows the Bethe–Bloch formula:
+      </p>
+
       <p class="equation">
         -&lt;dE/dx&gt; = K z² (Z/A) (1/β²) [ ½ ln (2 m<sub>e</sub>c² β²γ² T<sub>max</sub> / I² ) - β² - δ/2 ]
       </p>
 
       <p>
-        Here, <em>dE/dx</em> represents the stopping power, and for high-energy muons in thin absorbers, 
-        the deposited energy distribution follows a Landau shape. Based on the He-3 tube parameters 
-        (length 80 mm, 2 atm, 25 ℃), the most probable value (MPV) of the muon energy deposition was 
-        estimated to be <strong>3.828 keV</strong>.
+        For high-energy muons in thin absorbers, the deposited energy follows a Landau distribution. Based on the He-3 tube parameters 
+        (80 mm length, 2 atm, 25 ℃), the most probable energy deposition was estimated at <strong>3.828 keV</strong>.
       </p>
 
-      <!-- Figure: Muon stopping power -->
-      <figure class="research-figure">
-        <img src="/images/muon-stoppingpower.png" alt="Muon momentum vs stopping power">
-        <figcaption>Figure 1. Muon momentum versus stopping power, illustrating the Bethe–Bloch dependence.</figcaption>
-      </figure>
-
-      <!-- Figure: Muon Landau distribution -->
-      <figure class="research-figure">
-        <img src="/images/muon-landau.png" alt="Muon Landau distribution">
-        <figcaption>Figure 2. Simulated Landau distribution of muon energy deposition in the He-3 tube. 
-          The MPV is located at approximately 3.828 keV.</figcaption>
-      </figure>
-
+      <div class="figure-grid">
+        <figure>
+          <img src="/images/muon-stoppingpower.png" alt="Muon momentum vs stopping power">
+          <figcaption>Figure 3. Muon momentum versus stopping power.</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/muon-landau.png" alt="Muon Landau distribution">
+          <figcaption>Figure 4. Simulated Landau distribution of muon energy deposition in the He-3 tube.</figcaption>
+        </figure>
+      </div>
+      
       <p>
-        To further validate the calibration, a compact neutron source was constructed using Americium-241 from a smoke detector. 
-        The α particles released in its decay were directed onto an aluminum foil, inducing the nuclear reaction:
+        A compact neutron source was also constructed using Americium-241 from smoke detectors. The emitted α particles irradiated thin aluminum foils, inducing:
       </p>
 
       <p class="equation">
@@ -118,47 +109,45 @@ permalink: /research/research1.html
       </p>
 
       <p>
-        The measured cross-section indicates the feasibility of this method. 
-        The calculated neutron yield is about <strong>12.0 particles per minute</strong>, 
-        sufficient for testing the He-3 tube response. 
-        The captured neutrons are expected to produce the characteristic proton–triton peak at 764 keV, 
-        which serves as an anchor point for detector energy calibration.
+        The expected yield (~12 neutrons/min) confirmed the feasibility of this approach. Recording muon Landau peaks and neutron capture signals under identical 
+        trigger conditions enabled cross-referenced benchmarks for detector energy calibration and performance assessment.
       </p>
 
-      <!-- Figure: Alpha + Aluminum cross section -->
       <figure class="research-figure">
-        <img src="/images/aluminum-crosssection.png" alt="Alpha-Aluminum reaction cross-section">
-        <figcaption>Figure 3. Reaction cross-section of α particles on aluminum, confirming the feasibility of neutron generation.</figcaption>
+        <img src="/images/alpha-sigma.png" alt="Alpha-Aluminum reaction cross-section">
+        <figcaption>Figure 5. Cross-section of α-induced reactions on aluminum.</figcaption>
       </figure>
 
+      <h2>Progress and Results</h2>
+      <p>
+        Scintillator efficiency was first evaluated by measuring single-detector rates and aligning modules precisely. Using the three-detector coincidence method, 
+        the efficiency of the middle detector was determined, establishing a reliable baseline for performance characterization.
+      </p>
+      <p>
+        By stacking three scintillators and translating the middle one, both two-fold and three-fold coincidence rates were measured. 
+        A Python-based Monte Carlo analysis was implemented to extract the effective detection length, improving accuracy beyond simple geometry.
+      </p>
+      <p>
+        The telescope was subsequently deployed across multiple floors of the teaching building. Measured muon rates showed consistent attenuation trends 
+        with increasing overburden, providing preliminary evidence for muon imaging feasibility. 
+      </p>
+      <p>
+        Current work focuses on preparing the Am-241–aluminum neutron source to measure the muon Landau MPV (~3.8&nbsp;keV) in the He-3 tube 
+        and to evaluate statistical uncertainties and overall calibration reliability.
+      </p>
 
-
-
-        <h2>Results</h2>
-        <p>
-          The prototype telescope achieved consistent muon counting rates, with results 
-          matching simulated expectations within statistical uncertainties. Adjusting SiPM 
-          bias voltage demonstrated a clear optimization window for energy resolution 
-          and noise suppression.
-        </p>
-        <p>
-          For neutron detection, the α–Al reaction induced by an Am-241 source generated 
-          neutrons that were successfully detected by the <sup>3</sup>He counter. 
-          The characteristic p–t coincidence peak confirmed the presence of neutrons 
-          and validated the calibration of the spectrometer.
-        </p>
-
-        <h2>Conclusion & Outlook</h2>
-        <p>
-          This project successfully developed a compact, SiPM-based system capable of detecting 
-          both cosmic muons and neutron signals. The results establish a solid platform 
-          for future studies, including advanced muon tomography experiments, detector 
-          calibration routines, and radiation-safety applications. Upcoming work will 
-          focus on extending measurement duration, refining statistical analysis, 
-          and exploring hybrid systems integrating both scintillator and proportional-counter technologies.
-        </p>
-      </section>
-    </div>
+      <h2>Conclusion & Outlook</h2>
+      <p>
+        This project has demonstrated the successful construction and operation of a SiPM-based cosmic-ray telescope, validated through efficiency measurements, 
+        muon rate studies, and preliminary calibration. The combination of plastic scintillators and a He-3 counter provides a flexible platform capable of 
+        registering both muon and neutron signatures under coincidence logic.
+      </p>
+      <p>
+        In the short term, we will refine muon energy-deposition measurements and complete neutron-source validation to consolidate the platform as a calibration tool. 
+        In the longer term, the methodology developed here may be extended to muon imaging and integrated into broader particle detection and instrumentation programs.
+      </p>
+    </section>
   </div>
+</div>
 </body>
 </html>

@@ -24,82 +24,89 @@ permalink: /research/research4.html
     <section class="research-body">
       <h2>Background</h2>
       <p>
-        Modern 5G and emerging 6G networks rely on beamforming to direct radio energy in spatially selective directions. 
-        The resulting beam-space traffic distribution reflects dynamic user locations and temporal service demand, making 
-        accurate prediction critical for resource scheduling and adaptive beam management. However, the high dimensionality 
-        and variability of real-world traffic pose significant challenges to traditional modeling approaches.
+        Cellular networks partition geographic regions into cells, each served by a base station. 
+        With the adoption of beamforming in 5G and emerging 6G systems, base stations direct radio energy into specific 
+        spatial beams to improve signal quality and reduce interference. The distribution of traffic across beams 
+        evolves dynamically with user movement and service demand, making accurate modeling of beam-space traffic 
+        patterns crucial for efficient scheduling and adaptive resource allocation.
       </p>
       <p>
-        Deep generative models, such as the Vector-Quantized Variational Autoencoder (VQ-VAE), provide a powerful framework 
-        for compressing complex spatial distributions into discrete and interpretable representations. By learning a finite 
-        codebook of prototypical traffic patterns, VQ-VAE enables both efficient reconstruction and improved interpretability.
+        Traditional statistical methods are limited in capturing the high-dimensional, noisy, and time-varying 
+        nature of real-world traffic measurements. To overcome these challenges, this project applied deep generative 
+        modeling techniques, particularly the Vector-Quantized Variational Autoencoder (VQ-VAE). VQ-VAE compresses 
+        complex traffic maps into a discrete codebook of prototypical patterns, enabling both accurate reconstruction 
+        and interpretable analysis of beam-space traffic distributions.
       </p>
 
       <h2>Experimental Setup</h2>
       <p>
-        Large-scale cellular network datasets were processed through a standardized preprocessing pipeline, including 
-        feature engineering, normalization, and construction of <em>PyTorch</em>-based data loaders. This ensured 
-        reproducibility and high-quality inputs for downstream model training. The datasets captured traffic measurements 
-        across multiple beams and time intervals, providing a rich basis for representation learning.
+        Large-scale cellular network datasets were provided by the research team, consisting of traffic measurements 
+        across multiple beams and time intervals. To prepare the data, I developed end-to-end preprocessing pipelines 
+        including feature engineering, normalization, and construction of <em>PyTorch</em>-based data loaders. 
+        These pipelines ensured reproducibility and efficient model training, supporting both batch processing and 
+        controlled train/test splits.
       </p>
 
       <div class="figure-grid">
         <figure>
           <img src="/images/beam-traffic-map.png" alt="Beam-space traffic distribution">
-          <figcaption>Figure 1. Example beam-space traffic distribution extracted from cellular network datasets.</figcaption>
+          <figcaption>Figure 1. Example of beam-space traffic distribution extracted from cellular network datasets.</figcaption>
         </figure>
       </div>
 
       <h2>Methods</h2>
       <p>
-        Building on published frameworks, I designed advanced preprocessing modules including smoothing-spline fitting 
-        and matched filtering to enhance weak and noisy components. The VQ-VAE was then implemented and optimized to encode 
-        traffic maps into discrete embeddings. Network architecture refinements and hyperparameter tuning ensured stable 
-        convergence and robust reconstruction performance.
+        The central component of this project was the design and optimization of a VQ-VAE tailored to beam-space data. 
+        The encoder network compresses high-dimensional traffic maps into latent vectors, which are discretized via 
+        a learned codebook. Each codebook entry corresponds to a prototypical traffic distribution, and the decoder 
+        reconstructs the original input from these discrete embeddings.
       </p>
       <p>
-        For analysis, I examined the learned codebook embeddings, each representing a prototypical traffic pattern. 
-        Clustering metrics and quantization analysis confirmed their interpretability and stability. In addition, a 
-        double Chirp-Z Transform (double-CZT) was applied for high-resolution spectral estimation, allowing precise 
-        identification of periodic fluctuations in traffic demand beyond the resolution of conventional FFTs.
+        My contributions focused on implementing the model in PyTorch, refining its architecture, tuning hyperparameters 
+        such as codebook size and learning rate, and improving training stability. After training, I extracted the learned 
+        discrete embeddings and conducted clustering and quantization analyses to identify prototypical beam-space traffic 
+        patterns. Finally, I surveyed advanced temporal modeling paradigms, including Transformers and Graph Neural Networks, 
+        assessing their potential integration with VQ-VAE embeddings for spatio-temporal traffic prediction.
       </p>
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/vqvae-traffic.png" alt="VQ-VAE architecture for traffic modeling">
-          <figcaption>Figure 2. Architecture of the VQ-VAE model applied to beam-space traffic data.</figcaption>
+          <img src="/images/vqvae-architecture.png" alt="VQ-VAE framework">
+          <figcaption>Figure 2. Schematic of the VQ-VAE framework for beam-space traffic representation learning.</figcaption>
         </figure>
       </div>
 
       <h2>Results</h2>
       <p>
-        The trained VQ-VAE successfully compressed beam-space traffic into a compact codebook of discrete embeddings, 
-        each corresponding to a prototypical spatial distribution such as localized hotspots or distributed multi-beam 
-        activity. Reconstruction error remained low, and quantization analysis confirmed the consistency of assignments.
+        The trained VQ-VAE successfully compressed complex traffic distributions into a compact and interpretable codebook. 
+        Each codebook entry corresponded to a distinct spatial traffic mode, ranging from localized hotspots to more 
+        distributed multi-beam activity. Reconstruction error remained low, validating the effectiveness of the model. 
+        Clustering metrics confirmed the stability of embeddings, while quantization analysis demonstrated that 
+        prototypical traffic patterns were consistently captured.
       </p>
       <p>
-        The double-CZT spectral estimation revealed sharper peaks than conventional FFTs, enabling more accurate identification 
-        of periodic traffic fluctuations. These results validated both the accuracy and robustness of the implemented framework 
-        and demonstrated its applicability to practical network scenarios.
+        These results establish the VQ-VAE framework as a robust tool for analyzing high-dimensional traffic data. 
+        Beyond reconstruction, the learned discrete embeddings provide interpretable abstractions that can support 
+        downstream tasks in traffic prediction and adaptive scheduling.
       </p>
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/traffic-embeddings.png" alt="Discrete latent embeddings">
-          <figcaption>Figure 3. Visualization of discrete embeddings representing prototypical traffic patterns.</figcaption>
+          <img src="/images/traffic-embeddings.png" alt="Discrete embeddings of traffic patterns">
+          <figcaption>Figure 3. Visualization of discrete latent embeddings representing prototypical beam-space traffic patterns.</figcaption>
         </figure>
       </div>
 
       <h2>Conclusion & Outlook</h2>
       <p>
-        This project demonstrated that VQ-VAE can effectively learn discrete and interpretable representations of beam-space 
-        traffic while preserving reconstruction accuracy. My contributions encompassed data preprocessing, VQ-VAE implementation, 
-        optimization of signal-processing modules, and high-resolution spectral analysis.
+        This project demonstrated the utility of VQ-VAE for beam-space traffic analysis, contributing reproducible 
+        data pipelines, an optimized implementation of the model, and a systematic analysis of learned discrete 
+        embeddings. My work emphasized both methodological rigor and interpretability of results.
       </p>
       <p>
-        Future extensions include combining these embeddings with temporal models such as Transformers or Graph Neural Networks 
-        to achieve spatio-temporal traffic prediction. Such integration would enhance adaptive scheduling and improve resource 
-        efficiency in next-generation wireless networks.
+        Looking ahead, integrating VQ-VAE embeddings with spatio-temporal models such as Transformers or Graph Neural Networks 
+        offers a promising pathway for traffic prediction and real-time adaptive scheduling in next-generation wireless systems. 
+        These extensions will further bridge the gap between learned representations and practical network management strategies.
       </p>
     </section>
   </div>

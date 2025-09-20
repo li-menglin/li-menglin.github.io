@@ -28,9 +28,9 @@ header: false
 </section>
 
 <section id="Education">
-<div class="education-card">
-  <h2 class="page__title">Education</h2>
-  <div class="edu-top">
+  <div class="education-card">
+    <h2 class="page__title">Education</h2>
+    <div class="edu-top">
     <!-- 左边 Logo -->
     <img src="/images/sysu-logo.png" alt="SYSU Logo" class="edu-logo">
 
@@ -43,8 +43,8 @@ header: false
   </div>
 
   <!-- 下半部分：GPA、课程、荣誉等 -->
-<div class="edu-desc">
-  <ul class="edu-list">
+  <div class="edu-desc">
+    <ul class="edu-list">
     <li><strong>GPA:</strong> 3.6/4.0</li>
     <li><strong>Rank:</strong> Top 10 out of 75</li>
     <li><strong>Core Courses:</strong> Computer Programming, Optics, Statistical Methods in Physics, Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators, Principles of Laser, Radar Principles and Systems, etc.</li>

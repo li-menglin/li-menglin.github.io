@@ -27,6 +27,7 @@ header: false
   </div>
 </section>
 
+<section id="Education">
 <div class="education-card">
   <h2 class="page__title">Education</h2>
   <div class="edu-top">
@@ -58,9 +59,7 @@ header: false
     </li>
   </ul>
 </div>
-
-
-</div>
+</section>
 
 
 <section id="research">

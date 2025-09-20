@@ -7,7 +7,7 @@ permalink: /research/research2.html
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Non-contact Vital Sign Detection with FMCW Radar</title>
+  <title>FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring</title>
   <link rel="stylesheet" href="research.css">
   <!-- MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -19,37 +19,34 @@ permalink: /research/research2.html
 <div id="research-detail">
   <div class="content-card">
     <h1 class="page__title">
-      Radar-based Non-contact Detection of Heart Rate and Respiration
+      FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring
     </h1>
     <p class="meta">
       Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
-      May 2024 – present
+      November 2024 – present
     </p>
 
     <section class="research-body">
       <h2>Background</h2>
       <p>
-  Radar-based vital sign detection has become a promising alternative to contact sensors such as ECG or PPG, offering continuous 
-  monitoring without physical contact. Frequency-modulated continuous-wave (FMCW) radars, such as TI’s IWR1443BOOST, 
-  can capture subtle chest wall displacements on the order of millimeters, induced by respiration and heartbeat. The 
-  main challenge lies in separating weak heartbeat signals from the dominant respiratory motion and suppressing noise 
-  and harmonics.
-</p>
-<p>
-  Within this collaborative project, my responsibility was to reproduce a state-of-the-art signal-processing framework 
-  reported in the literature. By carefully studying the methodology and developing MATLAB programs, I implemented the 
-  complete pipeline for extracting heart rate (HR) and respiration rate (RR) from raw radar data, covering preprocessing, 
-  signal enhancement, mode decomposition, and frequency estimation.
-</p>
+        Radar-based cardiopulmonary monitoring has emerged as a promising non-contact alternative to traditional sensors such as ECG and PPG. 
+        Frequency-modulated continuous-wave (FMCW) radars are capable of resolving chest wall displacements induced by respiration and heartbeat, 
+        typically on the order of millimeters. The principal challenge is to isolate the weak cardiac component from the dominant respiratory motion 
+        and to suppress noise and spectral leakage under realistic conditions.
+      </p>
+      <p>
+        Within this collaborative project, I was responsible for configuring radar hardware and reproducing a state-of-the-art signal-processing 
+        framework in MATLAB. My work focused on the full technical pipeline—from raw data acquisition to advanced spectral estimation—ensuring 
+        accurate extraction of respiration rate (RR) and heart rate (HR) from noisy radar echoes.
+      </p>
 
-<h2>Experimental Setup</h2>
-<p>
-  Data acquisition was carried out with a TI IWR1443BOOST radar module. Raw ADC signals were collected and converted into 
-  range–time data cubes using fast-time and slow-time FFTs. Each recording contained thousands of chirps, with multiple 
-  range bins capturing reflections from the subject’s thoracic region. I was responsible for implementing the preprocessing 
-  steps—DC removal, range-bin selection, and phase unwrapping—to obtain clean displacement waveforms for subsequent analysis.
-</p>
-
+      <h2>Experimental Setup</h2>
+      <p>
+        Experiments were carried out with the Texas Instruments IWR1443BOOST FMCW radar platform. I configured the radar using mmWave Studio 
+        and acquired raw ADC data in multi-chirp frames. An approximated Fast Fourier Transform (apFFT) was then applied to resolve range profiles 
+        and identify the subject’s thoracic reflections. Subsequent preprocessing included DC removal, range-bin selection, and phase unwrapping, 
+        which I implemented to prepare displacement waveforms for further cardiopulmonary analysis.
+      </p>
 
       <div class="figure-grid">
         <figure>
@@ -60,53 +57,45 @@ permalink: /research/research2.html
 
       <h2>Signal Processing Framework</h2>
       <p>
-        The framework I reproduced follows the logic of the <em>heart-rate detection new framework</em> shown below. 
-        It consists of range-gate selection, clutter suppression via Singular Spectrum Analysis (SSA), phase extraction 
-        and unwrapping, residual enhancement using spline fitting and matched filtering, mode decomposition using 
-        Variational Mode Decomposition (VMD), and final estimation through a double-layer fuzzy logic system.
+        Building on published frameworks, I designed advanced preprocessing modules including smoothing-spline fitting and matched filtering 
+        to enhance weak heartbeat components. Variational Mode Extraction (VME) was then applied to decompose respiration and heartbeat oscillations, 
+        providing robust separation under noisy conditions. For spectral analysis, I implemented a double Chirp-Z Transform (double-CZT), 
+        which achieves high-resolution frequency estimation of both RR and HR beyond conventional FFT resolution.
       </p>
 
       <div class="figure-grid">
         <figure>
           <img src="/images/心率检测新框架.jpg" alt="Signal processing framework">
-          <figcaption>Figure 2. Signal-processing framework for radar-based heart and respiration rate detection, 
-          reproduced in MATLAB implementation.</figcaption>
+          <figcaption>Figure 2. Signal-processing framework for radar-based cardiopulmonary monitoring, reproduced in MATLAB implementation.</figcaption>
         </figure>
       </div>
 
-      <h2>Implementation and Results</h2>
+      <h2>Results</h2>
       <p>
-        Through MATLAB implementation, I reproduced the full pipeline to extract RR and HR from radar signals. The SSA step 
-        effectively suppressed static clutter, while spline-based residual extraction enhanced weak cardiac components. VMD 
-        enabled separation of respiratory and cardiac oscillations, and the double-layer fuzzy logic stabilized frequency 
-        estimation against noise and intermodulation. 
-      </p>
-      <p>
-        Frequency spectra were then obtained using FFT and VMD-based reconstruction, clearly showing respiration peaks around 
-        0.2–0.3 Hz and heartbeat peaks around 1 Hz. These results validated the framework and confirmed that the radar system 
-        could accurately recover both respiration and cardiac frequencies from non-contact measurements.
+        Using the implemented framework, I successfully reproduced benchmark results reported in the literature. The pipeline reliably 
+        extracted respiration peaks around 0.2–0.3 Hz and heartbeat peaks near 1 Hz, even in the presence of strong respiratory harmonics 
+        and background noise. Validation experiments demonstrated that the proposed preprocessing, VME decomposition, and double-CZT 
+        spectral estimation jointly improved the accuracy and robustness of radar-based vital sign detection.
       </p>
 
       <div class="figure-grid">
         <figure>
           <img src="/images/vitalsign-spectrum.jpg" alt="Frequency spectrum of respiration and heartbeat">
           <figcaption>Figure 3. Frequency spectrum showing distinct respiration (~0.25 Hz) and heartbeat (~1 Hz) peaks, 
-          extracted using the reproduced framework.</figcaption>
+          extracted using the reproduced radar-processing framework.</figcaption>
         </figure>
       </div>
 
       <h2>Conclusion & Outlook</h2>
       <p>
-        In this collaborative project, my contribution centered on reproducing a published signal-processing framework for 
-        radar-based vital sign detection. By implementing the full pipeline in MATLAB, I successfully extracted respiration 
-        and heartbeat signals from raw FMCW radar data and verified their frequency components. These results provide a 
-        solid foundation for further improvements and benchmarking.
+        In this project, I configured FMCW radar hardware, implemented advanced signal-processing algorithms, and validated a 
+        non-contact cardiopulmonary monitoring framework in MATLAB. My contributions demonstrate the feasibility of extracting 
+        accurate respiration and heartbeat frequencies using compact radar systems under realistic noise conditions.
       </p>
       <p>
-        Future work will extend toward real-time implementation, robustness evaluation under non-stationary conditions, 
-        and integration into broader experimental programs. Meanwhile, my postdoctoral collaborator continues to explore 
-        methodological innovations and alternative processing schemes, complementing my contribution with new directions 
-        for advancing radar-based biomedical sensing.
+        Moving forward, I plan to extend this framework toward real-time implementation and test its robustness in more 
+        challenging scenarios, including non-stationary subjects and through-obstacle conditions. These developments will 
+        further strengthen the applicability of FMCW radar technology for biomedical sensing and continuous health monitoring.
       </p>
     </section>
   </div>

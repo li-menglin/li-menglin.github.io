@@ -22,7 +22,7 @@ permalink: /research/research2.html
       FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring
     </h1>
     <p class="meta">
-      Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
+      Menglin Li · Sun Yat-sen University · Advisor: Prof. Chengpei Tang<br>
       November 2024 – present
     </p>
 
@@ -50,37 +50,59 @@ permalink: /research/research2.html
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/iwr1443-dataacq.jpg" alt="IWR1443BOOST data acquisition">
+          <img src="/images/iwr1443dataaq.png" alt="IWR1443BOOST data acquisition">
           <figcaption>Figure 1. Data acquisition process using the IWR1443BOOST FMCW radar module.</figcaption>
         </figure>
       </div>
 
-      <h2>Signal Processing Framework</h2>
-      <p>
-        Building on published frameworks, I designed advanced preprocessing modules including smoothing-spline fitting and matched filtering 
-        to enhance weak heartbeat components. Variational Mode Extraction (VME) was then applied to decompose respiration and heartbeat oscillations, 
-        providing robust separation under noisy conditions. For spectral analysis, I implemented a double Chirp-Z Transform (double-CZT), 
-        which achieves high-resolution frequency estimation of both RR and HR beyond conventional FFT resolution.
-      </p>
+<h2>Signal Processing Framework</h2>
+<p>
+  Building on published frameworks, I developed a complete signal-processing chain to extract respiration and heartbeat from noisy radar echoes. 
+  After initial range-bin selection, I applied DC removal and adaptive filtering to suppress static clutter. 
+  To address the strong amplitude disparity between respiration and heartbeat, I designed advanced preprocessing modules, 
+  including smoothing-spline fitting to capture and remove slow respiratory trends, and matched filtering to highlight 
+  the subtle heartbeat-induced oscillations buried in noise.
+</p>
+<p>
+  For component separation, I implemented Variational Mode Extraction (VME), which decomposes the radar displacement signal into 
+  distinct intrinsic modes. VME was particularly effective at isolating the fundamental respiratory oscillation while preserving 
+  higher-frequency cardiac components, thereby reducing spectral overlap and intermodulation artifacts that often hinder FFT-based approaches.
+</p>
+<p>
+  Finally, I applied a double Chirp-Z Transform (double-CZT) for spectral estimation. Compared with the standard FFT, 
+  the double-CZT provides zoomed, high-resolution analysis around the expected respiratory and cardiac frequency bands. 
+  This allowed precise localization of respiration peaks around 0.2–0.3 Hz and heartbeat peaks near 1 Hz, even under 
+  low signal-to-noise ratios. Together, these processing stages formed a robust pipeline that significantly enhanced the 
+  accuracy and stability of radar-based cardiopulmonary monitoring.
+</p>
+
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/心率检测新框架.jpg" alt="Signal processing framework">
+          <img src="/images/processframework.png" alt="Signal processing framework">
           <figcaption>Figure 2. Signal-processing framework for radar-based cardiopulmonary monitoring, reproduced in MATLAB implementation.</figcaption>
         </figure>
       </div>
 
-      <h2>Results</h2>
-      <p>
-        Using the implemented framework, I successfully reproduced benchmark results reported in the literature. The pipeline reliably 
-        extracted respiration peaks around 0.2–0.3 Hz and heartbeat peaks near 1 Hz, even in the presence of strong respiratory harmonics 
-        and background noise. Validation experiments demonstrated that the proposed preprocessing, VME decomposition, and double-CZT 
-        spectral estimation jointly improved the accuracy and robustness of radar-based vital sign detection.
-      </p>
+<h2>Results</h2>
+<p>
+  Using the implemented framework, I successfully reproduced benchmark results reported in the literature. 
+  The pipeline reliably extracted respiration peaks around 0.2–0.3 Hz and heartbeat peaks near 1 Hz, even in the presence of 
+  strong respiratory harmonics and background noise. The smoothing-spline and matched-filter preprocessing stages 
+  effectively suppressed low-frequency drift and enhanced weak cardiac oscillations, while VME provided clear separation 
+  between respiratory and cardiac modes.
+</p>
+<p>
+  Compared with conventional FFT-based analysis, the double-CZT spectral estimation offered visibly sharper peaks 
+  and reduced overlap between respiration harmonics and heartbeat frequencies. This improvement allowed more stable 
+  heart-rate tracking across multiple datasets, confirming that the proposed preprocessing and decomposition pipeline 
+  significantly enhances the robustness of radar-based cardiopulmonary monitoring.
+</p>
+
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/vitalsign-spectrum.jpg" alt="Frequency spectrum of respiration and heartbeat">
+          <img src="/images/vitalsign-spectrum.png" alt="Frequency spectrum of respiration and heartbeat">
           <figcaption>Figure 3. Frequency spectrum showing distinct respiration (~0.25 Hz) and heartbeat (~1 Hz) peaks, 
           extracted using the reproduced radar-processing framework.</figcaption>
         </figure>

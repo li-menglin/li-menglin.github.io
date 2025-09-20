@@ -30,36 +30,54 @@ header: false
 <section id="education">
   <div class="education-card">
     <h2 class="page__title">Education</h2>
-    <div class="edu-top">
-    <!-- 左边 Logo -->
-    <img src="/images/sysu-logo.png" alt="SYSU Logo" class="edu-logo">
 
-    <!-- 右边文字 -->
-    <div class="edu-info">
-      <p class="edu-school">Sun Yat-sen University</p>
-      <p class="edu-degree">B.Sc. in Physics (Major), Electronics and Information Science (Minor)</p>
-      <p class="edu-date">Sept. 2022 – Jun. 2026</p>
+    <div class="edu-top">
+      <!-- 左边 Logo -->
+      <img src="/images/sysu-logo.png" alt="SYSU Logo" class="edu-logo">
+
+      <!-- 右边文字 -->
+      <div class="edu-info">
+        <p class="edu-school">Sun Yat-sen University</p>
+        <p class="edu-degree">
+          B.Sc. in Physics (Major), Electronics and Information Science (Minor)
+        </p>
+        <p class="edu-date">Sept. 2022 – Jun. 2026</p>
+      </div>
+    </div>
+
+    <!-- 下半部分：GPA、课程、荣誉等 -->
+    <div class="edu-desc">
+      <ul class="edu-list">
+        <li><strong>GPA:</strong> 3.6/4.0</li>
+        <li><strong>Rank:</strong> Top 10 out of 75</li>
+        <li>
+          <strong>Core Courses:</strong>
+          Computer Programming, Optics, Statistical Methods in Physics,
+          Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators,
+          Principles of Laser, Radar Principles and Systems, etc.
+        </li>
+        <li>
+          <strong>Honors:</strong>
+          <ul class="honors-list">
+            <li>
+              <span>First-Class Academic Scholarship</span>
+              <span class="honor-year">2023 & 2024</span>
+            </li>
+            <li>
+              <span>Second Prize, Chinese Collegiate Mathematics Competition (CMC)</span>
+              <span class="honor-year">2023</span>
+            </li>
+            <li>
+              <span>Outstanding Undergraduate Research and Innovation Training Program, SYSU</span>
+              <span class="honor-year">2024</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
-
-  <!-- 下半部分：GPA、课程、荣誉等 -->
-  <div class="edu-desc">
-    <ul class="edu-list">
-    <li><strong>GPA:</strong> 3.6/4.0</li>
-    <li><strong>Rank:</strong> Top 10 out of 75</li>
-    <li><strong>Core Courses:</strong> Computer Programming, Optics, Statistical Methods in Physics, Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators, Principles of Laser, Radar Principles and Systems, etc.</li>
-    <li>
-      <strong>Honors:</strong>
-      <ul class="honors-list">
-        <li><span>First-Class Academic Scholarship</span><span class="honor-year">2023 & 2024</span></li>
-        <li><span>Second Prize, Chinese Collegiate Mathematics Competition (CMC)</span><span class="honor-year">2023</span></li>
-        <li><span>Outstanding Undergraduate Research and Innovation Training Program, SYSU</span><span class="honor-year">2024</span></li>
-
-      </ul>
-    </li>
-  </ul>
-</div>
 </section>
+
 
 
 <section id="research">

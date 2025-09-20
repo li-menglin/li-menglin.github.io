@@ -27,7 +27,7 @@ header: false
   </div>
 </section>
 
-<section id="Education">
+<section id="education">
   <div class="education-card">
     <h2 class="page__title">Education</h2>
     <div class="edu-top">

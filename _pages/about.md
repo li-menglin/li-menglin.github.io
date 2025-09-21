@@ -85,21 +85,21 @@ header: false
     <h2 class="page__title">Research Experiences</h2>
 
     <div class="research-grid">
-      <a class="research-card" href="/research/research1.html" aria-label="Cosmic Ray Telescope with Plastic Scintillators">
+      <a class="research-card" href="/research/research1.html" aria-label="Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems">
         <div class="card-image"><img src="/images/research1-cover.png" alt="Cosmic Ray Telescope"></div>
         <div class="card-content">
-          <h3>Cosmic Ray Telescope with Plastic Scintillators</h3>
+          <h3>Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems</h3>
         </div>
       </a>
 
-      <a class="research-card" href="/research/research2.html" aria-label="FMCW Radar for Non-Contact Cardiopulmonary Monitoring">
+      <a class="research-card" href="/research/research2.html" aria-label="FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring">
         <div class="card-image"><img src="/images/research2-cover.png" alt="FMCW Radar"></div>
         <div class="card-content">
-          <h3>FMCW Radar for Non-Contact Cardiopulmonary Monitoring</h3>
+          <h3>FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring</h3>
         </div>
       </a>
 
-      <a class="research-card" href="/research/research3.html" aria-label="Analysis of Long-Lived Particle Properties">
+      <a class="research-card" href="/research/research3.html" aria-label="Analysis of Long-Lived Particle Properties with Multiple Detectors">
         <div class="card-image"><img src="/images/research3-cover.png" alt="Long-Lived Particle Analysis"></div>
         <div class="card-content">
           <h3>Analysis of Long-Lived Particle Properties with Multiple Detectors</h3>

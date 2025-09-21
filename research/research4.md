@@ -37,12 +37,10 @@ permalink: /research/research4.html
         and <em>PyTorch</em>-based data loaders, ensuring reproducibility and controlled train/test splits for model evaluation.
       </p>
 
-      <div class="research-figure">
-        <figure>
+      <figure class="research-figure">
           <img src="/images/beam-traffic-map.png" alt="Beam-space traffic distribution">
           <figcaption>Figure 1. Example of beam-space traffic distribution extracted from cellular datasets</figcaption>
-        </figure>
-      </div>
+      </figure>
 
       <h2>Methods</h2>
       <p>
@@ -54,12 +52,10 @@ permalink: /research/research4.html
         with VQ-VAE embeddings.
       </p>
 
-      <div class="research-figure">
-        <figure>
+      <figure class="research-figure">
           <img src="/images/vqvae-architecture.png" alt="VQ-VAE framework">
           <figcaption>Figure 2. VQ-VAE framework for representation learning of beam-space traffic patterns</figcaption>
-        </figure>
-      </div>
+      </figure>
 
       <h2>My Contributions</h2>
       <ul>

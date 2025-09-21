@@ -48,11 +48,17 @@ permalink: /research/research3.html
         detector response was incorporated to project observable yields. Sensitivity curves for dark photons and ALPs were derived.
       </p>
 
-      <figure class="research-figure">
+      <div class="figure-grid">
+        <figure>
           <img src="/images/research3-cover.png" alt="CODEX-b detector geometry">
           <figcaption>Figure 1. Geometry of the proposed CODEX-b far detector at LHCb</figcaption>
-      </figure>
-
+        </figure>
+        <figure>
+          <img src="/images/llp-sensitivity.png" alt="Sensitivity curves for LLP models">
+          <figcaption>Figure 2. CODEX-b projected sensitivity to ALPs</figcaption>
+        </figure>   
+      </div>
+      
       <h2>My Contributions</h2>
       <ul>
         <li>Conducted a critical review of the <strong>CHARM</strong> fixed-target experiment, examining methodology and exclusion bounds on <strong>long-lived particles (LLPs)</strong> to establish a benchmark for subsequent studies.</li>
@@ -61,13 +67,6 @@ permalink: /research/research3.html
         <li>Applied <strong>Monte Carlo methods</strong> to compute spatial decay distributions and, in collaboration with colleagues using <em>Geant4</em> for detector response, derived sensitivity curves for models including dark photons and <strong>axion-like particles (ALPs)</strong>, demonstrating CODEX-b's complementary reach in the <strong>LLP parameter space</strong>.</li>
       </ul>
       
-      <div class="research-figure">
-        <figure>
-          <img src="/images/llp-sensitivity.png" alt="Sensitivity curves for LLP models">
-          <figcaption>Figure 2. CODEX-b projected sensitivity to ALPs</figcaption>
-        </figure>
-      </div>
-
       <h2>Results & Outlook</h2>
       <p>
         The simulation pipeline successfully reproduced CHARM exclusion bounds, confirming the validity of our modeling. 

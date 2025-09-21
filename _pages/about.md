@@ -78,15 +78,13 @@ header: false
   </div>
 </section>
 
-
-
 <section id="research">
   <div class="card research-outer">
     <h2 class="page__title">Research Experiences</h2>
 
     <div class="research-grid">
       <a class="research-card" href="/research/research1.html" aria-label="Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems">
-        <div class="card-image"><img src="/images/alpha-sigma.png" alt="Cosmic Ray Telescope"></div>
+        <div class="card-image"><img src="/images/muon-stoppingpower.png" alt="Cosmic Ray Telescope"></div>
         <div class="card-content">
           <h3>Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems</h3>
         </div>

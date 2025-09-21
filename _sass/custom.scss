@@ -142,7 +142,7 @@ section {
   grid-template-columns: 1fr;    /* 每行一个 */
   gap: 12px;                     /* 减小图片间距 */
   margin: 20px auto;             /* 容器水平居中并留垂直间距 */
-  max-width: 600px;              /* 限制容器最大宽度 */
+  max-width: 800px;              /* 限制容器最大宽度 */
   justify-items: center;         /* 居中每个 figure */
 }
 
@@ -152,7 +152,7 @@ section {
 }
 
 .figure-grid img {
-  max-width: 80%;                 /* 限制图片宽度 */
+  max-width: 90%;                 /* 限制图片宽度 */
   height: auto;
   aspect-ratio: 4/3;             /* 保持比例 */
   border-radius: 6px;
@@ -166,7 +166,7 @@ section {
   color: #555;
   margin-top: 6px;                 /* 图例与图片间距减小 */
   font-style: italic;
-  line-height: 1.1;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -177,11 +177,11 @@ section {
   flex-direction: column;     /* 垂直排列图片和 caption */
   align-items: center;        /* 居中对齐内容 */
   margin: 20px auto;          /* 容器自身水平居中，并留一些垂直间距 */
-  max-width: 600px;           /* 限制容器最大宽度 */
+  max-width: 800px;           /* 限制容器最大宽度 */
 }
 
 .research-figure img {
-  max-width: 80%;             /* 图片最大宽度 */
+  max-width: 90%;             /* 图片最大宽度 */
   height: auto;
   border-radius: 6px;
   aspect-ratio: 4/3;          /* 方形比例 */
@@ -194,7 +194,7 @@ section {
   color: #555;
   margin-top: 8px;
   font-style: italic;
-  line-height: 1.3;
+  line-height: 1.2;
   text-align: center;
 }
 

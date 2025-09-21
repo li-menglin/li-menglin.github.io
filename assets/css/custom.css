@@ -229,6 +229,30 @@ nav#site-nav.greedy-nav .visible-links { flex-wrap: nowrap !important; }*/
 /* ===============================
    小修（避免意外影响）
 =============================== */
+
+
 .page {
   margin-top: 0 !important;
+}
+/* 顶部导航栏默认浅色模式 */
+.masthead__inner-wrap {
+  background-color: #ffffff;
+}
+
+/* 深色模式下导航栏背景保持不透明（深灰） */
+body.dark-mode .masthead__inner-wrap,
+html[data-theme="dark"] .masthead__inner-wrap {
+  background-color: #1a1a1a !important;
+}
+
+/* 深色模式下，左侧主页文字变白 */
+body.dark-mode .masthead__menu-item--lg > a,
+html[data-theme="dark"] .masthead__menu-item--lg > a {
+  color: #ffffff !important;
+}
+
+/* 其他菜单项（如果需要统一调亮，可以加上） */
+body.dark-mode .masthead__menu-item > a,
+html[data-theme="dark"] .masthead__menu-item > a {
+  color: #e0e0e0 !important;
 }

@@ -86,7 +86,7 @@ header: false
 
     <div class="research-grid">
       <a class="research-card" href="/research/research1.html" aria-label="Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems">
-        <div class="card-image"><img src="/images/research1-cover.png" alt="Cosmic Ray Telescope"></div>
+        <div class="card-image"><img src="/images/alpha-sigma.png" alt="Cosmic Ray Telescope"></div>
         <div class="card-content">
           <h3>Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems</h3>
         </div>

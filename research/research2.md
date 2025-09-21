@@ -27,97 +27,104 @@ permalink: /research/research2.html
     </p>
 
     <section class="research-body">
-      <h2>Background</h2>
+      <h2>Overview</h2>
       <p>
-        Radar-based cardiopulmonary monitoring has emerged as a promising non-contact alternative to traditional sensors such as ECG and PPG. 
-        Frequency-modulated continuous-wave (FMCW) radars are capable of resolving chest wall displacements induced by respiration and heartbeat, 
-        typically on the order of millimeters. The principal challenge is to isolate the weak cardiac component from the dominant respiratory motion 
-        and to suppress noise and spectral leakage under realistic conditions.
-      </p>
-      <p>
-        Within this collaborative project, I was responsible for configuring radar hardware and reproducing a state-of-the-art signal-processing 
-        framework in MATLAB. My work focused on the full technical pipeline—from raw data acquisition to advanced spectral estimation—ensuring 
-        accurate extraction of respiration rate (RR) and heart rate (HR) from noisy radar echoes.
+        Frequency-Modulated Continuous-Wave (FMCW) radar provides a compact, non-contact solution for monitoring 
+        cardiopulmonary activity by resolving chest wall displacements at millimeter precision. 
+        The central challenge is <strong>separating weak heartbeat signals</strong> from dominant respiratory motion 
+        while suppressing noise and harmonics under realistic conditions. 
+        This project develops a full radar–signal processing pipeline to enable accurate extraction of 
+        respiration rate (RR) and heart rate (HR).
       </p>
 
       <h2>Experimental Setup</h2>
       <p>
-        Experiments were carried out with the Texas Instruments IWR1443BOOST FMCW radar platform. I configured the radar using mmWave Studio 
-        and acquired raw ADC data in multi-chirp frames. An approximated Fast Fourier Transform (apFFT) was then applied to resolve range profiles 
-        and identify the subject’s thoracic reflections. Subsequent preprocessing included DC removal, range-bin selection, and phase unwrapping, 
-        which I implemented to prepare displacement waveforms for further cardiopulmonary analysis.
+        I configured the <strong>Texas Instruments IWR1443BOOST FMCW radar</strong> via mmWave Studio to acquire raw ADC echoes 
+        in multi-chirp frames. Range profiles were resolved using an <strong>approximated FFT (apFFT)</strong>, 
+        followed by DC removal, range-bin selection, and phase unwrapping to obtain thoracic displacement waveforms.
       </p>
 
       <div class="figure-grid">
         <figure>
           <img src="/images/iwr1443dataaq.png" alt="IWR1443BOOST data acquisition">
-          <figcaption>Figure 1. Data acquisition process using the IWR1443BOOST FMCW radar module.</figcaption>
+          <figcaption>Figure 1. Data acquisition process with the IWR1443BOOST FMCW radar module.</figcaption>
         </figure>
       </div>
 
-<h2>Signal Processing Framework</h2>
-<p>
-  Building on published frameworks, I developed a complete signal-processing chain to extract respiration and heartbeat from noisy radar echoes. 
-  After initial range-bin selection, I applied DC removal and adaptive filtering to suppress static clutter. 
-  To address the strong amplitude disparity between respiration and heartbeat, I designed advanced preprocessing modules, 
-  including smoothing-spline fitting to capture and remove slow respiratory trends, and matched filtering to highlight 
-  the subtle heartbeat-induced oscillations buried in noise.
-</p>
-<p>
-  For component separation, I implemented Variational Mode Extraction (VME), which decomposes the radar displacement signal into 
-  distinct intrinsic modes. VME was particularly effective at isolating the fundamental respiratory oscillation while preserving 
-  higher-frequency cardiac components, thereby reducing spectral overlap and intermodulation artifacts that often hinder FFT-based approaches.
-</p>
-<p>
-  Finally, I applied a double Chirp-Z Transform (double-CZT) for spectral estimation. Compared with the standard FFT, 
-  the double-CZT provides zoomed, high-resolution analysis around the expected respiratory and cardiac frequency bands. 
-  This allowed precise localization of respiration peaks around 0.2–0.3 Hz and heartbeat peaks near 1 Hz, even under 
-  low signal-to-noise ratios. Together, these processing stages formed a robust pipeline that significantly enhanced the 
-  accuracy and stability of radar-based cardiopulmonary monitoring.
-</p>
+      <h2>Signal Processing Framework</h2>
+      <p>
+        To extract respiration and heartbeat components, I designed a multi-stage pipeline in MATLAB:
+      </p>
+      <ul>
+        <li><strong>Preprocessing:</strong> Applied smoothing-spline fitting to capture and remove slow respiratory trends, 
+        and used matched filtering to enhance subtle heartbeat oscillations.</li>
+        <li><strong>Variational Mode Extraction (VME):</strong> Decomposed displacement signals into intrinsic modes, 
+        isolating respiration (~0.2–0.3 Hz) from heartbeat (~1 Hz).</li>
+        <li><strong>Double Chirp-Z Transform (double-CZT):</strong> Provided high-resolution spectral estimation, 
+        surpassing conventional FFT by yielding sharper, better-separated peaks.</li>
+      </ul>
 
+      <p><strong>Key formulations:</strong></p>
+      <p>
+        Variational Mode Extraction (VME) minimizes the following cost functional:
+      </p>
+      <p>
+        \[
+        \min_{\{u_k,\omega_k\}} \sum_{k=1}^K \left\| \partial_t \left[ \left( \delta(t) + \frac{j}{\pi t} \right) * u_k(t) \cdot e^{-j\omega_k t} \right] \right\|_2^2
+        \]
+        where \(u_k(t)\) are intrinsic modes and \(\omega_k\) their center frequencies.
+      </p>
+      <p>
+        The Chirp-Z Transform (CZT) maps a sequence \(x[n]\) to an arbitrary contour in the z-plane:
+      </p>
+      <p>
+        \[
+        X_k = \sum_{n=0}^{N-1} x[n] \, z_k^{-n}, \quad z_k = A W^{-k}, \quad k=0,\ldots,M-1
+        \]
+        where \(A\) and \(W\) control the start point and frequency resolution. 
+        A double-CZT applies two successive zoomed analyses for enhanced resolution 
+        around respiratory and cardiac bands.
+      </p>
 
       <div class="figure-grid">
         <figure>
           <img src="/images/processframework.png" alt="Signal processing framework">
-          <figcaption>Figure 2. Signal-processing framework for radar-based cardiopulmonary monitoring, reproduced in MATLAB implementation.</figcaption>
+          <figcaption>Figure 2. MATLAB-implemented pipeline for respiration and heartbeat extraction.</figcaption>
         </figure>
       </div>
 
-<h2>Results</h2>
-<p>
-  Using the implemented framework, I successfully reproduced benchmark results reported in the literature. 
-  The pipeline reliably extracted respiration peaks around 0.2–0.3 Hz and heartbeat peaks near 1 Hz, even in the presence of 
-  strong respiratory harmonics and background noise. The smoothing-spline and matched-filter preprocessing stages 
-  effectively suppressed low-frequency drift and enhanced weak cardiac oscillations, while VME provided clear separation 
-  between respiratory and cardiac modes.
-</p>
-<p>
-  Compared with conventional FFT-based analysis, the double-CZT spectral estimation offered visibly sharper peaks 
-  and reduced overlap between respiration harmonics and heartbeat frequencies. This improvement allowed more stable 
-  heart-rate tracking across multiple datasets, confirming that the proposed preprocessing and decomposition pipeline 
-  significantly enhances the robustness of radar-based cardiopulmonary monitoring.
-</p>
+      <h2>Contributions</h2>
+      <ul>
+        <li>Configured the IWR1443BOOST FMCW radar with mmWave Studio to acquire raw ADC data for non-contact cardiopulmonary monitoring.</li>
+        <li>Implemented <strong>apFFT</strong>-based range profiling to resolve thoracic reflections from radar chirps.</li>
+        <li>Developed advanced preprocessing modules including <strong>smoothing-spline fitting</strong> and <strong>matched filtering</strong> to enhance weak heartbeat oscillations.</li>
+        <li>Applied <strong>Variational Mode Extraction (VME)</strong> for robust decomposition of respiratory and cardiac components.</li>
+        <li>Performed <strong>double-CZT spectral estimation</strong> for high-resolution frequency analysis, enabling precise detection of RR and HR.</li>
+        <li>Reproduced and validated published benchmark results in MATLAB, confirming the accuracy and robustness of the framework.</li>
+      </ul>
 
+      <h2>Results</h2>
+      <p>
+        The pipeline reliably extracted respiration (~0.25 Hz) and heartbeat (~1 Hz) peaks, 
+        even under low signal-to-noise conditions. 
+        Compared with FFT-based methods, the double-CZT produced <strong>sharper and better-isolated peaks</strong>, 
+        yielding more stable heart-rate tracking across datasets.
+      </p>
 
       <div class="figure-grid">
         <figure>
           <img src="/images/vitalsign-spectrum.png" alt="Frequency spectrum of respiration and heartbeat">
-          <figcaption>Figure 3. Frequency spectrum showing distinct respiration (~0.25 Hz) and heartbeat (~1 Hz) peaks, 
-          extracted using the reproduced radar-processing framework.</figcaption>
+          <figcaption>Figure 3. Frequency spectrum with distinct respiration and heartbeat peaks extracted from radar echoes.</figcaption>
         </figure>
       </div>
 
       <h2>Conclusion & Outlook</h2>
       <p>
-        In this project, I configured FMCW radar hardware, implemented advanced signal-processing algorithms, and validated a 
-        non-contact cardiopulmonary monitoring framework in MATLAB. My contributions demonstrate the feasibility of extracting 
-        accurate respiration and heartbeat frequencies using compact radar systems under realistic noise conditions.
-      </p>
-      <p>
-        Moving forward, I plan to extend this framework toward real-time implementation and test its robustness in more 
-        challenging scenarios, including non-stationary subjects and through-obstacle conditions. These developments will 
-        further strengthen the applicability of FMCW radar technology for biomedical sensing and continuous health monitoring.
+        This project demonstrates the feasibility of FMCW radar for non-contact cardiopulmonary monitoring. 
+        My contributions span radar configuration, advanced preprocessing, VME decomposition, and double-CZT spectral estimation. 
+        Moving forward, I aim to extend the framework toward <strong>real-time implementation</strong> 
+        and validate it under more challenging conditions such as subject motion and through-obstacle sensing, 
+        strengthening the biomedical applicability of radar technology.
       </p>
     </section>
   </div>

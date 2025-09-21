@@ -175,7 +175,7 @@ section {
 }
 
 .research-figure img {
-  max-width: 60%;             /* 图片最大宽度 */
+  max-width: 80%;             /* 图片最大宽度 */
   height: auto;
   border-radius: 6px;
   aspect-ratio: 1/1;          /* 方形比例 */
@@ -192,8 +192,6 @@ section {
   text-align: center;
 }
 
-
-
 .equation {
   text-align: center !important;          /* 居中 */
   font-size: 1.1rem;           /* 比正文略大，正文是1rem */
@@ -201,6 +199,7 @@ section {
   /* font-family: "Times New Roman", Georgia, serif; 使用衬线字体，更学术 */
   font-family: "Cambria Math", Cambria, Georgia, "Times New Roman", serif; 
   color: #222;                 /* 与正文一致 */
+  font-style: italic;
   margin: 18px 0;              /* 上下间距 */
 }
 

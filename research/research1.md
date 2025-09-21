@@ -68,11 +68,11 @@ permalink: /research/research1.html
       <div class="figure-grid">
         <figure>
           <img src="/images/muon-stoppingpower.png" alt="Muon momentum vs stopping power">
-          <figcaption>Figure 3. Muon momentum versus stopping power.</figcaption>
+          <figcaption>Figure 3. Muon momentum versus stopping power</figcaption>
         </figure>
         <figure>
           <img src="/images/muon-landau.png" alt="Muon Landau distribution">
-          <figcaption>Figure 4. Simulated Landau distribution of muon energy deposition.</figcaption>
+          <figcaption>Figure 4. Simulated Landau distribution of muon energy deposition</figcaption>
         </figure>
       </div>
 

@@ -125,8 +125,8 @@ header: false
       <p class="inline-item"><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</p>
       <p class="inline-item"><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</p>
       <p class="inline-item"><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</p>
-      <p class="inline-item"><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 26, S 19, W 25)</p>
-      <p class="inline-item"><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W)</p>
+      <p class="inline-item"><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 28, S 19, W 25)</p>
+      <p class="inline-item"><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W 3.5)</p>
     </div>
   </div>
 </section>
@@ -136,8 +136,6 @@ header: false
     <h2 class="page__title">Publications</h2>
     <div class="pub-content">
       <p class="inline-item"><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>
-      <p class="inline-item"><strong>M. Li</strong>, T. Tang, “Sensitivity Studies of Long-Lived Particles in CODEX-b,” <em>Proceedings of XXX Conference</em>, 2024.</p>
-      <p class="inline-item"><strong>M. Li</strong>, et al., “FMCW Radar for Non-Contact Cardiopulmonary Monitoring,” Preprint, 2025.</p>
     </div>
   </div>
 </section>
@@ -148,44 +146,44 @@ header: false
   <div class="card beyond-card">
     <h2 class="page__title">Beyond Academia</h2>
     <div class="beyond-grid">
-      <!-- 卡片1 -->
-      <div class="beyond-item">
-        <div class="beyond-image">
-          <img src="images/travel.png" alt="Travel">
-        </div>
-        <div class="beyond-content">
-          <h3>Travel</h3>
-          <p>I enjoy exploring new cities and natural landscapes, capturing unique perspectives through photography.</p>
-        </div>
-      </div>
-      <!-- 卡片2 -->
-      <div class="beyond-item">
-        <div class="beyond-image">
-          <img src="images/music.png" alt="Music">
-        </div>
-        <div class="beyond-content">
-          <h3>Music</h3>
-          <p>Electronic music fascinates me with its structure and creativity. I also experiment with mixing and loops.</p>
-        </div>
-      </div>
-      <!-- 卡片3 -->
-      <div class="beyond-item">
-        <div class="beyond-image">
-          <img src="images/pickleball.png" alt="pickleball">
-        </div>
-        <div class="beyond-content">
-          <h3>pickleball</h3>
-          <p>I enjoy playing pickleball as a fun and social way to stay active and meet new friends.</p>
-        </div>
-      </div>
-      <!-- 卡片4 -->
+     <!-- 卡片1 -->
       <div class="beyond-item">
         <div class="beyond-image">
           <img src="images/badminton.png" alt="badminton">
         </div>
         <div class="beyond-content">
           <h3>badminton</h3>
-          <p>Badminton has been one of my favorite sports for years, offering both relaxation and a good challenge.</p>
+          <p>Badminton keeps me balanced—sometimes a relaxed rally, sometimes a fierce match, always a good time.</p>
+        </div>
+      </div>
+      <!-- 卡片2 -->
+      <div class="beyond-item">
+        <div class="beyond-image">
+          <img src="images/travel.png" alt="Travel">
+        </div>
+        <div class="beyond-content">
+          <h3>Travel</h3>
+          <p>I enjoy wandering through new cities and hidden trails, collecting stories and snapshots along the way.</p>
+        </div>
+      </div>
+      <!-- 卡片3 -->
+      <div class="beyond-item">
+        <div class="beyond-image">
+          <img src="images/music.png" alt="Music">
+        </div>
+        <div class="beyond-content">
+          <h3>Music</h3>
+          <p>Electronic music fascinates me with its playful rhythms, and I like experimenting with beats and loops for fun.</p>
+        </div>
+      </div>
+      <!-- 卡片4 -->
+      <div class="beyond-item">
+        <div class="beyond-image">
+          <img src="images/pickleball.png" alt="pickleball">
+        </div>
+        <div class="beyond-content">
+          <h3>pickleball</h3>
+          <p>Pickleball is my go-to game for laughs, quick rallies, and meeting new friends on the court.</p>
         </div>
       </div>
     </div>

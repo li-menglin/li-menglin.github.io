@@ -48,8 +48,8 @@ permalink: /research/research2.html
       </p>
 
       <figure class="research-figure">
-          <img src="/images/iwr1443data.png" alt="IWR1443BOOST data acquisition">
-          <figcaption>Figure 2. Data acquisition process with the IWR1443BOOST FMCW radar module</figcaption>
+          <img src="/images/dataacq.png" alt="IWR1443BOOST data acquisition">
+          <figcaption>Figure 2. Data acquisition process with FMCW radar module</figcaption>
       </figure>
 
       <h2>Signal Processing Framework</h2>

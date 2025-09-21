@@ -109,12 +109,13 @@ permalink: /research/research2.html
         <li>Reproduced and validated published benchmark results in MATLAB, confirming the accuracy and robustness of the framework.</li>
       </ul>
 
-      <h2>Results</h2>
+      <h2>Progress & Outlook</h2>
       <p>
-        The pipeline reliably extracted respiration (~0.25 Hz) and heartbeat (~1 Hz) peaks, 
-        even under low signal-to-noise conditions. 
-        Compared with FFT-based methods, the double-CZT produced <strong>sharper and better-isolated peaks</strong>, 
-        yielding more stable heart-rate tracking across datasets.
+        The developed pipeline reliably extracted respiration (~0.25 Hz) and heartbeat (~1 Hz) peaks even under low signal-to-noise conditions. Compared with 
+        conventional FFT methods, the double-CZT produced <strong>sharper and better-isolated peaks</strong>, enabling more stable heart-rate tracking across 
+        datasets. My contributions spanned radar configuration, advanced preprocessing, VME decomposition, and double-CZT spectral estimation. Looking ahead, I 
+        aim to extend the framework toward <strong>real-time implementation</strong> and validate it under more challenging scenarios such as subject motion and 
+        through-obstacle sensing, thereby strengthening the biomedical applicability of FMCW radar technology.
       </p>
 
       <div class="figure-grid">
@@ -123,15 +124,6 @@ permalink: /research/research2.html
           <figcaption>Figure 4. Frequency spectrum with distinct respiration and heartbeat peaks extracted from radar echoes.</figcaption>
         </figure>
       </div>
-
-      <h2>Conclusion & Outlook</h2>
-      <p>
-        This project demonstrates the feasibility of FMCW radar for non-contact cardiopulmonary monitoring. 
-        My contributions span radar configuration, advanced preprocessing, VME decomposition, and double-CZT spectral estimation. 
-        Moving forward, I aim to extend the framework toward <strong>real-time implementation</strong> 
-        and validate it under more challenging conditions such as subject motion and through-obstacle sensing, 
-        strengthening the biomedical applicability of radar technology.
-      </p>
     </section>
   </div>
 </div>

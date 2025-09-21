@@ -29,25 +29,30 @@ permalink: /research/research2.html
     <section class="research-body">
       <h2>Overview</h2>
       <p>
-        Frequency-Modulated Continuous-Wave (FMCW) radar provides a compact, non-contact solution for monitoring 
-        cardiopulmonary activity by resolving chest wall displacements at millimeter precision. 
-        The central challenge is <strong>separating weak heartbeat signals</strong> from dominant respiratory motion 
-        while suppressing noise and harmonics under realistic conditions. 
-        This project develops a full radar–signal processing pipeline to enable accurate extraction of 
+        Frequency-Modulated Continuous-Wave (FMCW) radar provides a compact, non-contact solution for monitoring cardiopulmonary activity by resolving chest wall 
+        displacements at millimeter precision. The central challenge is <strong>separating weak heartbeat signals</strong> from dominant respiratory motion while 
+        suppressing noise and harmonics under realistic conditions. This project develops a full radar–signal processing pipeline to enable accurate extraction of 
         respiration rate (RR) and heart rate (HR).
       </p>
-
+      
+      <div class="research-figure">
+        <figure>
+          <img src="/images/framework.png" alt="cardiopulmonary monitor">
+          <figcaption>Figure 1. cardiopulmonary monitor framework</figcaption>
+        </figure>
+      </div>
+      
       <h2>Experimental Setup</h2>
       <p>
-        I configured the <strong>Texas Instruments IWR1443BOOST FMCW radar</strong> via mmWave Studio to acquire raw ADC echoes 
-        in multi-chirp frames. Range profiles were resolved using an <strong>approximated FFT (apFFT)</strong>, 
-        followed by DC removal, range-bin selection, and phase unwrapping to obtain thoracic displacement waveforms.
+        I configured the <strong>Texas Instruments IWR1443BOOST FMCW radar</strong> together with the <strong>DCA1000EVM data capture board</strong> via mmWave 
+        Studio to acquire raw ADC echoes in multi-chirp frames. Range profiles were resolved using an <strong>approximated FFT (apFFT)</strong>, followed by DC 
+        removal, range-bin selection, and phase unwrapping to obtain thoracic displacement waveforms.
       </p>
 
-      <div class="figure-grid">
+      <div class="research-figure">
         <figure>
-          <img src="/images/iwr1443dataaq.png" alt="IWR1443BOOST data acquisition">
-          <figcaption>Figure 1. Data acquisition process with the IWR1443BOOST FMCW radar module.</figcaption>
+          <img src="/images/iwr1443data.png" alt="IWR1443BOOST data acquisition">
+          <figcaption>Figure 2. Data acquisition process with the IWR1443BOOST FMCW radar module</figcaption>
         </figure>
       </div>
 
@@ -86,18 +91,19 @@ permalink: /research/research2.html
         around respiratory and cardiac bands.
       </p>
 
-      <div class="figure-grid">
+      <div class="research-figure">
         <figure>
           <img src="/images/processframework.png" alt="Signal processing framework">
-          <figcaption>Figure 2. MATLAB-implemented pipeline for respiration and heartbeat extraction.</figcaption>
+          <figcaption>Figure 3. MATLAB-implemented pipeline for respiration and heartbeat extraction</figcaption>
         </figure>
       </div>
 
       <h2>Contributions</h2>
       <ul>
-        <li>Configured the IWR1443BOOST FMCW radar with mmWave Studio to acquire raw ADC data for non-contact cardiopulmonary monitoring.</li>
+        <li>Configured the IWR1443BOOST FMCW radar with DCA1000EVM and mmWave Studio to acquire raw ADC data for non-contact cardiopulmonary monitoring.</li>
         <li>Implemented <strong>apFFT</strong>-based range profiling to resolve thoracic reflections from radar chirps.</li>
-        <li>Developed advanced preprocessing modules including <strong>smoothing-spline fitting</strong> and <strong>matched filtering</strong> to enhance weak heartbeat oscillations.</li>
+        <li>Developed advanced preprocessing modules including <strong>smoothing-spline fitting</strong> and <strong>matched filtering</strong> to enhance weak 
+        heartbeat oscillations.</li>
         <li>Applied <strong>Variational Mode Extraction (VME)</strong> for robust decomposition of respiratory and cardiac components.</li>
         <li>Performed <strong>double-CZT spectral estimation</strong> for high-resolution frequency analysis, enabling precise detection of RR and HR.</li>
         <li>Reproduced and validated published benchmark results in MATLAB, confirming the accuracy and robustness of the framework.</li>
@@ -114,7 +120,7 @@ permalink: /research/research2.html
       <div class="figure-grid">
         <figure>
           <img src="/images/vitalsign-spectrum.png" alt="Frequency spectrum of respiration and heartbeat">
-          <figcaption>Figure 3. Frequency spectrum with distinct respiration and heartbeat peaks extracted from radar echoes.</figcaption>
+          <figcaption>Figure 4. Frequency spectrum with distinct respiration and heartbeat peaks extracted from radar echoes.</figcaption>
         </figure>
       </div>
 

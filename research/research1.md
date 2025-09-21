@@ -90,12 +90,11 @@ permalink: /research/research1.html
         \( \alpha + {}^{27}\mathrm{Al} \;\rightarrow\; {}^{30}\mathrm{P} + n \)
       </p>
       
-      <div class="research-figure">
-      <figure>
+      <figure class="research-figure">
         <img src="/images/alpha-sigma.png" alt="Alpha-Aluminum reaction cross-section">
         <figcaption>Figure 5. Cross-section of α-induced reactions on aluminum.</figcaption>
       </figure>
-      </div>
+
 
       <h2>My Contributions</h2>
       <ul>

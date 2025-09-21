@@ -35,12 +35,10 @@ permalink: /research/research2.html
         respiration rate (RR) and heart rate (HR).
       </p>
       
-      <div class="research-figure">
-        <figure>
-          <img src="/images/framework.png" alt="cardiopulmonary monitor">
-          <figcaption>Figure 1. cardiopulmonary monitor framework</figcaption>
-        </figure>
-      </div>
+      <figure class="research-figure">
+          <img src="/images/research2-cover.png" alt="cardiopulmonary monitor">
+          <figcaption>Figure 1. Cardiopulmonary signal detection framework</figcaption>
+      </figure>
       
       <h2>Experimental Setup</h2>
       <p>
@@ -49,12 +47,10 @@ permalink: /research/research2.html
         removal, range-bin selection, and phase unwrapping to obtain thoracic displacement waveforms.
       </p>
 
-      <div class="research-figure">
-        <figure>
+      <figure class="research-figure">
           <img src="/images/iwr1443data.png" alt="IWR1443BOOST data acquisition">
           <figcaption>Figure 2. Data acquisition process with the IWR1443BOOST FMCW radar module</figcaption>
-        </figure>
-      </div>
+      </figure>
 
       <h2>Signal Processing Framework</h2>
       <p>

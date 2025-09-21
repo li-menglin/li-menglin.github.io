@@ -98,7 +98,7 @@ permalink: /research/research2.html
         </figure>
       </div>
 
-      <h2>Contributions</h2>
+      <h2>My Contributions</h2>
       <ul>
         <li>Configured the IWR1443BOOST FMCW radar with DCA1000EVM and mmWave Studio to acquire raw ADC data for non-contact cardiopulmonary monitoring.</li>
         <li>Implemented <strong>apFFT</strong>-based range profiling to resolve thoracic reflections from radar chirps.</li>

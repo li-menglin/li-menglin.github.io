@@ -38,13 +38,6 @@ permalink: /research/research3.html
         modern simulations.
       </p>
 
-      <div class="research-figure">
-        <figure>
-          <img src="/images/llp-charm.png" alt="CHARM fixed-target experiment">
-          <figcaption>Figure 1. CHARM fixed-target experiment, serving as a benchmark for LLP constraints</figcaption>
-        </figure>
-      </div>
-
       <h2>Simulation Framework</h2>
       <p>
         I employed <em>Pythia8</em> to simulate proton–proton collisions at LHC energies, generating LLP momentum spectra 
@@ -56,8 +49,8 @@ permalink: /research/research3.html
       </p>
 
       <figure class="research-figure">
-          <img src="/images/codexb-geometry.png" alt="CODEX-b detector geometry">
-          <figcaption>Figure 2. Geometry of the proposed CODEX-b far detector at LHCb</figcaption>
+          <img src="/images/research3-cover.png" alt="CODEX-b detector geometry">
+          <figcaption>Figure 1. Geometry of the proposed CODEX-b far detector at LHCb</figcaption>
       </figure>
 
       <h2>My Contributions</h2>
@@ -71,7 +64,7 @@ permalink: /research/research3.html
       <div class="research-figure">
         <figure>
           <img src="/images/llp-sensitivity.png" alt="Sensitivity curves for LLP models">
-          <figcaption>Figure 3. CODEX-b projected sensitivity to ALPs</figcaption>
+          <figcaption>Figure 2. CODEX-b projected sensitivity to ALPs</figcaption>
         </figure>
       </div>
 

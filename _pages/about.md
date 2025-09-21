@@ -37,7 +37,7 @@ header: false
 
       <!-- 右边文字 -->
       <div class="edu-info">
-        <p class="edu-school">Sun Yat-sen University</p>
+        <p class="edu-school">Sun Yat-sen University (SYSU)</p>
         <p class="edu-degree">
           B.Sc. in Physics (Major), Electronics and Information Science (Minor)
         </p>

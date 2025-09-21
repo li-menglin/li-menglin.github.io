@@ -164,11 +164,11 @@ section {
 .figure-grid figcaption {
   font-size: 1rem;             /* 文字稍微小一点 */
   color: #555;
-  margin-top: 6px;                 /* 图例与图片间距减小 */
+  margin-top: 8px;                 /* 图例与图片间距减小 */
   font-style: italic;
   line-height: 1.2;
   max-width: 90%;   /* 跟图片宽度一致 */
-  margin: 6px auto 0;  /* 上间距 6px，水平居中 */
+  margin: 8px auto 0;  /* 上间距 6px，水平居中 */
   text-align: center !important;
 }
 

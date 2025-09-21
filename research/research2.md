@@ -87,12 +87,10 @@ permalink: /research/research2.html
         around respiratory and cardiac bands.
       </p>
 
-      <div class="research-figure">
-        <figure>
+      <figure class="research-figure">
           <img src="/images/processframework.png" alt="Signal processing framework">
-          <figcaption>Figure 3. MATLAB-implemented pipeline for respiration and heartbeat extraction</figcaption>
-        </figure>
-      </div>
+          <figcaption>Figure 3. MATLAB-implemented pipeline for heart rate estimation</figcaption>
+      </figure>
 
       <h2>My Contributions</h2>
       <ul>
@@ -114,12 +112,6 @@ permalink: /research/research2.html
         through-obstacle sensing, thereby strengthening the biomedical applicability of FMCW radar technology.
       </p>
 
-      <div class="figure-grid">
-        <figure>
-          <img src="/images/vitalsign-spectrum.png" alt="Frequency spectrum of respiration and heartbeat">
-          <figcaption>Figure 4. Frequency spectrum with distinct respiration and heartbeat peaks extracted from radar echoes.</figcaption>
-        </figure>
-      </div>
     </section>
   </div>
 </div>

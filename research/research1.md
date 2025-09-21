@@ -30,15 +30,15 @@ permalink: /research/research1.html
       <h2>Overview</h2>
       <p>
         This project develops a compact detection platform based on plastic scintillators with Silicon Photomultipliers (SiPMs), 
-        complemented by a helium-3 counter for neutron measurements. The system is designed to register cosmic-ray muons and neutrons 
+        complemented by a helium-3 tube detector for neutron spectrum measurement. The system is designed to register cosmic-ray muons and neutrons 
         under coincidence logic, enabling both detector calibration and exploratory muon imaging studies.
       </p>
 
       <h2>Experimental Setup</h2>
       <p>
-        The telescope employs two vertically aligned scintillators coupled with SiPMs; coincident signals identify through-going muons. 
-        Electronics include a spectroscopy amplifier, single-channel analyzers (SCAs), and a coincidence unit triggering a multichannel analyzer (MCA). 
-        A helium-3 proportional counter is inserted coaxially to measure neutrons under the same trigger conditions.
+        The telescope employs two vertically aligned scintillators coupled with SiPMs, with coincident signals to identify through-going muons. The readout chain 
+        incorporates spectroscopy amplifiers, single-channel analyzers (SCAs), and a coincidence unit triggering a multichannel analyzer (MCA). A \
+        (^{3}\mathrm{He}\) tube neutron detector is inserted coaxially to measure neutrons under the same trigger conditions.
       </p>
 
       <div class="figure-grid">
@@ -54,10 +54,11 @@ permalink: /research/research1.html
 
       <h2>Methodology</h2>
       <p>
-        Muon energy deposition is modeled by the Bethe–Bloch formula:
+        Muon energy deposition in the plastic scintillators and the He-3 tube is modeled by the Bethe–Bloch formula:
       </p>
       <p class="equation">
-        -&lt;dE/dx&gt; = K z² (Z/A) (1/β²) [ ½ ln (2 m<sub>e</sub>c² β²γ² T<sub>max</sub> / I² ) - β² - δ/2 ].
+        \( -\left\langle \frac{dE}{dx} \right\rangle= K z^{2} \frac{Z}{A} \frac{1}{\beta^{2}}\left[\tfrac{1}{2} \ln\!\left( \frac{2 m_{e} c^{2} 
+        \beta^{2}\gamma^{2} T_{\text{max}}}{I^{2}} \right)- \beta^{2} - \frac{\delta}{2}\right] \)
       </p>
       <p>
         In thin absorbers, energy deposition follows a Landau distribution. Python-based Monte Carlo simulations were developed to reproduce 
@@ -86,31 +87,36 @@ permalink: /research/research1.html
         A compact Am-241–aluminum neutron source was also prepared via:
       </p>
       <p class="equation">
-        α + <sup>27</sup>Al → <sup>30</sup>P + n.
+        \( \alpha + {}^{27}\mathrm{Al} \;\rightarrow\; {}^{30}\mathrm{P} + n \)
       </p>
       
       <div class="figure-grid">
       <figure>
         <img src="/images/alpha-sigma.png" alt="Alpha-Aluminum reaction cross-section">
         <figcaption>Figure 5. Cross-section of α-induced reactions on aluminum.</figcaption>
-        </figure>
+      </figure>
       </div>
 
-      <h2>Key Contributions</h2>
+      <h2>My Contributions</h2>
       <ul>
-        <li><strong>System Design:</strong> Constructed a multi-channel SiPM-based cosmic-ray telescope with coincidence logic for muon detection.</li>
-        <li><strong>Detector Optimization:</strong> Tuned SiPM bias and thresholds to enhance resolution, suppress noise, and ensure stable muon flux measurements across multiple building levels.</li>
-        <li><strong>Modeling & Simulation:</strong> Applied Bethe–Bloch and Landau MPV analysis; implemented Python-based Monte Carlo simulations to model muon energy-loss spectra and predict detection efficiency.</li>
-        <li><strong>Neutron Detection:</strong> Designed experiments with an Am-241–aluminum neutron source, identified the p–t coincidence peak in the He-3 counter, and established calibration benchmarks via spectral analysis.</li>
+      <li><strong>System Design:</strong> Constructed a multi-channel SiPM-based cosmic-ray telescope with coincidence logic for muon detection.</li>
+      <li><strong>Experimental Corrections:</strong> Measured two-fold and three-fold coincidence rates with three stacked plastic scintillators, and developed a 
+      Python program that combines Monte Carlo sampling with experimental data to determine the effective scintillator length and correct raw measurements.</li>   
+      <li><strong>Detector Optimization:</strong> Tuned SiPM bias and thresholds to enhance resolution, suppress noise, and ensure stable muon flux measurements 
+      across multiple building levels.</li>
+      <li><strong>Theoretical Modeling:</strong> Applied Bethe–Bloch and Landau MPV analysis; built dedicated Python-based Monte Carlo simulations to reproduce 
+      muon energy-loss spectra and quantitatively predict detector efficiency.</li>
+      <li><strong>Neutron Detection:</strong> Designed experiments with an Am-241–aluminum neutron source, identified the p–t coincidence peak in the He-3 
+      tube, and established calibration benchmarks via spectral analysis.</li>
+
       </ul>
 
       <h2>Progress & Outlook</h2>
       <p>
-        Initial efficiency studies confirmed alignment of scintillator modules and validated coincidence logic. 
-        Measurements across multiple floors demonstrated attenuation trends consistent with muon absorption, 
-        supporting the feasibility of muon imaging. Current efforts focus on refining neutron-source validation 
-        and quantifying uncertainties. Longer-term, the platform provides a foundation for muon imaging applications 
-        and broader particle instrumentation research.
+        Initial efficiency studies confirmed alignment of scintillator modules and validated coincidence logic. Measurements across multiple floors demonstrated 
+        attenuation trends consistent with muon absorption, supporting the feasibility of muon imaging. Current efforts focus on refining neutron-source 
+        validation and quantifying uncertainties. Longer-term, the platform provides a foundation for muon imaging applications and extended particle 
+        instrumentation calibration
       </p>
     </section>
   </div>

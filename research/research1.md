@@ -44,11 +44,11 @@ permalink: /research/research1.html
       <div class="figure-grid">
         <figure>
           <img src="/images/research1setup.png" alt="Setup diagram">
-          <figcaption>Figure 1. Schematic of the telescope system with scintillators and SiPM readout.</figcaption>
+          <figcaption>Figure 1. Schematic of the Cosmic ray telescope system</figcaption>
         </figure>
         <figure>
           <img src="/images/research1platform.png" alt="Experiment photo">
-          <figcaption>Figure 2. Laboratory implementation including scintillator paddles and electronics.</figcaption>
+          <figcaption>Figure 2. Laboratory implementation including scintillator paddles and electronics</figcaption>
         </figure>
       </div>
 

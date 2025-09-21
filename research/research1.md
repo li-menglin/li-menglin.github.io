@@ -19,7 +19,7 @@ permalink: /research/research1.html
 <div id="research-detail">
   <div class="content-card">
     <h1 class="page__title">
-      Development of a SiPM-Based Cosmic-Ray Telescope and Neutron Detection System
+      Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems
     </h1>
     <p class="meta">
       Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
@@ -88,11 +88,13 @@ permalink: /research/research1.html
       <p class="equation">
         α + <sup>27</sup>Al → <sup>30</sup>P + n.
       </p>
-
-      <figure class="research-figure">
+      
+      <div class="figure-grid">
+      <figure>
         <img src="/images/alpha-sigma.png" alt="Alpha-Aluminum reaction cross-section">
         <figcaption>Figure 5. Cross-section of α-induced reactions on aluminum.</figcaption>
-      </figure>
+        </figure>
+      </div>
 
       <h2>Key Contributions</h2>
       <ul>

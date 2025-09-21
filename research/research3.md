@@ -24,70 +24,70 @@ permalink: /research/research3.html
     <section class="research-body">
       <h2>Overview</h2>
       <p>
-        This project focused on the phenomenology of long-lived particles (LLPs), motivated by beyond the Standard Model scenarios 
-        such as hidden-sector dark photons and axion-like particles (ALPs). I established a full simulation pipeline—from event 
-        generation to detector acceptance studies—to evaluate the discovery potential of the proposed CODEX-b far detector at the LHC 
-        and benchmarked results against past experiments.
+        This project investigated long-lived particles (LLPs) in beyond-Standard-Model scenarios, focusing on 
+        hidden-sector dark photons and axion-like particles (ALPs). I developed a simulation pipeline linking 
+        event generation, decay kinematics, and detector acceptance to evaluate the discovery potential of the 
+        proposed CODEX-b far detector at the LHC. The pipeline reproduced and generated CODEX-b sensitivity plots in the mass–lifetime parameter space.
       </p>
 
-      <h2>Experimental Setup</h2>
+      <h2>Theoretical Preparation & Experimental Report Analysis</h2>
       <p>
-        As a baseline, I studied the CHARM fixed-target experiment (400 GeV proton–copper collisions), which placed exclusion limits 
-        on neutral LLPs. For collider-scale studies, proton–proton interactions at LHC energies were generated using <em>Pythia8</em>, 
-        producing LLP spectra and decay-length distributions under benchmark BSM models.
+        To establish a solid foundation, I studied essential quantum field theory and the principles of LLP detection. 
+        I conducted a critical review of the <strong>CHARM fixed-target experiment</strong> (400 GeV proton–copper collisions), 
+        analyzing its methodology and exclusion limits on neutral LLPs. These results provided a benchmark for validating 
+        modern simulations.
       </p>
 
-      <div class="figure-grid">
+      <div class="research-figure">
         <figure>
           <img src="/images/llp-charm.png" alt="CHARM fixed-target experiment">
-          <figcaption>Figure 1. CHARM fixed-target experiment, used as a benchmark for LLP constraints.</figcaption>
+          <figcaption>Figure 1. CHARM fixed-target experiment, serving as a benchmark for LLP constraints</figcaption>
         </figure>
       </div>
 
-      <h2>Methods</h2>
+      <h2>Simulation Framework</h2>
       <p>
-        Detector acceptance studies targeted the CODEX-b proposal: a 10×10×10 m³ decay volume near LHCb, shielded from the interaction 
-        point. I modeled its fiducial geometry and applied kinematic cuts to compute the probability of LLP decays inside the active 
-        region. Monte Carlo propagation sampled decay vertices according to LLP lifetimes, while Geant4-based response simulations 
-        enabled signal yield projections. Sensitivity curves were then derived for dark photons and ALPs.
+        I employed <em>Pythia8</em> to simulate proton–proton collisions at LHC energies, generating LLP momentum spectra 
+        and decay-length distributions under benchmark BSM scenarios. Detector acceptance studies focused on the 
+        <strong>proposed CODEX-b far detector</strong>, a 10×10×10 m³ decay volume near LHCb. I modeled its geometry and 
+        shielding, applied kinematic cuts, and estimated the probability of LLP decays within the fiducial volume. Monte Carlo 
+        methods were used to propagate decay vertices, and in collaboration with colleagues using <em>Geant4</em>, 
+        detector response was incorporated to project observable yields. Sensitivity curves for dark photons and ALPs were derived.
       </p>
 
-      <div class="figure-grid">
+      <div class="research-figure">
         <figure>
           <img src="/images/codexb-geometry.png" alt="CODEX-b detector geometry">
-          <figcaption>Figure 2. Geometry of the proposed CODEX-b far detector at LHCb.</figcaption>
+          <figcaption>Figure 2. Geometry of the proposed CODEX-b far detector at LHCb</figcaption>
         </figure>
       </div>
 
       <h2>My Contributions</h2>
       <ul>
-        <li>Reviewed the CHARM fixed-target experiment, analyzing methodology and exclusion bounds on LLPs as a benchmark for modern studies.</li>
-        <li>Simulated proton–proton collisions at LHC energies using <em>Pythia8</em>, generating LLP kinematics and decay distributions under BSM models.</li>
-        <li>Investigated CODEX-b’s geometry and shielding, assessing acceptance for LLP decays inside the fiducial volume.</li>
-        <li>Applied Monte Carlo techniques and collaborated with colleagues using Geant4 to derive sensitivity curves for dark photons and ALPs, demonstrating CODEX-b’s complementary reach.</li>
+        <li>Conducted a critical review of the CHARM fixed-target experiment, examining methodology and exclusion bounds on LLPs to establish a benchmark for subsequent studies.</li>
+        <li>Utilized the <em>Pythia8</em> event generator to simulate proton–proton collisions at LHC energies, producing LLP kinematic spectra and decay-length distributions under benchmark BSM scenarios.</li>
+        <li>Investigated the geometry and shielding of the proposed CODEX-b far detector at LHCb, assessed its acceptance for LLP decays within the 10×10×10 m³ fiducial volume, and evaluated its potential to extend sensitivity beyond existing experiments.</li>
+        <li>Applied Monte Carlo methods to compute spatial decay distributions and, in collaboration with colleagues using <em>Geant4</em> for detector response, derived sensitivity curves for models including dark photons and axion-like particles (ALPs), demonstrating CODEX-b's complementary reach in the LLP parameter space.</li>
       </ul>
-
-      <h2>Results</h2>
-      <p>
-        Simulations reproduced CHARM exclusion bounds, validating the pipeline. CODEX-b showed unique coverage in mass–lifetime 
-        parameter space, particularly for intermediate lifetimes where both prompt and beam-dump experiments lack sensitivity. 
-        Dark photon sensitivity extended well beyond previous limits in the MeV–GeV range, and ALPs demonstrated complementary reach.
-      </p>
-
-      <div class="figure-grid">
+      
+      <div class="research-figure">
         <figure>
           <img src="/images/llp-sensitivity.png" alt="Sensitivity curves for LLP models">
-          <figcaption>Figure 3. Sensitivity curves for dark photons and ALPs, illustrating CODEX-b’s extended reach.</figcaption>
+          <figcaption>Figure 3. Sensitivity curves for dark photons and ALPs, illustrating CODEX-b’s extended reach</figcaption>
         </figure>
       </div>
 
-      <h2>Conclusion & Outlook</h2>
+
+      <h2>Results & Outlook</h2>
       <p>
-        This work established a validated simulation pipeline for LLP studies, integrating event generation, decay kinematics, and 
-        detector acceptance. By reproducing CHARM results and extending to CODEX-b, we demonstrated the ability of far detectors 
-        to probe previously unexplored regions. Future work will incorporate background modeling and expand to additional BSM 
-        scenarios, strengthening the physics case for LLP searches at the LHC.
+        The simulation pipeline successfully reproduced CHARM exclusion bounds, confirming the validity of our modeling. 
+        Applied to CODEX-b, it demonstrated unique coverage in the mass–lifetime plane, particularly for intermediate 
+        lifetimes beyond the reach of prompt and beam-dump experiments. Dark photon sensitivity was extended in the MeV–GeV 
+        range, with complementary coverage for ALPs. Future work includes systematic background modeling and extension to 
+        additional BSM scenarios.
       </p>
+
+
     </section>
   </div>
 </div>

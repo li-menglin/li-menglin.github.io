@@ -38,7 +38,7 @@ permalink: /research/research1.html
       <p>
         The telescope employs two vertically aligned scintillators coupled with SiPMs, with coincident signals to identify through-going muons. The readout chain 
         incorporates spectroscopy amplifiers, single-channel analyzers (SCAs), and a coincidence unit triggering a multichannel analyzer (MCA). A 
-        $^{3}\mathrm{He}$ tube neutron detector is inserted coaxially to measure neutrons under the same trigger conditions.
+        \({}^{3}\mathrm{He}\) tube neutron detector is inserted coaxially to measure neutrons under the same trigger conditions.
       </p>
 
       <div class="figure-grid">

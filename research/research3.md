@@ -17,8 +17,8 @@ permalink: /research/research3.html
       Analysis of Long-Lived Particle Properties with Multiple Detectors
     </h1>
     <p class="meta">
-      Menglin Li · Sun Yat-sen University · Advisor: Prof. Wei Su<br>
-      Research Assistant · Sept. 2023 – Sept. 2024
+      Research Assistant · Sun Yat-sen University · Advisor: Prof. Wei Su<br>
+      Sept. 2023 – Sept. 2024
     </p>
 
     <section class="research-body">

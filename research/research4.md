@@ -17,8 +17,8 @@ permalink: /research/research4.html
       Machine Learning for Beam-Space Traffic Pattern Analysis
     </h1>
     <p class="meta">
-      Menglin Li · The Chinese University of Hong Kong, Shenzhen · Advisor: Prof. Qingjiang Shi<br>
-      Research Assistant · Oct 2024 – Jun 2025
+      Research Assistant · The Chinese University of Hong Kong, Shenzhen · Advisor: Prof. Qingjiang Shi<br>
+      Oct. 2024 – Jun. 2025
     </p>
 
     <section class="research-body">

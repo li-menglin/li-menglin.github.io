@@ -22,7 +22,7 @@ permalink: /research/research1.html
       Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems
     </h1>
     <p class="meta">
-      Menglin Li · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
+      Research Assistant/Project Lead · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
       October 2024 – present
     </p>
 

@@ -23,7 +23,7 @@ permalink: /research/research2.html
     </h1>
     <p class="meta">
       Research Assistant · Sun Yat-sen University · Advisor: Prof. Chengpei Tang<br>
-      November 2024 – present
+      Nov. 2024 – Present
     </p>
 
     <section class="research-body">

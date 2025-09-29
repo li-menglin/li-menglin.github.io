@@ -18,7 +18,7 @@ permalink: /research/research3.html
     </h1>
     <p class="meta">
       Menglin Li · Sun Yat-sen University · Advisor: Prof. Wei Su<br>
-      Research Assistant · Sep 2023 – Sep 2024
+      Research Assistant · Sept. 2023 – Sept. 2024
     </p>
 
     <section class="research-body">

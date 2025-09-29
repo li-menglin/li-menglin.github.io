@@ -132,7 +132,8 @@ header: false
   <div class="pub-card">
     <h2 class="page__title">Publications</h2>
     <div class="pub-content">
-      <p class="inline-item"><strong>M. Li</strong>, J. Feng, “Study of Factors Affecting the Performance of Dual-End Readout PET Detectors Based on SiPM,” <em>Journal of Instrumentation</em>, Under Review, 2025.</p>
+      <p class="inline-item"><strong>M. Li</strong>, J. Feng, “A Novel Method for Measuring the Effective Length of Plastic Scintillators,” <em>Journal of 
+        Instrumentation</em>, Under Review, 2025.</p>
     </div>
   </div>
 </section>

@@ -17,7 +17,7 @@ permalink: /research/research4.html
       Machine Learning for Beam-Space Traffic Pattern Analysis
     </h1>
     <p class="meta">
-      Research Assistant · The Chinese University of Hong Kong, Shenzhen · Advisor: Prof. Qingjiang Shi<br>
+      Research Assistant · CUHK-Shenzhen · Advisor: Prof. Qingjiang Shi<br>
       Oct. 2024 – Jun. 2025
     </p>
 

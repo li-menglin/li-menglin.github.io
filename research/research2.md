@@ -22,7 +22,7 @@ permalink: /research/research2.html
       FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring
     </h1>
     <p class="meta">
-      Menglin Li · Sun Yat-sen University · Advisor: Prof. Chengpei Tang<br>
+      Research Assistant · Sun Yat-sen University · Advisor: Prof. Chengpei Tang<br>
       November 2024 – present
     </p>
 

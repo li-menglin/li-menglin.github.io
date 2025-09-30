@@ -150,7 +150,7 @@ header: false
           <img src="images/badminton.png" alt="badminton">
         </div>
         <div class="beyond-content">
-          <h3>badminton</h3>
+          <h3>Badminton</h3>
           <p>Badminton keeps me balanced—sometimes a relaxed rally, sometimes a fierce match, always a good time.</p>
         </div>
       </div>
@@ -180,7 +180,7 @@ header: false
           <img src="images/pickleball.png" alt="pickleball">
         </div>
         <div class="beyond-content">
-          <h3>pickleball</h3>
+          <h3>Pickleball</h3>
           <p>Pickleball is my go-to game for laughs, quick rallies, and meeting new friends on the court.</p>
         </div>
       </div>

@@ -12,7 +12,7 @@ header: false
       <p>
         I am a bachelor’s student in Physics, with a minor in Electronics and Information Science, at Sun Yat-sen University (SYSU). My research interests span 
         the intersection of physics and electrical engineering, with a particular focus on photonics, microelectronics, and biomedical signal processing. With a 
-        GPA above 3.6/4.0 and multiple major scholarships and competition awards, I have built a solid academic foundation and gained extensive research 
+        GPA above 3.7/4.0 and multiple major scholarships and competition awards, I have built a solid academic foundation and gained extensive research 
         experience through both experimental techniques and computational modeling. I am eager to further my research as a Ph.D. student starting in Fall 2026.
       </p>
       <strong>Research Interests: </strong>
@@ -47,7 +47,7 @@ header: false
     <!-- 下半部分：GPA、课程、荣誉等 -->
     <div class="edu-desc">
       <ul class="edu-list">
-        <li><strong>GPA:</strong> 3.6/4.0</li>
+        <li><strong>GPA:</strong> 3.7/4.0</li>
         <li><strong>Rank:</strong> Top 10 out of 75</li>
         <li>
           <strong>Core Courses:</strong>

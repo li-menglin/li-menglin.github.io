@@ -122,7 +122,7 @@ header: false
       <p class="inline-item"><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</p>
       <p class="inline-item"><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</p>
       <p class="inline-item"><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</p>
-      <p class="inline-item"><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 28, S 19, W 25)</p>
+      <p class="inline-item"><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 27, S 20, W 25)</p>
       <p class="inline-item"><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W 3.5)</p>
     </div>
   </div>

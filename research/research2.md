@@ -7,86 +7,102 @@ permalink: /research/research2.html
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Experimental Research on PMT-Based Environmental Radiation Monitoring Systems</title>
+  <title>Experimental Research on PMT-Based Signal Detection Systems</title>
   <link rel="stylesheet" href="research.css">
 </head>
+
 <body>
 <div id="research-detail">
   <div class="content-card">
+
     <h1 class="page__title">
-      Experimental Research on PMT-Based Environmental Radiation Monitoring Systems
+      Experimental Research on PMT-Based Signal Detection Systems
     </h1>
+
     <p class="meta">
-      Research Assistant/Project Lead · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
+      Research Assistant / Project Lead · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
       Oct. 2024 – Nov. 2025
     </p>
 
     <section class="research-body">
+
       <h2>Overview</h2>
       <p>
-        This project develops a compact detection platform based on plastic scintillators coupled with Photomultiplier Tubes (PMTs). 
-        The system is designed to register environmental background radiation under coincidence logic, enabling accurate detector calibration, 
-        signal chain optimization, and baseline environmental monitoring across different operational conditions.
+        This project focuses on the design and optimization of a photomultiplier tube (PMT)-based signal detection platform. 
+        The system is developed to study low-intensity signal acquisition and processing under realistic noise conditions. 
+        Emphasis is placed on improving signal stability, calibration accuracy, and robustness of the electronic readout chain.
       </p>
+
+      <p>
+        The work combines experimental instrumentation with computational modeling, aiming to better understand how 
+        detector configuration and signal processing strategies influence measurement reliability in sensing systems.
+      </p>
+
 
       <h2>Experimental Setup</h2>
       <p>
-        The monitoring platform employs vertically aligned scintillators coupled with PMTs, utilizing coincident signals to isolate target radiation events 
-        from background noise. The electronic readout chain incorporates spectroscopy amplifiers, single-channel analyzers (SCAs), and a coincidence 
-        logic unit that triggers a digital multi-channel analyzer (MCA) for precise spectral acquisition.
+        The platform consists of scintillation materials coupled with PMTs, forming a vertically aligned detection structure. 
+        Coincidence-based triggering is applied to suppress noise and improve signal selectivity. The readout chain includes 
+        amplification modules, signal discrimination units, and a digital acquisition system for spectral analysis.
       </p>
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/monitoring-setup.png" alt="Setup diagram of the monitoring platform">
-          <figcaption>Figure 1. Schematic of the environmental radiation monitoring system</figcaption>
+          <img src="/images/monitoring-setup.png" alt="Experimental setup">
+          <figcaption>Figure 1. Experimental setup of the PMT-based detection system</figcaption>
         </figure>
         <figure>
-          <img src="/images/monitoring-platform.png" alt="Experiment photo with electronics">
-          <figcaption>Figure 2. Laboratory implementation including optoelectronic signal chains</figcaption>
+          <img src="/images/monitoring-platform.png" alt="System architecture">
+          <figcaption>Figure 2. Schematic architecture of the signal acquisition and processing chain</figcaption>
         </figure>
       </div>
+
 
       <h2>Methodology</h2>
       <p>
-        The energy deposition of background radiation in the plastic scintillators is modeled using standard energy-loss distributions. 
-        In thin absorbers, the energy loss fluctuations are characterized by a Landau distribution. Python-based Monte Carlo simulations 
-        were developed to reproduce these energy-loss spectra and predict baseline counting rates, providing a robust theoretical cross-check 
-        against the experimental MCA data.
+        Signal formation in the detector is influenced by statistical fluctuations and electronic noise. 
+        To better understand these effects, computational models were developed to reproduce signal distributions 
+        and estimate baseline response characteristics.
       </p>
+
       <p>
-        To ensure signal integrity, the accidental coincidence rate was carefully evaluated and minimized using the resolving time of the coincidence unit. 
-        System calibration was performed by mapping the analog-to-digital conversion channels of the MCA to known energy reference points, 
-        ensuring high-fidelity spectral analysis.
+        Data analysis focuses on spectral consistency, signal stability, and noise suppression. 
+        Calibration procedures are applied to align digital readout channels with reference signal levels, 
+        ensuring reliable comparison across different operating conditions.
       </p>
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/energy-loss-sim.png" alt="Simulated energy deposition">
-          <figcaption>Figure 3. Simulated distribution of radiation energy deposition</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/mca-calibration.png" alt="MCA calibration spectrum">
-          <figcaption>Figure 4. Validated MCA spectrum for system baseline calibration</figcaption>
+          <img src="/images/neutron-spectrum.png" alt="Signal spectrum">
+          <figcaption>Figure 3. Example of measured signal spectrum under calibrated conditions</figcaption>
         </figure>
       </div>
 
+
       <h2>My Contributions</h2>
       <ul>
-      <li><strong>System Design:</strong> Designed and constructed an environmental monitoring platform using plastic scintillators and PMTs, integrated with digital MCAs for signal acquisition.</li>
-      <li><strong>Experimental Corrections:</strong> Measured coincidence rates with stacked detectors, and developed a Python program combining Monte Carlo sampling with experimental data to determine effective detector length and correct raw measurements.</li>   
-      <li><strong>Detector Optimization:</strong> Tuned PMT bias voltages and thresholds to enhance signal resolution, suppress electronic noise, and ensure stable baseline counting rates across different operational environments.</li>
-      <li><strong>Theoretical Modeling:</strong> Built dedicated Python-based simulations to model detector energy-loss spectra and quantitatively predict system efficiency.</li>
-      <li><strong>System Validation:</strong> Validated the system's baseline performance through spectral analysis, integrating signal processing chains into the theoretical framework of coincidence triggering logic.</li>
+        <li><strong>System Development:</strong> Designed and assembled a PMT-based detection platform with integrated signal acquisition and processing modules.</li>
+        <li><strong>Signal Processing:</strong> Optimized amplification, thresholding, and coincidence logic to improve signal quality and reduce noise.</li>
+        <li><strong>Modeling:</strong> Developed Python-based simulations to reproduce signal distributions and support system calibration.</li>
+        <li><strong>Performance Evaluation:</strong> Conducted measurements across different conditions to validate system stability and consistency.</li>
       </ul>
 
-      <h2>Progress & Outlook</h2>
+
+      <h2>Results and Discussion</h2>
       <p>
-        Initial efficiency studies confirmed the accurate alignment of the optoelectronic modules and validated the robustness of the coincidence logic. 
-        Measurements taken across multiple environments demonstrated stable baseline characteristics, supporting the reliability of the signal processing chain. 
-        Current efforts focus on refining signal-to-noise ratios and quantifying statistical uncertainties. Longer-term, the platform provides a solid 
-        foundation for advanced electronic instrumentation and environmental sensing applications.
+        The system demonstrates stable signal acquisition performance with improved noise suppression through coincidence-based processing. 
+        Experimental results are consistent with modeled expectations, indicating that the platform can reliably capture 
+        low-intensity signals under varying conditions.
       </p>
+
+
+      <h2>Outlook</h2>
+      <p>
+        Future work will focus on improving system integration and exploring more efficient signal processing methods. 
+        The framework developed in this project can be extended to a wide range of sensing applications that require 
+        precise signal detection and analysis.
+      </p>
+
     </section>
   </div>
 </div>

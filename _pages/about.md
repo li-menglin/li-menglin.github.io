@@ -81,37 +81,25 @@ header: false
   <div class="card research-outer">
     <h2 class="page__title">Research Experiences</h2>
 
+
     <div class="research-grid">
-      <a class="research-card" href="/research/research1.html" aria-label="Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems">
-        <div class="card-image"><img src="/images/muon-stoppingpower.png" alt="Cosmic Ray Telescope"></div>
+      <a class="research-card" href="/research/research1.html" aria-label="Timing Signal Reconstruction in PMT-Based Dual-End Readout PET Detectors">
+        <div class="card-image"><img src="/images/pet-detector-cover.png" alt="PET Detector Research"></div>
         <div class="card-content">
-          <h3>Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems</h3>
+          <h3>Timing Signal Reconstruction in PMT-Based Dual-End Readout PET Detectors</h3>
         </div>
       </a>
 
-      <a class="research-card" href="/research/research2.html" aria-label="FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring">
-        <div class="card-image"><img src="/images/research2-cover.png" alt="FMCW Radar"></div>
+      <a class="research-card" href="/research/research2.html" aria-label="Experimental Research on PMT-Based Environmental Radiation Monitoring Systems">
+        <div class="card-image"><img src="/images/environmental-monitoring-cover.png" alt="Environmental Monitoring Platform"></div>
         <div class="card-content">
-          <h3>FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring</h3>
-        </div>
-      </a>
-
-      <a class="research-card" href="/research/research3.html" aria-label="Analysis of Long-Lived Particle Properties with Multiple Detectors">
-        <div class="card-image"><img src="/images/research3-cover.png" alt="Long-Lived Particle Analysis"></div>
-        <div class="card-content">
-          <h3>Analysis of Long-Lived Particle Properties with Multiple Detectors</h3>
-        </div>
-      </a>
-
-      <a class="research-card" href="/research/research4.html" aria-label="Machine Learning for Beam-Space Traffic Pattern Analysis">
-        <div class="card-image"><img src="/images/research4-cover.png" alt="Beam-Space Traffic"></div>
-        <div class="card-content">
-          <h3>Machine Learning for Beam-Space Traffic Pattern Analysis</h3>
+          <h3>Experimental Research on PMT-Based Environmental Radiation Monitoring Systems</h3>
         </div>
       </a>
     </div>
   </div>
 </section>
+
 
 
 

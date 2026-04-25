@@ -1,4 +1,3 @@
-<img width="376" height="70" alt="image" src="https://github.com/user-attachments/assets/e5f908cb-595c-466f-8cec-e8eb62d5a47c" />---
 layout: default
 title: null
 permalink: /research/research1.html

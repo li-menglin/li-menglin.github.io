@@ -48,11 +48,11 @@ permalink: /research/research2.html
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/monitoring-setup.png" alt="Experimental setup">
+          <img src="/images/research2setup.png" alt="Experimental setup">
           <figcaption>Figure 1. Experimental setup of the PMT-based detection system</figcaption>
         </figure>
         <figure>
-          <img src="/images/monitoring-platform.png" alt="System architecture">
+          <img src="/images/platform.png" alt="System architecture">
           <figcaption>Figure 2. Schematic architecture of the signal acquisition and processing chain</figcaption>
         </figure>
       </div>
@@ -73,7 +73,7 @@ permalink: /research/research2.html
 
       <div class="figure-grid">
         <figure>
-          <img src="/images/neutron-spectrum.png" alt="Signal spectrum">
+          <img src="/images/spectrum.png" alt="Signal spectrum">
           <figcaption>Figure 3. Example of measured signal spectrum under calibrated conditions</figcaption>
         </figure>
       </div>

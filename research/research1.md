@@ -26,7 +26,7 @@ permalink: /research/research1.html
 
     <p class="meta">
       Bachelor Thesis Project · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
-      Nov. 2025 – May 2026
+      Nov. 2025 – Apr. 2026
     </p>
 
 <section class="research-body">
@@ -56,11 +56,11 @@ permalink: /research/research1.html
 
   <div class="figure-grid">
     <figure>
-      <img src="/images/pmt-structure.png" alt="PMT structure">
+      <img src="/images/pmt.png" alt="PMT structure">
       <figcaption>Figure 1. Basic structure and signal amplification process of a photomultiplier tube (PMT)</figcaption>
     </figure>
     <figure>
-      <img src="/images/photon-collection-distribution.png" alt="Photon collection distribution">
+      <img src="/images/distribution.png" alt="Photon collection distribution">
       <figcaption>Figure 2. Distribution of photon collection and its impact on signal formation</figcaption>
     </figure>
   </div>

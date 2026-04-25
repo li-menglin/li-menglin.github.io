@@ -18,7 +18,7 @@ permalink: /research/research2.html
     </h1>
     <p class="meta">
       Research Assistant/Project Lead · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
-      Oct. 2024 – Present
+      Oct. 2024 – Nov. 2025
     </p>
 
     <section class="research-body">

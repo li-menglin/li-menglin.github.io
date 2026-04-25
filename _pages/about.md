@@ -17,10 +17,10 @@ header: false
       </p>
       <strong>Research Interests: </strong>
       <ul class="interest-list">
-        <li>Biomedical Signal Processing</li>
-        <li>Optoelectronic Devices (e.g., SiPMs)</li>
-        <li>Silicon Photonics</li>
-        <li>Non-Invasive Sensing Technologies (e.g., Radar for Healthcare Monitoring)</li>
+        <li>Applied Physics</li>
+        <li>Optoelectronic Devices (e.g., PMTs)</li>
+        <li>Integrated Optics</li>
+        <li>Biomedical Sensing Technologies</li>
       </ul>
     </div>
   </div>
@@ -38,7 +38,7 @@ header: false
       <div class="edu-info">
         <p class="edu-school">Sun Yat-sen University (SYSU)</p>
         <p class="edu-degree">
-          B.Sc. in Physics (Major), Electronics and Information Science (Minor)
+          B.S. in Physics (Major), Electronics and Information Science (Minor)
         </p>
         <p class="edu-date">Sept. 2022 – Jun. 2026</p>
       </div>
@@ -52,8 +52,8 @@ header: false
         <li>
           <strong>Core Courses:</strong>
           Computer Programming, Optics, Statistical Methods in Physics,
-          Atomic Physics, Quantum Mechanics, Principles of Particle Accelerators,
-          Principles of Laser, Radar Principles and Systems, etc.
+          Quantum Mechanics, Analog and Digital Circuits, Electromagnetism, 
+          Signals and Systems, Solid State Physics, etc.
         </li>
         <li>
           <strong>Honors:</strong>
@@ -120,13 +120,15 @@ header: false
     <h2 class="page__title">Skills</h2>
     <div class="skill-content">
       <p class="inline-item"><strong>Programming Ability:</strong> C++, Python, MATLAB, and Mathematica</p>
-      <p class="inline-item"><strong>Simulation & Modeling:</strong> Pythia8, Geant4, Proteus, and mmWave Studio</p>
+      <p class="inline-item"><strong>Simulation & Modeling:</strong> Proteus and FDTD</p>
       <p class="inline-item"><strong>Data Analysis:</strong> Origin and SciDAVis for scientific visualization</p>
       <p class="inline-item"><strong>Language Proficiency:</strong> TOEFL 102 (R 30, L 27, S 20, W 25)</p>
       <p class="inline-item"><strong>Learning Agility:</strong> GRE 322 (V 155, Q 167, W 3.5)</p>
     </div>
   </div>
 </section>
+
+
 
 <section id="publications">
   <div class="pub-card">

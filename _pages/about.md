@@ -91,7 +91,7 @@ header: false
       </a>
 
       <a class="research-card" href="/research/research2.html" aria-label="Experimental Research on PMT-Based Environmental Radiation Monitoring Systems">
-        <div class="card-image"><img src="/images/research2-cover.png" alt="Environmental Monitoring Platform"></div>
+        <div class="card-image"><img src="/images/research2setup.png" alt="Environmental Monitoring Platform"></div>
         <div class="card-content">
           <h3>Experimental Research on PMT-Based Environmental Radiation Monitoring Systems</h3>
         </div>

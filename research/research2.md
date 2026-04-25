@@ -1,13 +1,13 @@
 ---
 layout: default
 title: null
-permalink: /research/research2.html
+permalink: /research/research1.html
 ---
 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring</title>
+  <title>Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems</title>
   <link rel="stylesheet" href="research.css">
   <!-- MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -19,99 +19,104 @@ permalink: /research/research2.html
 <div id="research-detail">
   <div class="content-card">
     <h1 class="page__title">
-      FMCW Millimeter-Wave Radar for Non-Contact Cardiopulmonary Monitoring
+      Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems
     </h1>
     <p class="meta">
-      Research Assistant · Sun Yat-sen University · Advisor: Prof. Chengpei Tang<br>
-      Nov. 2024 – Present
+      Research Assistant/Project Lead · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
+      Oct. 2024 – Present
     </p>
 
     <section class="research-body">
       <h2>Overview</h2>
       <p>
-        Frequency-Modulated Continuous-Wave (FMCW) radar provides a compact, non-contact solution for monitoring cardiopulmonary activity by resolving chest wall 
-        displacements at millimeter precision. The central challenge is <strong>separating weak heartbeat signals</strong> from dominant respiratory motion while 
-        suppressing noise and harmonics under realistic conditions. This project develops a full radar–signal processing pipeline to enable accurate extraction of 
-        respiration rate (RR) and heart rate (HR).
+        This project develops a compact detection platform based on plastic scintillators with Silicon Photomultipliers (SiPMs), 
+        complemented by a helium-3 tube detector for neutron spectrum measurement. The system is designed to register cosmic-ray muons and neutrons 
+        under coincidence logic, enabling both detector calibration and exploratory muon imaging studies.
       </p>
-      
-      <figure class="research-figure">
-          <img src="/images/research2-cover.png" alt="cardiopulmonary monitor">
-          <figcaption>Figure 1. Cardiopulmonary signal detection framework</figcaption>
-      </figure>
-      
+
       <h2>Experimental Setup</h2>
       <p>
-        I configured the <strong>Texas Instruments IWR1443BOOST FMCW radar</strong> together with the <strong>DCA1000EVM data capture board</strong> via mmWave 
-        Studio to acquire raw ADC echoes in multi-chirp frames. Range profiles were resolved using an <strong>approximated FFT (apFFT)</strong>, followed by DC 
-        removal, range-bin selection, and phase unwrapping to obtain thoracic displacement waveforms.
+        The telescope employs two vertically aligned scintillators coupled with SiPMs, with coincident signals to identify through-going muons. The readout chain 
+        incorporates spectroscopy amplifiers, single-channel analyzers (SCAs), and a coincidence unit triggering a multichannel analyzer (MCA). A 
+        \({}^{3}\mathrm{He}\) tube neutron detector is inserted coaxially to measure neutrons under the same trigger conditions.
       </p>
 
+      <div class="figure-grid">
+        <figure>
+          <img src="/images/research1setup.png" alt="Setup diagram">
+          <figcaption>Figure 1. Schematic of the Cosmic ray telescope system</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/research1platform.png" alt="Experiment photo">
+          <figcaption>Figure 2. Laboratory implementation including scintillator paddles and electronics</figcaption>
+        </figure>
+      </div>
+
+      <h2>Methodology</h2>
+      <p>
+        Muon energy deposition in the plastic scintillators and the He-3 tube is modeled by the Bethe–Bloch formula:
+      </p>
+      <p class="equation">
+        \( -\left\langle \frac{dE}{dx} \right\rangle= K z^{2} \frac{Z}{A} \frac{1}{\beta^{2}}\left[\tfrac{1}{2} \ln\!\left( \frac{2 m_{e} c^{2} 
+        \beta^{2}\gamma^{2} T_{\text{max}}}{I^{2}} \right)- \beta^{2} - \frac{\delta}{2}\right] \)
+      </p>
+      <p>
+        In thin absorbers, energy deposition follows a Landau distribution. Python-based Monte Carlo simulations were developed to reproduce 
+        the spectrum and predict counting rates, providing a cross-check against experimental results.
+      </p>
+
+      <div class="figure-grid">
+        <figure>
+          <img src="/images/muon-stoppingpower.png" alt="Muon momentum vs stopping power">
+          <figcaption>Figure 3. Muon momentum versus stopping power</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/muon-landau.png" alt="Muon Landau distribution">
+          <figcaption>Figure 4. Simulated Landau distribution of muon energy deposition</figcaption>
+        </figure>
+      </div>
+
+      <p>
+        Neutron detection is based on the reaction:
+      </p>
+      <p class="equation">
+        \( n + {}^{3}\mathrm{He} \rightarrow p + t + 764\ \mathrm{keV} \),
+      </p>
+      <p>
+        where the proton–triton pair deposits its full kinetic energy, forming a distinct peak in the MCA spectrum. 
+        A compact Am-241–aluminum neutron source was also prepared via:
+      </p>
+      <p class="equation">
+        \( \alpha + {}^{27}\mathrm{Al} \;\rightarrow\; {}^{30}\mathrm{P} + n \)
+      </p>
+      
       <figure class="research-figure">
-          <img src="/images/dataacq.png" alt="IWR1443BOOST data acquisition">
-          <figcaption>Figure 2. Data acquisition process with FMCW radar module</figcaption>
+        <img src="/images/alpha-sigma.png" alt="Alpha-Aluminum reaction cross-section">
+        <figcaption>Figure 5. Cross-section of α-induced reactions on aluminum.</figcaption>
       </figure>
 
-      <h2>Signal Processing Framework</h2>
-      <p>
-        To extract respiration and heartbeat components, I designed a multi-stage pipeline in MATLAB:
-      </p>
-      <ul>
-        <li><strong>Preprocessing:</strong> Applied smoothing-spline fitting to capture and remove slow respiratory trends, 
-        and used matched filtering to enhance subtle heartbeat oscillations.</li>
-        <li><strong>Variational Mode Extraction (VME):</strong> Decomposed displacement signals into intrinsic modes, 
-        isolating respiration (~0.2–0.3 Hz) from heartbeat (~1 Hz).</li>
-        <li><strong>Double Chirp-Z Transform (double-CZT):</strong> Provided high-resolution spectral estimation, 
-        surpassing conventional FFT by yielding sharper, better-separated peaks.</li>
-      </ul>
-
-      <p><strong>Key formulations:</strong></p>
-      <p>
-        Variational Mode Extraction (VME) minimizes the following cost functional:
-      </p>
-      <p>
-        \[
-        \min_{\{u_k,\omega_k\}} \sum_{k=1}^K \left\| \partial_t \left[ \left( \delta(t) + \frac{j}{\pi t} \right) * u_k(t) \cdot e^{-j\omega_k t} \right] \right\|_2^2
-        \]
-        where \(u_k(t)\) are intrinsic modes and \(\omega_k\) their center frequencies.
-      </p>
-      <p>
-        The Chirp-Z Transform (CZT) maps a sequence \(x[n]\) to an arbitrary contour in the z-plane:
-      </p>
-      <p>
-        \[
-        X_k = \sum_{n=0}^{N-1} x[n] \, z_k^{-n}, \quad z_k = A W^{-k}, \quad k=0,\ldots,M-1
-        \]
-        where \(A\) and \(W\) control the start point and frequency resolution. 
-        A double-CZT applies two successive zoomed analyses for enhanced resolution 
-        around respiratory and cardiac bands.
-      </p>
-
-      <figure class="research-figure">
-          <img src="/images/processframework.png" alt="Signal processing framework">
-          <figcaption>Figure 3. MATLAB-implemented pipeline for heart rate estimation</figcaption>
-      </figure>
 
       <h2>My Contributions</h2>
       <ul>
-        <li>Configured the IWR1443BOOST FMCW radar with DCA1000EVM and mmWave Studio to acquire raw ADC data for non-contact cardiopulmonary monitoring.</li>
-        <li>Implemented <strong>apFFT</strong>-based range profiling to resolve thoracic reflections from radar chirps.</li>
-        <li>Developed advanced preprocessing modules including <strong>smoothing-spline fitting</strong> and <strong>matched filtering</strong> to enhance weak 
-        heartbeat oscillations.</li>
-        <li>Applied <strong>Variational Mode Extraction (VME)</strong> for robust decomposition of respiratory and cardiac components.</li>
-        <li>Performed <strong>double-CZT spectral estimation</strong> for high-resolution frequency analysis, enabling precise detection of RR and HR.</li>
-        <li>Reproduced and validated published benchmark results in MATLAB, confirming the accuracy and robustness of the framework.</li>
+      <li><strong>System Design:</strong> Constructed a multi-channel SiPM-based cosmic-ray telescope with coincidence logic for muon detection.</li>
+      <li><strong>Experimental Corrections:</strong> Measured two-fold and three-fold coincidence rates with three stacked plastic scintillators, and developed a 
+      Python program that combines Monte Carlo sampling with experimental data to determine the effective scintillator length and correct raw measurements.</li>   
+      <li><strong>Detector Optimization:</strong> Tuned SiPM bias and thresholds to enhance resolution, suppress noise, and ensure stable muon flux measurements 
+      across multiple building levels.</li>
+      <li><strong>Theoretical Modeling:</strong> Applied Bethe–Bloch and Landau MPV analysis; built dedicated Python-based Monte Carlo simulations to reproduce 
+      muon energy-loss spectra and quantitatively predict detector efficiency.</li>
+      <li><strong>Neutron Detection:</strong> Designed experiments with an Am-241–aluminum neutron source, identified the p–t coincidence peak in the He-3 
+      tube, and established calibration benchmarks via spectral analysis.</li>
+
       </ul>
 
       <h2>Progress & Outlook</h2>
       <p>
-        The developed pipeline reliably extracted respiration (~0.25 Hz) and heartbeat (~1 Hz) peaks even under low signal-to-noise conditions. Compared with 
-        conventional FFT methods, the double-CZT produced <strong>sharper and better-isolated peaks</strong>, enabling more stable heart-rate tracking across 
-        datasets. My contributions spanned radar configuration, advanced preprocessing, VME decomposition, and double-CZT spectral estimation. Looking ahead, I 
-        aim to extend the framework toward <strong>real-time implementation</strong> and validate it under more challenging scenarios such as subject motion and 
-        through-obstacle sensing, thereby strengthening the biomedical applicability of FMCW radar technology.
+        Initial efficiency studies confirmed alignment of scintillator modules and validated coincidence logic. Measurements across multiple floors demonstrated 
+        attenuation trends consistent with muon absorption, supporting the feasibility of muon imaging. Current efforts focus on refining neutron-source 
+        validation and quantifying uncertainties. Longer-term, the platform provides a foundation for muon imaging applications and extended particle 
+        instrumentation calibration
       </p>
-
     </section>
   </div>
 </div>

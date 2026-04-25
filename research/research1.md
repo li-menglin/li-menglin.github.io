@@ -7,7 +7,7 @@ permalink: /research/research1.html
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems</title>
+  <title>Timing Reconstruction in PMT-Based PET Detectors</title>
   <link rel="stylesheet" href="research.css">
   <!-- MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -15,98 +15,109 @@ permalink: /research/research1.html
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 </head>
+
 <body>
 <div id="research-detail">
   <div class="content-card">
+
     <h1 class="page__title">
-      Timing Reconstruction in PMT-Based TOF-PET Detectors
+      Timing Reconstruction in PMT-Based PET Detectors
     </h1>
+
     <p class="meta">
       Bachelor Thesis Project · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
-      Dec. 2025 – Apr. 2026
+      Nov. 2025 – May 2026
     </p>
 
 <section class="research-body">
+
   <h2>Overview</h2>
   <p>
-    Time-of-Flight Positron Emission Tomography (TOF-PET) is a cornerstone of modern molecular imaging, where timing resolution 
-    directly determines the signal-to-noise ratio of reconstructed images. This project focuses on the waveform-level 
-    analysis of signal characteristics in dual-end readout PET detectors. By modeling the detector response and 
-    optimizing timing extraction algorithms, the research aims to overcome the fundamental limits imposed by 
-    scintillation photon statistics and sensor electronic response.
+    Positron Emission Tomography (PET) is an important imaging technique in biomedical research and clinical diagnostics. 
+    Its performance is closely related to timing accuracy, which affects image quality and signal localization. 
+    This project focuses on waveform-level signal analysis in photomultiplier tube (PMT)-based detector systems, 
+    with the goal of improving timing precision through modeling and signal processing.
   </p>
 
-  <h2>Experimental Setup</h2>
   <p>
-    The study utilizes experimental datasets from a high-resolution mouse PET system. The detector modules consist of 
-    finely segmented crystal arrays coupled with high-sensitivity photomultiplier sensors. The readout electronics 
-    capture high-speed digital waveforms, allowing for a detailed examination of the pulse shape, rise time, and 
-    electronic noise characteristics that affect the precision of coincidence event detection.
+    Rather than modifying hardware, the study explores how digital signal processing and statistical modeling 
+    can enhance timing estimation under realistic noise conditions. The work lies at the intersection of 
+    experimental physics, signal processing, and data analysis.
+  </p>
+
+
+  <h2>Detector and Signal Characteristics</h2>
+  <p>
+    The detector system consists of scintillation materials coupled with photomultiplier tubes (PMTs). 
+    When radiation interacts with the scintillator, optical photons are generated and collected by the PMT, 
+    producing electrical pulses. The temporal shape of these pulses contains information about photon arrival statistics, 
+    electronic response, and noise.
   </p>
 
   <div class="figure-grid">
     <figure>
-      <img src="/images/pet-detector-setup.png" alt="PET detector module">
-      <figcaption>Figure 1. Schematic of the dual-end readout PET detector module</figcaption>
+      <img src="/images/pmt-structure.png" alt="PMT structure">
+      <figcaption>Figure 1. Basic structure and signal amplification process of a photomultiplier tube (PMT)</figcaption>
     </figure>
     <figure>
-      <img src="/images/pet-readout-electronics.png" alt="Readout electronics">
-      <figcaption>Figure 2. High-speed waveform sampling and data acquisition system</figcaption>
+      <img src="/images/photon-collection-distribution.png" alt="Photon collection distribution">
+      <figcaption>Figure 2. Distribution of photon collection and its impact on signal formation</figcaption>
     </figure>
   </div>
+
 
   <h2>Methodology</h2>
   <p>
-    The timing precision \(\sigma_t\) of a PET detector is governed by the fluctuations in the arrival time of the first 
-    detected photons. The relationship can be simplified as a function of the signal-to-noise ratio and the slope of the 
-    pulse leading edge:
+    The timing resolution depends on both signal slope and noise level. A simplified relationship can be expressed as:
   </p>
+
   <p class="equation">
-    \( \sigma_{t} \approx \frac{\sigma_{noise}}{\left| dV/dt \right|_{threshold}} \)
-  </p>
-  <p>
-    To validate experimental findings, comprehensive Monte Carlo simulations were conducted using the GATE (GEANT4 Application 
-    for Tomographic Emission) framework. These simulations reproduce the stochastic processes of photon generation, 
-    transport, and detection, providing a gold-standard reference for benchmarking different timing extractors.
+    \( \sigma_{t} \approx \frac{\sigma_{noise}}{\left| dV/dt \right|} \)
   </p>
 
-  <div class="figure-grid">
-    <figure>
-      <img src="/images/pet-waveforms.png" alt="Digital waveforms">
-      <figcaption>Figure 3. Captured digital waveforms from dual-end readout sensors</figcaption>
-    </figure>
-    <figure>
-      <img src="/images/timing-resolution-fit.png" alt="Coincidence timing resolution">
-      <figcaption>Figure 4. Extracted coincidence timing resolution (CTR) distribution</figcaption>
-    </figure>
-  </div>
+  <p>
+    Based on this principle, the project models detector waveforms to separate different contributing factors, 
+    including photon arrival fluctuations and electronic noise. This provides a framework for evaluating 
+    timing extraction methods under controlled conditions.
+  </p>
 
   <p>
-    Timing extraction is implemented through multiple digital signal processing strategies, including:
+    Several signal processing techniques are implemented and compared:
   </p>
+
   <ul>
-    <li><strong>Constant Fraction Discrimination (CFD):</strong> Reducing amplitude-walk by triggering at a fixed percentage of the peak.</li>
-    <li><strong>Leading-Edge Triggering:</strong> Analyzing the impact of threshold levels on timing jitter.</li>
-    <li><strong>Waveform Fitting:</strong> Using mathematical models to reconstruct the signal pulse and estimate the true start time.</li>
+    <li><strong>Constant Fraction Discrimination (CFD):</strong> Reduces amplitude-dependent timing variation.</li>
+    <li><strong>Leading-Edge Detection:</strong> Provides a simple baseline for timing extraction.</li>
+    <li><strong>Waveform Fitting:</strong> Uses parametric models to estimate the true signal onset more accurately.</li>
   </ul>
 
 
   <h2>My Contributions</h2>
   <ul>
-  <li><strong>Data Analysis:</strong> Processed and analyzed large-scale experimental datasets to isolate signal fluctuations from electronic noise in medical imaging detectors.</li>
-  <li><strong>Simulation Development:</strong> Developed Monte Carlo-based models of photon transport and detection to reproduce timing behavior and validate experimental data.</li>   
-  <li><strong>Algorithm Implementation:</strong> Implemented and benchmarked digital timing extractors, including CFD and curve-fitting methods, to optimize coincidence timing resolution.</li>
-  <li><strong>Performance Evaluation:</strong> Evaluated signal processing strategies to improve the timing precision of medical imaging systems, directly contributing to enhanced disease diagnosis capabilities.</li>
+    <li><strong>Data Analysis:</strong> Processed experimental waveform data to study signal variability under realistic conditions.</li>
+    <li><strong>Modeling:</strong> Built simplified computational models to reproduce signal formation and noise behavior.</li>
+    <li><strong>Algorithm Development:</strong> Implemented and compared multiple timing extraction methods.</li>
+    <li><strong>Evaluation:</strong> Analyzed how different processing strategies influence timing precision and system performance.</li>
   </ul>
 
-  <h2>Progress & Outlook</h2>
+
+  <h2>Results and Discussion</h2>
   <p>
-    Preliminary results demonstrate that waveform-based fitting significantly outperforms traditional leading-edge methods 
-    under low-photon statistics. The integration of dual-end readout information effectively corrects for the depth-of-interaction 
-    (DOI) effect, further refining the timing accuracy. Future work will focus on implementing these algorithms into real-time 
-    FPGA-based hardware to support the next generation of high-sensitivity clinical PET scanners.
+    The results show that methods incorporating waveform shape information provide improved robustness compared to 
+    simple threshold-based approaches, especially in low signal-to-noise scenarios. This highlights the importance 
+    of combining physical modeling with signal processing techniques in detector optimization.
   </p>
+
+
+  <h2>Outlook</h2>
+  <p>
+    Future work will focus on improving computational efficiency and exploring real-time implementation possibilities. 
+    The general approach developed in this project can also be extended to other sensing systems that rely on precise 
+    timing extraction from noisy signals.
+  </p>
+
 </section>
+
   </div>
 </div>
 </body>

@@ -1,4 +1,4 @@
----
+<img width="376" height="70" alt="image" src="https://github.com/user-attachments/assets/e5f908cb-595c-466f-8cec-e8eb62d5a47c" />---
 layout: default
 title: null
 permalink: /research/research1.html
@@ -19,105 +19,94 @@ permalink: /research/research1.html
 <div id="research-detail">
   <div class="content-card">
     <h1 class="page__title">
-      Experimental Research on SiPM-Based Cosmic-Ray and Neutron Detection Systems
+      Timing Reconstruction in PMT-Based TOF-PET Detectors
     </h1>
     <p class="meta">
-      Research Assistant/Project Lead · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
-      Oct. 2024 – Present
+      Bachelor Thesis Project · Sun Yat-sen University · Advisor: Prof. Jie Feng<br>
+      Dec. 2025 – Apr. 2026
     </p>
 
-    <section class="research-body">
-      <h2>Overview</h2>
-      <p>
-        This project develops a compact detection platform based on plastic scintillators with Silicon Photomultipliers (SiPMs), 
-        complemented by a helium-3 tube detector for neutron spectrum measurement. The system is designed to register cosmic-ray muons and neutrons 
-        under coincidence logic, enabling both detector calibration and exploratory muon imaging studies.
-      </p>
+<section class="research-body">
+  <h2>Overview</h2>
+  <p>
+    Time-of-Flight Positron Emission Tomography (TOF-PET) is a cornerstone of modern molecular imaging, where timing resolution 
+    directly determines the signal-to-noise ratio of reconstructed images. This project focuses on the waveform-level 
+    analysis of signal characteristics in dual-end readout PET detectors. By modeling the detector response and 
+    optimizing timing extraction algorithms, the research aims to overcome the fundamental limits imposed by 
+    scintillation photon statistics and sensor electronic response.
+  </p>
 
-      <h2>Experimental Setup</h2>
-      <p>
-        The telescope employs two vertically aligned scintillators coupled with SiPMs, with coincident signals to identify through-going muons. The readout chain 
-        incorporates spectroscopy amplifiers, single-channel analyzers (SCAs), and a coincidence unit triggering a multichannel analyzer (MCA). A 
-        \({}^{3}\mathrm{He}\) tube neutron detector is inserted coaxially to measure neutrons under the same trigger conditions.
-      </p>
+  <h2>Experimental Setup</h2>
+  <p>
+    The study utilizes experimental datasets from a high-resolution mouse PET system. The detector modules consist of 
+    finely segmented crystal arrays coupled with high-sensitivity photomultiplier sensors. The readout electronics 
+    capture high-speed digital waveforms, allowing for a detailed examination of the pulse shape, rise time, and 
+    electronic noise characteristics that affect the precision of coincidence event detection.
+  </p>
 
-      <div class="figure-grid">
-        <figure>
-          <img src="/images/research1setup.png" alt="Setup diagram">
-          <figcaption>Figure 1. Schematic of the Cosmic ray telescope system</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/research1platform.png" alt="Experiment photo">
-          <figcaption>Figure 2. Laboratory implementation including scintillator paddles and electronics</figcaption>
-        </figure>
-      </div>
+  <div class="figure-grid">
+    <figure>
+      <img src="/images/pet-detector-setup.png" alt="PET detector module">
+      <figcaption>Figure 1. Schematic of the dual-end readout PET detector module</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/pet-readout-electronics.png" alt="Readout electronics">
+      <figcaption>Figure 2. High-speed waveform sampling and data acquisition system</figcaption>
+    </figure>
+  </div>
 
-      <h2>Methodology</h2>
-      <p>
-        Muon energy deposition in the plastic scintillators and the He-3 tube is modeled by the Bethe–Bloch formula:
-      </p>
-      <p class="equation">
-        \( -\left\langle \frac{dE}{dx} \right\rangle= K z^{2} \frac{Z}{A} \frac{1}{\beta^{2}}\left[\tfrac{1}{2} \ln\!\left( \frac{2 m_{e} c^{2} 
-        \beta^{2}\gamma^{2} T_{\text{max}}}{I^{2}} \right)- \beta^{2} - \frac{\delta}{2}\right] \)
-      </p>
-      <p>
-        In thin absorbers, energy deposition follows a Landau distribution. Python-based Monte Carlo simulations were developed to reproduce 
-        the spectrum and predict counting rates, providing a cross-check against experimental results.
-      </p>
+  <h2>Methodology</h2>
+  <p>
+    The timing precision \(\sigma_t\) of a PET detector is governed by the fluctuations in the arrival time of the first 
+    detected photons. The relationship can be simplified as a function of the signal-to-noise ratio and the slope of the 
+    pulse leading edge:
+  </p>
+  <p class="equation">
+    \( \sigma_{t} \approx \frac{\sigma_{noise}}{\left| dV/dt \right|_{threshold}} \)
+  </p>
+  <p>
+    To validate experimental findings, comprehensive Monte Carlo simulations were conducted using the GATE (GEANT4 Application 
+    for Tomographic Emission) framework. These simulations reproduce the stochastic processes of photon generation, 
+    transport, and detection, providing a gold-standard reference for benchmarking different timing extractors.
+  </p>
 
-      <div class="figure-grid">
-        <figure>
-          <img src="/images/muon-stoppingpower.png" alt="Muon momentum vs stopping power">
-          <figcaption>Figure 3. Muon momentum versus stopping power</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/muon-landau.png" alt="Muon Landau distribution">
-          <figcaption>Figure 4. Simulated Landau distribution of muon energy deposition</figcaption>
-        </figure>
-      </div>
+  <div class="figure-grid">
+    <figure>
+      <img src="/images/pet-waveforms.png" alt="Digital waveforms">
+      <figcaption>Figure 3. Captured digital waveforms from dual-end readout sensors</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/timing-resolution-fit.png" alt="Coincidence timing resolution">
+      <figcaption>Figure 4. Extracted coincidence timing resolution (CTR) distribution</figcaption>
+    </figure>
+  </div>
 
-      <p>
-        Neutron detection is based on the reaction:
-      </p>
-      <p class="equation">
-        \( n + {}^{3}\mathrm{He} \rightarrow p + t + 764\ \mathrm{keV} \),
-      </p>
-      <p>
-        where the proton–triton pair deposits its full kinetic energy, forming a distinct peak in the MCA spectrum. 
-        A compact Am-241–aluminum neutron source was also prepared via:
-      </p>
-      <p class="equation">
-        \( \alpha + {}^{27}\mathrm{Al} \;\rightarrow\; {}^{30}\mathrm{P} + n \)
-      </p>
-      
-      <figure class="research-figure">
-        <img src="/images/alpha-sigma.png" alt="Alpha-Aluminum reaction cross-section">
-        <figcaption>Figure 5. Cross-section of α-induced reactions on aluminum.</figcaption>
-      </figure>
+  <p>
+    Timing extraction is implemented through multiple digital signal processing strategies, including:
+  </p>
+  <ul>
+    <li><strong>Constant Fraction Discrimination (CFD):</strong> Reducing amplitude-walk by triggering at a fixed percentage of the peak.</li>
+    <li><strong>Leading-Edge Triggering:</strong> Analyzing the impact of threshold levels on timing jitter.</li>
+    <li><strong>Waveform Fitting:</strong> Using mathematical models to reconstruct the signal pulse and estimate the true start time.</li>
+  </ul>
 
 
-      <h2>My Contributions</h2>
-      <ul>
-      <li><strong>System Design:</strong> Constructed a multi-channel SiPM-based cosmic-ray telescope with coincidence logic for muon detection.</li>
-      <li><strong>Experimental Corrections:</strong> Measured two-fold and three-fold coincidence rates with three stacked plastic scintillators, and developed a 
-      Python program that combines Monte Carlo sampling with experimental data to determine the effective scintillator length and correct raw measurements.</li>   
-      <li><strong>Detector Optimization:</strong> Tuned SiPM bias and thresholds to enhance resolution, suppress noise, and ensure stable muon flux measurements 
-      across multiple building levels.</li>
-      <li><strong>Theoretical Modeling:</strong> Applied Bethe–Bloch and Landau MPV analysis; built dedicated Python-based Monte Carlo simulations to reproduce 
-      muon energy-loss spectra and quantitatively predict detector efficiency.</li>
-      <li><strong>Neutron Detection:</strong> Designed experiments with an Am-241–aluminum neutron source, identified the p–t coincidence peak in the He-3 
-      tube, and established calibration benchmarks via spectral analysis.</li>
+  <h2>My Contributions</h2>
+  <ul>
+  <li><strong>Data Analysis:</strong> Processed and analyzed large-scale experimental datasets to isolate signal fluctuations from electronic noise in medical imaging detectors.</li>
+  <li><strong>Simulation Development:</strong> Developed Monte Carlo-based models of photon transport and detection to reproduce timing behavior and validate experimental data.</li>   
+  <li><strong>Algorithm Implementation:</strong> Implemented and benchmarked digital timing extractors, including CFD and curve-fitting methods, to optimize coincidence timing resolution.</li>
+  <li><strong>Performance Evaluation:</strong> Evaluated signal processing strategies to improve the timing precision of medical imaging systems, directly contributing to enhanced disease diagnosis capabilities.</li>
+  </ul>
 
-      </ul>
-
-      <h2>Progress & Outlook</h2>
-      <p>
-        Initial efficiency studies confirmed alignment of scintillator modules and validated coincidence logic. Measurements across multiple floors demonstrated 
-        attenuation trends consistent with muon absorption, supporting the feasibility of muon imaging. Current efforts focus on refining neutron-source 
-        validation and quantifying uncertainties. Longer-term, the platform provides a foundation for muon imaging applications and extended particle 
-        instrumentation calibration
-      </p>
-    </section>
+  <h2>Progress & Outlook</h2>
+  <p>
+    Preliminary results demonstrate that waveform-based fitting significantly outperforms traditional leading-edge methods 
+    under low-photon statistics. The integration of dual-end readout information effectively corrects for the depth-of-interaction 
+    (DOI) effect, further refining the timing accuracy. Future work will focus on implementing these algorithms into real-time 
+    FPGA-based hardware to support the next generation of high-sensitivity clinical PET scanners.
+  </p>
+</section>
   </div>
 </div>
 </body>

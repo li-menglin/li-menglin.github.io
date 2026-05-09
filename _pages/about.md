@@ -19,8 +19,8 @@ header: false
       <ul class="interest-list">
         <li>Applied Physics</li>
         <li>Optoelectronic Devices (e.g., PMTs)</li>
-        <li>Integrated Optics</li>
-        <li>Biomedical Sensing Technologies</li>
+        <li>Biomedical and Human-Centered Sensing Technologies</li>
+        <li>Non-Contact Sensing Technologies</li>
       </ul>
     </div>
   </div>
